@@ -19,16 +19,14 @@ export const metadata: Metadata = {
 		"Макаруны (пирожные макарони) в Санкт-Петербурге от производителя. Всегда свежие, из натуральных ингредиентов, бесплатная доставка",
 };
 
-export default function RootLayout({
+const RootLayout = ({
 	children,
 }: Readonly<{
 	children: ReactNode;
-}>) {
-	return (
-		<html lang="ru">
-			<body className={cn(MontserratSans.variable, "font-sans")}>
-				{children}
-			</body>
-		</html>
-	);
-}
+}>) => (
+	<html lang="ru">
+		<body className={cn(MontserratSans.variable, "font-sans")}>{children}</body>
+	</html>
+);
+
+export default RootLayout;
