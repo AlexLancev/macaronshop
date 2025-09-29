@@ -5,8 +5,11 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-import "@unocss/reset/eric-meyer.css";
+import "@unocss/reset/tailwind.css";
 import "@/styles/index.css";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const MontserratSans: NextFontWithVariable = Montserrat({
 	variable: "--font-Montserrat-sans",
@@ -25,7 +28,11 @@ const RootLayout = ({
 	children: ReactNode;
 }>) => (
 	<html lang="ru">
-		<body className={cn(MontserratSans.variable, "font-sans")}>{children}</body>
+		<body className={cn(MontserratSans.variable, "font-sans")}>
+			<Header />
+			{children}
+			<Footer />
+		</body>
 	</html>
 );
 

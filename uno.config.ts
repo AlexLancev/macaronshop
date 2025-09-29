@@ -8,6 +8,8 @@ import {
 	transformerDirectives,
 	transformerVariantGroup,
 } from "unocss";
+import presetAnimations from "unocss-preset-animations";
+import { presetShadcn } from "unocss-preset-shadcn";
 
 export default defineConfig({
 	shortcuts: [
@@ -36,6 +38,8 @@ export default defineConfig({
 				],
 			},
 		}),
+		presetAnimations(),
+		presetShadcn(),
 	],
 	transformers: [transformerDirectives(), transformerVariantGroup()],
 });
