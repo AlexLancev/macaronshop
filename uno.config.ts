@@ -20,7 +20,10 @@ export default defineConfig({
 			// ...
 		},
 	},
-	presets: [
+	rules: [
+		['min-w-0', { 'min-width': '0px' }],
+	],
+presets: [
 		presetWind3(),
 		presetAttributify(),
 		presetIcons(),
@@ -41,5 +44,4 @@ export default defineConfig({
 		presetAnimations(),
 		presetShadcn(),
 	],
-	transformers: [transformerDirectives(), transformerVariantGroup()],
 });

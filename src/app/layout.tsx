@@ -3,13 +3,13 @@ import type { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { Montserrat } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils/cn";
 
 import "@unocss/reset/tailwind.css";
-import "@/styles/index.css";
+import "@/shared/styles/index.css";
 
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Footer from "@/shared/ui/layout/Footer";
+import Header from "@/shared/ui/layout/Header";
 
 const MontserratSans: NextFontWithVariable = Montserrat({
 	variable: "--font-Montserrat-sans",

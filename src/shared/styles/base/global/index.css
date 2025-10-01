@@ -1,0 +1,6 @@
+@unocss all;
+
+body {
+	background-color: #f7ebe5;
+	font-family: var(--font-Montserrat-sans);
+}
