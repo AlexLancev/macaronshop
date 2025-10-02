@@ -1,12 +1,10 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface SmallOurAdvantagesTypeProps {
 	title: string;
 	icon: ReactNode;
 }
 
-const SmallOurAdvantages = ({ title, icon }: SmallOurAdvantagesTypeProps) => {
-
-}
+const SmallOurAdvantages = ({ title, icon }: SmallOurAdvantagesTypeProps) => {};
 
 export default SmallOurAdvantages;

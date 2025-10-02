@@ -20,10 +20,8 @@ export default defineConfig({
 			// ...
 		},
 	},
-	rules: [
-		['min-w-0', { 'min-width': '0px' }],
-	],
-presets: [
+	rules: [["min-w-0", { "min-width": "0px" }]],
+	presets: [
 		presetWind3(),
 		presetAttributify(),
 		presetIcons(),

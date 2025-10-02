@@ -1,25 +1,22 @@
+import useEmblaCarousel from "embla-carousel-react";
 
-import useEmblaCarousel from 'embla-carousel-react'
-
-interface TopBarTypeProps {
-
-}
+type TopBarTypeProps = {};
 
 export const emblaCarousel = () => {
-  const [emblaRef] = useEmblaCarousel()
+	const [emblaRef] = useEmblaCarousel();
 
-  return (
-    <div className="overflow-hidden" ref={emblaRef}>
-      <div className="flex">
-        <div className="min-w-[0px] flex-">Slide 1</div>
-      </div>
-    </div>
-  )
-}
+	return (
+		<div
+			className="overflow-hidden"
+			ref={emblaRef}
+		>
+			<div className="flex">
+				<div className="flex- min-w-[0px]">Slide 1</div>
+			</div>
+		</div>
+	);
+};
 
-
-const TopBar = () => {
-
-}
+const TopBar = () => {};
 
 export default TopBar;
