@@ -1,26 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 
+import type { Flavor } from "../../../shared/types";
 
 import { macaronsApi } from "../api";
-import { useMacaronsStore } from "../store/macaronsStore";
-import { useMacaronsUIStore } from "../store/uiStore";
-import { Flavor } from "../../../shared/types";
 
-// Загружаем все макаруны и сохраняем в Zustand
+// Загружаем все макаруны (только TanStack Query)
 export const useMacarons = () => {
-	const { setMacarons } = useMacaronsStore();
-
 	return useQuery({
 		queryKey: ["macarons"],
-		queryFn: async () => {
-			const macarons = await macaronsApi.getAllMacarons();
-			setMacarons(macarons); // Сохраняем в Zustand
-			return macarons;
-		},
+		queryFn: () => macaronsApi.getAllMacarons(),
 	});
 };
 
-// Конкретный макарун (только TanStack Query)
+// Конкретный макарун
 export const useMacaron = (id: number) => {
 	return useQuery({
 		queryKey: ["macarons", id],
@@ -29,55 +21,28 @@ export const useMacaron = (id: number) => {
 	});
 };
 
-// Макаруны по вкусу (только TanStack Query для свежих данных)
+// Макаруны по вкусу
 export const useMacaronsByFlavor = (flavor: Flavor) => {
 	return useQuery({
 		queryKey: ["macarons", "flavor", flavor],
 		queryFn: () => macaronsApi.getMacaronsByFlavor(flavor),
+		enabled: !!flavor,
 	});
 };
 
-// Поиск (только TanStack Query)
+// Популярные макаруны
+export const usePopularMacarons = () => {
+	return useQuery({
+		queryKey: ["macarons", "popular"],
+		queryFn: () => macaronsApi.getPopularMacarons(),
+	});
+};
+
+// Поиск
 export const useSearchMacarons = (query: string) => {
 	return useQuery({
 		queryKey: ["macarons", "search", query],
 		queryFn: () => macaronsApi.searchMacarons(query),
 		enabled: query.length > 0,
 	});
-};
-
-// Фильтрованные макаруны (Zustand для UI фильтров)
-export const useFilteredMacarons = () => {
-	const macarons = useMacaronsStore((state) => state.macarons);
-	const { selectedFlavor, searchQuery, sortBy } = useMacaronsUIStore();
-
-	let filtered = macarons;
-
-	if (selectedFlavor !== "all") {
-		filtered = filtered.filter((macaron) => macaron.flavor === selectedFlavor);
-	}
-
-	if (searchQuery) {
-		filtered = filtered.filter((macaron) =>
-			macaron.name.toLowerCase().includes(searchQuery.toLowerCase()),
-		);
-	}
-
-	// Сортировка
-	return [...filtered].sort((a, b) => {
-		switch (sortBy) {
-			case "price":
-				return a.price - b.price;
-			case "name":
-				return a.name.localeCompare(b.name);
-			default:
-				return 0;
-		}
-	});
-};
-
-// Популярные макаруны (из Zustand)
-export const usePopularMacarons = () => {
-	const macarons = useMacaronsStore((state) => state.macarons);
-	return macarons.slice(0, 4);
 };

@@ -9,16 +9,12 @@
 		"lint": "biome check",
 		"format": "biome format --write",
 		"organizeImports": "biome check --write",
-		"fix": "npm run format && npm run organizeImports",
-		"db:generate": "drizzle-kit generate:pg",
-		"db:studio": "drizzle-kit studio",
-		"db:migrate": "drizzle-kit migrate",
-		"db:push": "drizzle-kit push"
+		"fix": "npm run format && npm run organizeImports"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "5.2.2",
-		"@neondatabase/serverless": "^1.0.2",
 		"@radix-ui/react-slot": "^1.2.3",
+		"@supabase/ssr": "^0.7.0",
 		"@tailwindcss/postcss": "^4.1.13",
 		"@tanstack/react-query": "^5.90.2",
 		"@unocss/reset": "^66.5.2",
@@ -47,7 +43,7 @@
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@unocss/postcss": "^66.5.2",
-		"drizzle-kit": "^0.31.5",
+		"@unocss/preset-attributify": "^66.5.2",
 		"globals": "^16.4.0",
 		"typescript": "^5",
 		"unocss": "^66.5.2",

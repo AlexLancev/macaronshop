@@ -1,5 +1,3 @@
-// shared/features/dessertCategories/macarons/data/types.ts
-
 import type { flavorEnum, macaronsTable } from "../schema";
 
 // Основные типы из Drizzle
@@ -9,10 +7,7 @@ export type DbMacaronFlavor = (typeof flavorEnum.enumValues)[number];
 
 // Дополнительные типы для бизнес-логики — см. ниже актуальные интерфейсы
 
-import type {
-	BaseDessert,
-	SearchResult,
-} from "../../../shared/types";
+import type { BaseDessert, SearchResult } from "../../../shared/types";
 
 export type MacaronSearchResult = SearchResult<Macaron>;
 

@@ -1,8 +1,7 @@
-// shared/features/dessertCategories/macarons/data/validators.ts
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 
-import { macaronsTable } from "../schema"; // Импорт схемы таблицы
+import { macaronsTable } from "../description"; // Импорт схемы таблицы
 
 // Zod схемы для валидации данных при создании/вставке
 export const insertMacaronSchema = createInsertSchema(macaronsTable, {

@@ -2,7 +2,6 @@
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": false,
-		"attributePosition": "multiline",
 		"indentStyle": "tab",
 		"lineWidth": 80,
 		"lineEnding": "crlf"
@@ -11,6 +10,7 @@
 		"formatter": {
 			"arrowParentheses": "always",
 			"bracketSameLine": false,
+			"attributePosition": "multiline",
 			"bracketSpacing": true,
 			"jsxQuoteStyle": "double",
 			"quoteProperties": "asNeeded",

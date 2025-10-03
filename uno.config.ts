@@ -12,9 +12,7 @@ import presetAnimations from "unocss-preset-animations";
 import { presetShadcn } from "unocss-preset-shadcn";
 
 export default defineConfig({
-	shortcuts: [
-		// ...
-	],
+	shortcuts: [["flex-0-0-100", "flex-grow-0 flex-shrink-0 flex-basis-full"]],
 	theme: {
 		colors: {
 			// ...

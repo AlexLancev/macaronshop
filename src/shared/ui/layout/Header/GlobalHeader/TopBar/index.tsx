@@ -1,22 +1,29 @@
-import useEmblaCarousel from "embla-carousel-react";
+import { Carousel } from "@/shared/ui/components/Carousel";
 
-type TopBarTypeProps = {};
+const topBarData = [
+	"google",
+	"almond",
+	"yandex",
+	"cake",
+	"2gis",
+	"delivery",
+	"truckDelivery",
+] as const;
 
-export const emblaCarousel = () => {
-	const [emblaRef] = useEmblaCarousel();
-
+const TopBar = () => {
 	return (
-		<div
-			className="overflow-hidden"
-			ref={emblaRef}
-		>
-			<div className="flex">
-				<div className="flex- min-w-[0px]">Slide 1</div>
-			</div>
-		</div>
+		<Carousel>
+			{topBarData.map((elem, index) => (
+				<div
+					key={index}
+					display="flex-0-0-100"
+					size="min-w-[0px]"
+				>
+					{elem}
+				</div>
+			))}
+		</Carousel>
 	);
 };
-
-const TopBar = () => {};
 
 export default TopBar;
