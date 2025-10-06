@@ -4,3 +4,16 @@ body {
 	background-color: #f7ebe5;
 	font-family: var(--font-Montserrat-sans);
 }
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+	display: flex;
+	justify-content: center;
+  flex: 0 0 100%;
+  min-width: 0;
+}

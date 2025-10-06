@@ -1,3 +1,4 @@
+import transformerAttributifyJsx from "@unocss/transformer-attributify-jsx";
 import {
 	defineConfig,
 	presetAttributify,
@@ -15,7 +16,7 @@ export default defineConfig({
 	shortcuts: [["flex-0-0-100", "flex-grow-0 flex-shrink-0 flex-basis-full"]],
 	theme: {
 		colors: {
-			// ...
+			bgBlue: "#d4e9f9",
 		},
 	},
 	rules: [["min-w-0", { "min-width": "0px" }]],
@@ -39,5 +40,10 @@ export default defineConfig({
 		}),
 		presetAnimations(),
 		presetShadcn(),
+	],
+	transformers: [
+		transformerDirectives(),
+		transformerVariantGroup(),
+		transformerAttributifyJsx(),
 	],
 });
