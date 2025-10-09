@@ -17,6 +17,8 @@ export default defineConfig({
 	theme: {
 		colors: {
 			bgBlue: "#d4e9f9",
+			bgBeige: "#f7ebe5",
+			bgGrey: "#ebedee",
 		},
 	},
 	rules: [["min-w-0", { "min-width": "0px" }]],
