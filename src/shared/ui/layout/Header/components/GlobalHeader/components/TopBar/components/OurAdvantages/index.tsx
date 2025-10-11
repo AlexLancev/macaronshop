@@ -16,11 +16,7 @@ const OurAdvantages = ({
 	} = ourAdvantagesData[ourAdvantagesKey] ?? ourAdvantagesDefault;
 
 	return (
-		<div
-			flex="~ row"
-			items="center"
-			gap="x-2"
-		>
+		<div className="flex items-center gap-x-2">
 			<Image
 				src={iconUrl}
 				width={width}
@@ -28,7 +24,7 @@ const OurAdvantages = ({
 				alt=""
 				aria-hidden
 			/>
-			<span block="~ block">{description}</span>
+			<span className="block">{description}</span>
 		</div>
 	);
 };

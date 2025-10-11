@@ -19,14 +19,7 @@ const carouselConfig = {
 
 const TopBar = () => {
 	return (
-		<div
-			bg="bgBlue"
-			p="3"
-			flex="~ row"
-			justify="center"
-			items="center"
-			text="lg"
-		>
+		<div className="flex items-center justify-center bg-customSkyBlue p-3 text-lg">
 			<Carousel carouselConfig={carouselConfig}>
 				{topBarData?.map((elem, index) => (
 					<div

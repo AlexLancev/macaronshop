@@ -16,7 +16,7 @@ export default function MenuItem({
 	return (
 		<li>
 			<Link
-				font="uppercase"
+				className="uppercase"
 				href={path}
 			>
 				{linkName}

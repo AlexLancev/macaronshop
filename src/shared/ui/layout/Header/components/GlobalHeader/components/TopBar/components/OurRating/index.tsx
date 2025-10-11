@@ -9,21 +9,17 @@ const OurRating = ({ ourRatingKey }: { ourRatingKey: OurRatingKeyType }) => {
 		ourRatingData[ourRatingKey] ?? ourRatingDefault;
 
 	return (
-		<div
-			flex="~ row"
-			items="center"
-			gap="x-2"
-		>
+		<div className="flex items-center gap-x-2">
 			Наш рейтинг в
 			<Link
-				text="blue lg"
+				className="text-[rgb(0,0,255)] text-lg"
 				href={path}
 			>
 				{name}
 			</Link>
-			<span font="500">{grade}</span>
+			<span className="font-bold">{grade}</span>
 			на основании
-			<span font="500">{quantity}+</span>
+			<span className="font-medium">{quantity}+</span>
 			отзывов
 		</div>
 	);

@@ -12,8 +12,8 @@
   "style": "default",
   "tailwind": {
     "baseColor": "neutral",
-    "config": "uno.config.ts",
-    "css": "./src/styles/index.css",
+    "config": "",
+    "css": "./src/shared/styles/index.css",
     "cssVariables": true,
     "prefix": ""
   },

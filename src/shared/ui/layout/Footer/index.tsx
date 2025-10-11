@@ -1,3 +1,3 @@
-const Footer = () => <footer bg='bgGrey'>Footer</footer>;
+const Footer = () => <footer className="bg-customGray">Footer</footer>;
 
 export default Footer;

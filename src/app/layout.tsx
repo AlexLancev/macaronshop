@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/shared/lib/utils/cn";
 
-import "@unocss/reset/tailwind.css";
 import "@/shared/styles/index.css";
 
 import Footer from "@/shared/ui/layout/Footer";

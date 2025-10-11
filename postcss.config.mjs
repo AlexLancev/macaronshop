@@ -1,7 +1,6 @@
 export default {
-  plugins: {
-    '@unocss/postcss': {
-      content: ['./app/**/*.{html,js,ts,jsx,tsx}'],
-    },
-  },
-}
+	plugins: [
+		"postcss-import",
+		"@tailwindcss/postcss",
+	],
+};
