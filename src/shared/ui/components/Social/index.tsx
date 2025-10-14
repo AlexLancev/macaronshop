@@ -1,25 +1,31 @@
 import React from 'react'
 import { TelegramIcon, VkIcon } from './constants'
 
-const SocialData = {
+const socialData = {
 	telegram: {
-		icon: <TelegramIcon fill={red} />,
-		label: '',
+		icon: <TelegramIcon />,
+		label: 'Telegram',
 	},
 	vk: {
-		icon: <VkIcon/>,
-		label: '',
+		icon: <VkIcon />,
+		label: 'VK',
 	},
 } as const
 
 interface SocialPropsType {
-	data: 
+	readonly data: ReadonlyArray<keyof typeof socialData>;
 }
 
-export default function Social({data}: any) {
+export default function Social({ data }: SocialPropsType) {
+	if (!data || data.length === 0) return null;
+
 	return (
 		<ul className='flex items-center gap-x-2'>
-
+			{data.map((keyItem) => (
+				<li key={keyItem} aria-label={socialData[keyItem].label}>
+					{socialData[keyItem].icon}
+				</li>
+			))}
 		</ul>
 	)
 }
