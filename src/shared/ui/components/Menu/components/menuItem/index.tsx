@@ -16,11 +16,12 @@ export default function MenuItem({
 	return (
 		<li>
 			<Link
-				className="uppercase"
+				className="text-sm"
 				href={path}
 			>
 				{linkName}
 			</Link>
+			<ChevronDown strokeWidth={1} />
 			{submenu && submenu.length !== 0 && <SubMenu data={submenu} />}
 		</li>
 	);
