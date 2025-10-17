@@ -8,7 +8,7 @@ export default function SubMenu({ data }: SubMenuPropsType) {
 	if (!data || data.length === 0) return null;
 
 	return (
-		<ul>
+		<ul className="hidden">
 			{data.map((keyItem, idx) => {
 				const { path, linkName } = mainMenuDataCurrent[keyItem];
 				if (!path && !linkName) return null;
