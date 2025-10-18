@@ -1,14 +1,17 @@
 import React from 'react'
 import { TelegramIcon, VkIcon } from './constants'
+import Link from 'next/link';
 
 const socialData = {
 	telegram: {
 		icon: <TelegramIcon />,
-		label: 'Telegram',
+		label: 'перейти в Telegram',
+		path: 'https://t.me/macaron_shop'
 	},
 	vk: {
 		icon: <VkIcon />,
-		label: 'VK',
+		label: 'перейти в VK',
+		path: 'https://vk.com/macaronshop'
 	},
 } as const
 
@@ -20,10 +23,11 @@ export default function Social({ data }: SocialPropsType) {
 	if (!data || data.length === 0) return null;
 
 	return (
-		<ul className='flex items-center gap-x-2'>
+		<ul className='flex items-center gap-x-4'>
 			{data.map((keyItem) => (
-				<li key={keyItem} aria-label={socialData[keyItem].label}>
-					{socialData[keyItem].icon}
+				<li key={keyItem}>
+					<span className='visually-hidden'>{socialData[keyItem].label}</span>
+					<Link href={socialData[keyItem].path} title={socialData[keyItem].label}>{socialData[keyItem].icon}</Link>
 				</li>
 			))}
 		</ul>
