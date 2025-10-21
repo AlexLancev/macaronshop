@@ -2,7 +2,13 @@ import { Smartphone as SmartphoneIcon } from "lucide-react";
 
 export const phoneData = {
 	mobilePhone: {
-		icon: <SmartphoneIcon size={24} stroke="#333333" strokeWidth={1} />,
+		icon: (
+			<SmartphoneIcon
+				size={24}
+				stroke="#333333"
+				strokeWidth={1}
+			/>
+		),
 		patchPhone: 74956680730,
 		namePhone: "+7 495 668-07-30",
 		title: "Позвонить нам",

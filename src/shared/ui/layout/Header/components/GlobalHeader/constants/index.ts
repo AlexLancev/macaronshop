@@ -40,6 +40,7 @@ export const menuInfoData = [
 	},
 	{
 		keyMenu: "companies",
+		submenu: ["corporateGifts", "wholesaleSupplies", "eclairsWholesale"],
 	},
 	{
 		keyMenu: "entireСatalog",

@@ -19,4 +19,6 @@ export interface MainMenuType {
 
 export interface SubMenuPropsType {
 	data: readonly MenuKeysType[];
+	activeMenu: string | null;
+	path: string;
 }
