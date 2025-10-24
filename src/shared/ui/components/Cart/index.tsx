@@ -5,13 +5,13 @@ import React from "react";
 export default function Cart() {
 	return (
 		<Link
-			className="flex items-center gap-x-4"
+			className="flex items-center gap-x-3 text-customGreyMedium hover:text-black duration-300"
 			href="/cart"
 		>
 			<div className="relative">
 				<ShoppingBagIcon
 					size={24}
-					stroke="#333333"
+					stroke="currentColor"
 					strokeWidth={1}
 				/>
 				<span className="-right-2 -bottom-2 absolute grid h-4 place-items-center rounded-full bg-accent-foreground px-1.25 text-white text-xs">

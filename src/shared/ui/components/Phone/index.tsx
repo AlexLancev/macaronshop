@@ -14,7 +14,7 @@ export default function Phone({ keyPhone, className }: PhonePropsType) {
 
 	return (
 		<Link
-			className={cn(className, "flex items-center gap-x-2")}
+			className={cn(className, "flex items-center gap-x-2 text-customGreyMedium hover:text-black duration-300")}
 			href={`tel:${patchPhone}`}
 			title={title}
 		>

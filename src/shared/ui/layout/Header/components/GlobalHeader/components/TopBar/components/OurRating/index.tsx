@@ -12,12 +12,12 @@ const OurRating = ({ ourRatingKey }: { ourRatingKey: OurRatingKeyType }) => {
 		<div className="flex items-center gap-x-2">
 			Наш рейтинг в
 			<Link
-				className="text-[rgb(0,0,255)] text-lg"
+				className="text-customBlue text-lg"
 				href={path}
 			>
 				{name}
 			</Link>
-			<span className="font-bold">{grade}</span>
+			<span className="font-medium">{grade}</span>
 			на основании
 			<span className="font-medium">{quantity}+</span>
 			отзывов

@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import type { MainMenuRenderType } from "../../types";
 
 import { cn } from "@/shared/lib/utils/cn";
-import { mainMenuDataCurrent } from "../../constants";
+import { type MenuKeysType, mainMenuDataCurrent } from "../../constants";
 import SubMenu from "../submenu";
 
 export default function MenuItem({
@@ -38,6 +38,10 @@ export default function MenuItem({
 	const { path, linkName } = mainMenuDataCurrent[keyMenu];
 	if (!path && !linkName) return null;
 
+	const isSubmenu = (keyArray: readonly MenuKeysType[] | undefined) => {
+		return keyArray && keyArray.length !== 0;
+	};
+
 	return (
 		<li
 			className="relative"
@@ -46,26 +50,30 @@ export default function MenuItem({
 			onFocus={() => handleFocus(path)}
 		>
 			<Link
-				className="text-sm flex items-center gap-x-1"
+				className={cn(
+					isSubmenu(submenu) && "after:content-none",
+					"underlineDecor flex items-center gap-x-1 text-sm text-customGreyMedium hover:text-black duration-300",
+				)}
 				href={path}
 			>
 				{linkName}
-				{submenu && submenu.length !== 0 && (
-
+				{isSubmenu(submenu) && (
 					<IconChevronDown
-						className={cn("duration-200 ease-in-out", activeMenu === path && "rotate-180")}
+						className={cn(
+							"duration-200 ease-in-out",
+							activeMenu === path && "rotate-180",
+						)}
 						strokeWidth={1}
+						stroke="currentColor"
 					/>
 				)}
 			</Link>
-			{submenu && submenu.length !== 0 && (
-				<>
-					<SubMenu
-						data={submenu}
-						activeMenu={activeMenu}
-						path={path}
-					/>
-				</>
+			{isSubmenu(submenu) && (
+				<SubMenu
+					data={submenu}
+					activeMenu={activeMenu}
+					path={path}
+				/>
 			)}
 		</li>
 	);

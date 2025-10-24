@@ -6,13 +6,12 @@
   --breakpoint-xxs: 525px;
   --breakpoint-3xl: 1920px;
 
-  --font-customFontMontserrat: 'Montserrat', sans-serif;
-  
-  /* Цвета для shadcn/ui */
+  --font-customFontMontserrat: "Montserrat", sans-serif;
+
   --color-background: rgb(247, 235, 229);
   --color-foreground: rgb(41, 41, 41);
-  
-  /* Ваши кастомные цвета */
+  --color-customGreyMedium: rgb(80, 80, 80);
+
   --color-customSkyBlue: rgb(212, 233, 249);
   --color-customMilk: rgb(242, 243, 244);
   --color-customWhite: rgb(255, 255, 255);
@@ -22,33 +21,73 @@
   --color-customRed: rgb(231, 66, 106);
   --color-customPink: rgb(254, 176, 225);
   --color-customTextMain: rgb(41, 41, 41);
-  
-  /* Дополнительные переменные для shadcn */
+
   --color-primary: var(--color-customBlue);
   --color-primary-foreground: white;
-  
+
   --color-secondary: var(--color-customGray);
   --color-secondary-foreground: var(--color-customTextMain);
-  
+
   --color-muted: var(--color-customGray);
   --color-muted-foreground: rgb(100, 100, 100);
-  
+
   --color-accent: var(--color-customSkyBlue);
   --color-accent-foreground: var(--color-customTextMain);
-  
+
   --color-destructive: var(--color-customRed);
   --color-destructive-foreground: white;
-  
+
   --color-border: rgb(200, 200, 200);
   --color-input: rgb(250, 250, 250);
   --color-ring: var(--color-customBlue);
 }
 
 @utility container {
-	margin: 0 auto;
-	padding: 0 15px;
-	width: 100%;
-	max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1240px;
+}
+
+@utility underlineDecor {
+  position: relative;
+  transition-duration: 0.4s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-customRed);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+		right: auto;
+		left: 0;
+  }
+}
+
+@utility discount {
+	position: relative;
+
+	:after {
+		content: "%";
+		width: 1.75em;
+		height: 1.75em;
+		display: flex
+		align-items: center;
+		justify-content: center;
+		background: var(--color-customRed);
+		color: #fff;
+		margin-left: 5px;
+		border-radius: 100%;
+		margin-top: -7px;
+	}
 }
 
 body {

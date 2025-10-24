@@ -5,7 +5,7 @@ export const phoneData = {
 		icon: (
 			<SmartphoneIcon
 				size={24}
-				stroke="#333333"
+				stroke="currentColor"
 				strokeWidth={1}
 			/>
 		),
