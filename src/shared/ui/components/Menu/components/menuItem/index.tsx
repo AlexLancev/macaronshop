@@ -7,11 +7,20 @@ import { useRef, useState } from "react";
 import type { MainMenuRenderType } from "../../types";
 
 import { cn } from "@/shared/lib/utils/cn";
-import { type MenuKeysType, mainMenuDataCurrent } from "../../constants";
+import {
+	type MenuKeysType,
+	iconData,
+	mainMenuDataCurrent,
+} from "../../constants";
 import SubMenu from "../submenu";
 
+const discountIconConfig = {
+	size: 24,
+	color: "rgb(231, 66, 106)",
+} as const;
+
 export default function MenuItem({
-	data: { keyMenu, submenu },
+	data: { keyMenu, submenu, isIcon },
 }: {
 	data: MainMenuRenderType;
 }) {
@@ -35,12 +44,12 @@ export default function MenuItem({
 		setActiveMenu(path);
 	};
 
-	const { path, linkName } = mainMenuDataCurrent[keyMenu];
-	if (!path && !linkName) return null;
-
 	const isSubmenu = (keyArray: readonly MenuKeysType[] | undefined) => {
 		return keyArray && keyArray.length !== 0;
 	};
+
+	const { path, linkName } = mainMenuDataCurrent[keyMenu];
+	if (!path && !linkName) return null;
 
 	return (
 		<li
@@ -52,11 +61,18 @@ export default function MenuItem({
 			<Link
 				className={cn(
 					isSubmenu(submenu) && "after:content-none",
-					"underlineDecor flex items-center gap-x-1 text-sm text-customGreyMedium hover:text-black duration-300",
+					"underlineDecor flex items-center gap-x-1.5 text-customGreyMedium text-sm duration-300 hover:text-black",
 				)}
 				href={path}
 			>
+
 				{linkName}
+
+				{isIcon && isIcon in iconData && (
+						iconData[isIcon](discountIconConfig)
+					)
+				}
+
 				{isSubmenu(submenu) && (
 					<IconChevronDown
 						className={cn(
@@ -67,7 +83,9 @@ export default function MenuItem({
 						stroke="currentColor"
 					/>
 				)}
+
 			</Link>
+
 			{isSubmenu(submenu) && (
 				<SubMenu
 					data={submenu}
@@ -75,6 +93,7 @@ export default function MenuItem({
 					path={path}
 				/>
 			)}
+
 		</li>
 	);
 }

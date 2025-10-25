@@ -1,4 +1,4 @@
-import type { MenuKeysType } from "../constants";
+import type { MenuIconKeys, MenuKeysType } from "../constants";
 
 export interface MainMenuDataType {
 	path: string;
@@ -8,6 +8,7 @@ export interface MainMenuDataType {
 
 export interface MainMenuRenderType {
 	keyMenu: MenuKeysType;
+	isIcon?: MenuIconKeys;
 	submenu?: readonly MenuKeysType[];
 }
 

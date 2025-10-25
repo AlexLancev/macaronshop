@@ -5,7 +5,7 @@ import React from "react";
 export default function Cart() {
 	return (
 		<Link
-			className="flex items-center gap-x-3 text-customGreyMedium hover:text-black duration-300"
+			className="flex items-center gap-x-3 text-customGreyMedium duration-300 hover:text-black"
 			href="/cart"
 		>
 			<div className="relative">

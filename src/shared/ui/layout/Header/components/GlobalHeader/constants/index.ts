@@ -1,6 +1,7 @@
 export const menuSaleData = [
 	{
 		keyMenu: "sweetDays",
+		isIcon: "discount",
 	},
 	{
 		keyMenu: "giftSets",

@@ -9,7 +9,7 @@ export const TelegramIcon = ({ fill }: IconType) => {
 			width="18"
 			height="18"
 			viewBox="0 0 22 19"
-			fill='currentColor'
+			fill="currentColor"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
@@ -28,7 +28,7 @@ export const VkIcon = ({ fill }: IconType) => {
 			width="18"
 			height="18"
 			viewBox="0 0 30 18"
-			fill='currentColor'
+			fill="currentColor"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path

@@ -13,10 +13,10 @@ export default function Menu({
 	return (
 		<nav aria-label={ariaLabel}>
 			<ul className={cn(className, "flex items-center gap-x-4")}>
-				{data.map(({ keyMenu, submenu }, idx) => (
+				{data.map((menuItem, idx) => (
 					<MenuItem
 						key={idx}
-						data={{ keyMenu, submenu }}
+						data={menuItem}
 					/>
 				))}
 			</ul>

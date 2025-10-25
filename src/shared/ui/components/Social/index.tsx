@@ -31,7 +31,7 @@ export default function Social({ data }: SocialPropsType) {
 					<Link
 						href={socialData[keyItem].path}
 						title={socialData[keyItem].label}
-						className="text-customGreyMedium hover:text-black duration-300"
+						className="text-customGreyMedium duration-300 hover:text-black"
 					>
 						{socialData[keyItem].icon}
 					</Link>
