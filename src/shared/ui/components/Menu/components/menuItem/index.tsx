@@ -1,22 +1,23 @@
 "use client";
 
-import { ChevronDown as IconChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
 import type { MainMenuRenderType } from "../../types";
 
+import { icons } from "@/shared/constants/icons";
 import { cn } from "@/shared/lib/utils/cn";
-import {
-	type MenuKeysType,
-	iconData,
-	mainMenuDataCurrent,
-} from "../../constants";
+import { type MenuKeysType, mainMenuDataCurrent } from "../../constants";
 import SubMenu from "../submenu";
 
 const discountIconConfig = {
 	size: 24,
 	color: "rgb(231, 66, 106)",
+} as const;
+
+const chevronDownIconConfig = {
+	strokeWidth: 1,
+	stroke: "currentColor",
 } as const;
 
 export default function MenuItem({
@@ -65,25 +66,15 @@ export default function MenuItem({
 				)}
 				href={path}
 			>
-
 				{linkName}
 
-				{isIcon && isIcon in iconData && (
-						iconData[isIcon](discountIconConfig)
-					)
-				}
+				{isIcon && icons[isIcon](discountIconConfig, "pulse")}
 
-				{isSubmenu(submenu) && (
-					<IconChevronDown
-						className={cn(
-							"duration-200 ease-in-out",
-							activeMenu === path && "rotate-180",
-						)}
-						strokeWidth={1}
-						stroke="currentColor"
-					/>
-				)}
-
+				{isSubmenu(submenu) &&
+					icons["iconChevronDown"](
+						chevronDownIconConfig,
+						cn("duration-200 ease-in-out", activeMenu === path && "rotate-180"),
+					)}
 			</Link>
 
 			{isSubmenu(submenu) && (
@@ -93,7 +84,6 @@ export default function MenuItem({
 					path={path}
 				/>
 			)}
-
 		</li>
 	);
 }

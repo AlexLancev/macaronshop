@@ -1,8 +1,3 @@
-import {
-	BadgePercent as BadgePercentIcon,
-	type LucideProps,
-} from "lucide-react";
-
 import { PATHS } from "@/shared/lib/paths";
 
 export const mainMenuDataCurrent = {
@@ -112,20 +107,4 @@ export const mainMenuDataCurrent = {
 	},
 } as const;
 
-const DiscountIcon = ({ configIcon }: { configIcon: LucideProps }) => {
-	return (
-		<BadgePercentIcon
-			className="pulse"
-			{...configIcon}
-		/>
-	);
-};
-
-export const iconData = {
-	discount: (config: LucideProps) => (
-		<DiscountIcon configIcon={config} />
-	),
-} as const;
-
 export type MenuKeysType = keyof typeof mainMenuDataCurrent;
-export type MenuIconKeys = keyof typeof iconData;

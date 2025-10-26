@@ -1,6 +1,13 @@
-import { ShoppingBag as ShoppingBagIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+
+import { icons } from "@/shared/constants/icons";
+
+const shoppingBagIconConfig = {
+	size: 24,
+	stroke: "currentColor",
+	strokeWidth: 1,
+} as const;
 
 export default function Cart() {
 	return (
@@ -9,11 +16,7 @@ export default function Cart() {
 			href="/cart"
 		>
 			<div className="relative">
-				<ShoppingBagIcon
-					size={24}
-					stroke="currentColor"
-					strokeWidth={1}
-				/>
+				{icons["shoppingBag"](shoppingBagIconConfig)}
 				<span className="-right-2 -bottom-2 absolute grid h-4 place-items-center rounded-full bg-accent-foreground px-1.25 text-white text-xs">
 					{0}
 				</span>

@@ -1,9 +1,9 @@
-import type { MenuIconKeys, MenuKeysType } from "../constants";
+import type { MenuIconKeys } from "@/shared/constants/icons";
+import type { MenuKeysType } from "../constants";
 
 export interface MainMenuDataType {
 	path: string;
 	linkName: string;
-	icon?: string;
 }
 
 export interface MainMenuRenderType {
