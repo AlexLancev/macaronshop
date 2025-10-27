@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
-
 import type { phoneData } from "../constants";
+
+type keyPhone = keyof typeof phoneData;
 
 export interface PhoneDataItemType {
 	patchPhone: number;
 	namePhone: string;
 	title: string;
-	icon?: ReactNode;
+	icon?: keyPhone;
 }
 
 export interface PhonePropsType {
 	className?: string;
-	keyPhone: keyof typeof phoneData;
+	keyPhone: keyPhone;
 }

@@ -1,21 +1,7 @@
 "use client";
 
-import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
-
-import { carouselTopBarData, topBarData } from "./constants";
+import { carouselConfig, carouselTopBarData, topBarData } from "./constants";
 import { Carousel } from "@/shared/ui/components/Carousel";
-
-const carouselConfig = {
-	options: { loop: true },
-	plugins: [
-		Autoplay({
-			delay: 3000,
-			stopOnInteraction: false,
-		}),
-		Fade(),
-	],
-};
 
 const TopBar = () => {
 	return (

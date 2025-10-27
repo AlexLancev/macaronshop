@@ -1,16 +1,13 @@
 import Link from "next/link";
 
-import type { PhoneDataItemType, PhonePropsType } from "./types";
+import type { PhonePropsType } from "./types";
 
-import { phoneData } from "./constants";
+import { mobilePhoneConfigIcon, phoneData } from "./constants";
 import { cn } from "@/shared/lib/utils/cn";
+import { icons } from "@/shared/constants/icons";
 
 export default function Phone({ keyPhone, className }: PhonePropsType) {
-	if (!phoneData || !(keyPhone in phoneData)) return null;
-
-	const { icon, patchPhone, namePhone, title } = phoneData[
-		keyPhone
-	] as PhoneDataItemType;
+	const { icon, patchPhone, namePhone, title } = phoneData[keyPhone];
 
 	return (
 		<Link
@@ -21,7 +18,7 @@ export default function Phone({ keyPhone, className }: PhonePropsType) {
 			href={`tel:${patchPhone}`}
 			title={title}
 		>
-			{icon && icon}
+			{icon && icons[icon](mobilePhoneConfigIcon)}
 			{namePhone}
 		</Link>
 	);

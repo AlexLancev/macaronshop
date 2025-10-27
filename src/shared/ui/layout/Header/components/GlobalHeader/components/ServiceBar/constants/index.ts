@@ -1,0 +1,1 @@
+export const socialData = ["telegram", "vk"] as const;

@@ -3,6 +3,7 @@ import {
 	ChevronDown,
 	type LucideProps,
 	ShoppingBag,
+	Smartphone,
 } from "lucide-react";
 import type { SVGProps } from "react";
 
@@ -78,6 +79,15 @@ const VkIcon = ({ configIcon, className }: IconPropsType) => {
 	);
 };
 
+const SmartphoneIcon = ({ configIcon, className }: IconPropsType) => {
+	return (
+		<Smartphone
+			className={className}
+			{...configIcon}
+		/>
+	);
+};
+
 export const icons = {
 	discount: (config?: LucideProps, className?: string) => (
 		<DiscountIcon
@@ -85,7 +95,7 @@ export const icons = {
 			className={className}
 		/>
 	),
-	iconChevronDown: (config?: LucideProps, className?: string) => (
+	chevronDown: (config?: LucideProps, className?: string) => (
 		<ChevronDownIcon
 			configIcon={config}
 			className={className}
@@ -93,6 +103,12 @@ export const icons = {
 	),
 	shoppingBag: (config?: LucideProps, className?: string) => (
 		<ShoppingBagIcon
+			configIcon={config}
+			className={className}
+		/>
+	),
+	mobilePhone: (config?: LucideProps, className?: string) => (
+		<SmartphoneIcon
 			configIcon={config}
 			className={className}
 		/>

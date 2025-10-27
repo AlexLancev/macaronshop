@@ -3,8 +3,7 @@ import Menu from "@/shared/ui/components/Menu";
 import Phone from "@/shared/ui/components/Phone";
 import Social from "@/shared/ui/components/Social";
 import { menuServiceData } from "../../constants";
-
-const socialData = ["telegram", "vk"] as const;
+import { socialData } from "./constants";
 
 export default function ServiceBar() {
 	return (

@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 
 import OurAdvantages from "../components/OurAdvantages";
 import OurRating from "../components/OurRating";
+import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 
 export const topBarData = [
 	"google",
@@ -38,4 +40,15 @@ export const carouselTopBarData: Record<
 	truckDelivery: {
 		component: <OurAdvantages ourAdvantagesKey={"truckDelivery"} />,
 	},
+};
+
+export const carouselConfig = {
+	options: { loop: true },
+	plugins: [
+		Autoplay({
+			delay: 3000,
+			stopOnInteraction: false,
+		}),
+		Fade(),
+	],
 };

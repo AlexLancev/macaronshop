@@ -2,12 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import { icons } from "@/shared/constants/icons";
-
-const shoppingBagIconConfig = {
-	size: 24,
-	stroke: "currentColor",
-	strokeWidth: 1,
-} as const;
+import { shoppingBagIconConfig } from "./constants";
 
 export default function Cart() {
 	return (

@@ -71,7 +71,7 @@ export default function MenuItem({
 				{isIcon && icons[isIcon](discountIconConfig, "pulse")}
 
 				{isSubmenu(submenu) &&
-					icons["iconChevronDown"](
+					icons["chevronDown"](
 						chevronDownIconConfig,
 						cn("duration-200 ease-in-out", activeMenu === path && "rotate-180"),
 					)}
