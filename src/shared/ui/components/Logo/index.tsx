@@ -1,23 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/shared/lib/utils/cn";
-
-interface LogoPropsType {
+interface LogoProps {
 	className?: string;
 }
 
-export default function Logo({ className }: LogoPropsType) {
+export default function Logo({ className }: LogoProps) {
 	return (
 		<Link
-			className={cn(className, "")}
 			href="/"
 		>
+			<span className="visually-hidden">Логотип компании Макароншоп</span>
 			<Image
 				src="/images/logo.svg"
 				width={100}
 				height={100}
 				alt="Логотип компании Макароншоп"
+				title="Логотип компании Макароншоп"
 			/>
 		</Link>
 	);

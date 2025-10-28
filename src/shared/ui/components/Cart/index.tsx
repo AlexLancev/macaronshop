@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import { icons } from "@/shared/constants/icons";
 import { shoppingBagIconConfig } from "./constants";
+import { iconRender } from "@/shared/lib/constants/icons";
 
 export default function Cart() {
 	return (
@@ -11,7 +11,7 @@ export default function Cart() {
 			href="/cart"
 		>
 			<div className="relative">
-				{icons["shoppingBag"](shoppingBagIconConfig)}
+				{iconRender["shoppingBag"](shoppingBagIconConfig)}
 				<span className="-right-2 -bottom-2 absolute grid h-4 place-items-center rounded-full bg-accent-foreground px-1.25 text-white text-xs">
 					{0}
 				</span>

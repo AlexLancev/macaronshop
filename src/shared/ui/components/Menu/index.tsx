@@ -8,11 +8,10 @@ export default function Menu({
 	ariaLabel = "Главное меню сайта",
 	className,
 }: MainMenuType) {
-	if (!data || data.length === 0) return null;
-
+	
 	return (
 		<nav aria-label={ariaLabel}>
-			<ul className={cn(className, "flex items-center gap-x-4")}>
+			<ul className={cn("flex items-center gap-x-12 uppercase", className)}>
 				{data.map((menuItem, idx) => (
 					<MenuItem
 						key={idx}

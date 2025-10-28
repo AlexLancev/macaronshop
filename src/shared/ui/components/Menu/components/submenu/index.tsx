@@ -1,13 +1,11 @@
 import Link from "next/link";
 
-import type { SubMenuPropsType } from "../../types";
+import type { SubMenuProps } from "../../types";
 
 import { cn } from "@/shared/lib/utils/cn";
 import { mainMenuDataCurrent } from "../../constants";
 
-export default function SubMenu({ data, activeMenu, path }: SubMenuPropsType) {
-	if (!data || data.length === 0) return null;
-
+export default function SubMenu({ data, activeMenu, path }: SubMenuProps) {
 	return (
 		<ul
 			className={cn(
@@ -20,7 +18,6 @@ export default function SubMenu({ data, activeMenu, path }: SubMenuPropsType) {
 		>
 			{data.map((keyItem, idx) => {
 				const { path, linkName } = mainMenuDataCurrent[keyItem];
-				if (!path && !linkName) return null;
 
 				return (
 					<li

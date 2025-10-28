@@ -1,9 +1,9 @@
+import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 import type { ReactNode } from "react";
 
 import OurAdvantages from "../components/OurAdvantages";
 import OurRating from "../components/OurRating";
-import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
 
 export const topBarData = [
 	"google",

@@ -27,7 +27,7 @@ const RootLayout = ({
 	children: ReactNode;
 }>) => (
 	<html lang="ru">
-		<body className={cn(MontserratSans.variable, "font-sans")}>
+		<body className={cn("font-sans", MontserratSans.variable)}>
 			<Header />
 			{children}
 			<Footer />

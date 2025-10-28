@@ -1,10 +1,10 @@
 export const phoneData = {
 	mobilePhone: {
-		icon: 'mobilePhone',
+		icon: "mobilePhone",
 		patchPhone: 74956680730,
 		namePhone: "+7 495 668-07-30",
 		title: "Позвонить нам",
-	}
+	},
 } as const;
 
 export const mobilePhoneConfigIcon = {

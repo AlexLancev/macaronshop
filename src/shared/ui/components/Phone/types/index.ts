@@ -9,7 +9,7 @@ export interface PhoneDataItemType {
 	icon?: keyPhone;
 }
 
-export interface PhonePropsType {
+export interface PhoneProps {
 	className?: string;
 	keyPhone: keyPhone;
 }

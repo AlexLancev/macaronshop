@@ -1,4 +1,4 @@
-import type { MenuIconKeys } from "@/shared/constants/icons";
+import type { MenuIconKeys } from "@/shared/lib/constants/icons";
 import type { MenuKeysType } from "../constants";
 
 export interface MainMenuDataType {
@@ -18,8 +18,8 @@ export interface MainMenuType {
 	className?: string;
 }
 
-export interface SubMenuPropsType {
-	data: readonly MenuKeysType[] | undefined;
+export interface SubMenuProps {
+	data: readonly MenuKeysType[];
 	activeMenu: string | null;
 	path: string;
 }

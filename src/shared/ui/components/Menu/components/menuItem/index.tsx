@@ -5,20 +5,11 @@ import { useRef, useState } from "react";
 
 import type { MainMenuRenderType } from "../../types";
 
-import { icons } from "@/shared/constants/icons";
+import { iconRender } from "@/shared/lib/constants/icons";
 import { cn } from "@/shared/lib/utils/cn";
 import { type MenuKeysType, mainMenuDataCurrent } from "../../constants";
 import SubMenu from "../submenu";
-
-const discountIconConfig = {
-	size: 24,
-	color: "rgb(231, 66, 106)",
-} as const;
-
-const chevronDownIconConfig = {
-	strokeWidth: 1,
-	stroke: "currentColor",
-} as const;
+import { chevronDownIconConfig, discountIconConfig } from "./constants";
 
 export default function MenuItem({
 	data: { keyMenu, submenu, isIcon },
@@ -50,7 +41,6 @@ export default function MenuItem({
 	};
 
 	const { path, linkName } = mainMenuDataCurrent[keyMenu];
-	if (!path && !linkName) return null;
 
 	return (
 		<li
@@ -61,23 +51,23 @@ export default function MenuItem({
 		>
 			<Link
 				className={cn(
-					isSubmenu(submenu) && "after:content-none",
 					"underlineDecor flex items-center gap-x-1.5 text-customGreyMedium text-sm duration-300 hover:text-black",
+					isSubmenu(submenu) && "after:content-none",
 				)}
 				href={path}
 			>
 				{linkName}
 
-				{isIcon && icons[isIcon](discountIconConfig, "pulse")}
+				{isIcon && iconRender[isIcon](discountIconConfig, "pulse")}
 
 				{isSubmenu(submenu) &&
-					icons["chevronDown"](
+					iconRender["chevronDown"](
 						chevronDownIconConfig,
 						cn("duration-200 ease-in-out", activeMenu === path && "rotate-180"),
 					)}
 			</Link>
 
-			{isSubmenu(submenu) && (
+			{submenu && isSubmenu(submenu) && (
 				<SubMenu
 					data={submenu}
 					activeMenu={activeMenu}

@@ -4,18 +4,12 @@ import { menuInfoData, menuSaleData } from "../../constants";
 
 export default function PrimaryNavigation() {
 	return (
-		<div className="flex items-center bg-customWhite">
+		<div className="flex items-center bg-white">
 			<div className="container">
 				<div className="flex items-center justify-between gap-x-3 py-5">
-					<Menu
-						data={menuSaleData}
-						className="flex items-center gap-x-12 uppercase"
-					/>
+					<Menu data={menuSaleData} />
 					<Logo />
-					<Menu
-						data={menuInfoData}
-						className="flex items-center gap-x-12 uppercase"
-					/>
+					<Menu data={menuInfoData} />
 				</div>
 			</div>
 		</div>
