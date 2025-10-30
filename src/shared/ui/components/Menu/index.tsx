@@ -8,7 +8,6 @@ export default function Menu({
 	ariaLabel = "Главное меню сайта",
 	className,
 }: MainMenuType) {
-	
 	return (
 		<nav aria-label={ariaLabel}>
 			<ul className={cn("flex items-center gap-x-12 uppercase", className)}>

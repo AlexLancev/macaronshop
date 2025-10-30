@@ -7,9 +7,7 @@ interface LogoProps {
 
 export default function Logo({ className }: LogoProps) {
 	return (
-		<Link
-			href="/"
-		>
+		<Link href="/">
 			<span className="visually-hidden">Логотип компании Макароншоп</span>
 			<Image
 				src="/images/logo.svg"

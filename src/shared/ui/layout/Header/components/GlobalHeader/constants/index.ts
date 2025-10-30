@@ -6,10 +6,6 @@ export const menuSaleData = [
 	{
 		keyMenu: "giftSets",
 		submenu: [
-			"teachesDay",
-			"allSets",
-			"birthDay",
-			"classicMacarons",
 			"weddingProposals",
 			"candyBars",
 			"corporateGifts",

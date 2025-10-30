@@ -10,7 +10,10 @@ export default function ServiceBar() {
 		<div className="bg-customBeige">
 			<div className="container">
 				<div className="flex items-center justify-between gap-x-2 py-3">
-					<Menu data={menuServiceData} className="gap-x-4 normal-case" />
+					<Menu
+						data={menuServiceData}
+						className="gap-x-4 normal-case"
+					/>
 					<div className="flex items-center gap-x-8">
 						<Phone keyPhone={"mobilePhone"} />
 						<Cart />

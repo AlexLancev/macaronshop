@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 
 import type { MainMenuRenderType } from "../../types";
 
+import { chevronDownIconConfig, discountIconConfig } from "./constants";
 import { iconRender } from "@/shared/lib/constants/icons";
 import { cn } from "@/shared/lib/utils/cn";
 import { type MenuKeysType, mainMenuDataCurrent } from "../../constants";
 import SubMenu from "../submenu";
-import { chevronDownIconConfig, discountIconConfig } from "./constants";
 
 export default function MenuItem({
 	data: { keyMenu, submenu, isIcon },

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function GiftSets() {
+export default function Freshness() {
 	return (
 		<div>
-			GiftSets
+			Freshness
 		</div>
 	)
 }
