@@ -1,7 +1,3 @@
 export default function WeddingProposals() {
-	return (
-		<div>
-			WeddingProposals
-		</div>
-	)
+	return <div>WeddingProposals</div>;
 }

@@ -1,7 +1,3 @@
 export default function CakePops() {
-	return (
-		<div>
-			CakePops
-		</div>
-	)
+	return <div>CakePops</div>;
 }

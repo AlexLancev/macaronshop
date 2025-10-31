@@ -1,7 +1,3 @@
 export default function WaffleCones() {
-	return (
-		<div>
-			WaffleCones
-		</div>
-	)
+	return <div>WaffleCones</div>;
 }

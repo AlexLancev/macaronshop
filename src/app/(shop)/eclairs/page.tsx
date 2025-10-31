@@ -1,7 +1,3 @@
 export default function Eclairs() {
-	return (
-		<div>
-			Eclairs
-		</div>
-	)
+	return <div>Eclairs</div>;
 }

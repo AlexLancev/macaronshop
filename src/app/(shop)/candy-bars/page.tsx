@@ -1,7 +1,3 @@
 export default function CandyBars() {
-	return (
-		<div>
-			CandyBars
-		</div>
-	)
+	return <div>CandyBars</div>;
 }

@@ -1,7 +1,3 @@
 export default function AssembleSet() {
-	return (
-		<div>
-			AssembleSet
-		</div>
-	)
+	return <div>AssembleSet</div>;
 }

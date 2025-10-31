@@ -5,11 +5,7 @@ export const menuSaleData = [
 	},
 	{
 		keyMenu: "giftSets",
-		submenu: [
-			"weddingProposals",
-			"candyBars",
-			"corporateGifts",
-		],
+		submenu: ["weddingProposals", "candyBars", "corporateGifts"],
 	},
 	{
 		keyMenu: "assembleSet",

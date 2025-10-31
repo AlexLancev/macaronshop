@@ -1,7 +1,3 @@
 export default function CreateDesign() {
-	return (
-		<div>
-			CreateDesign
-		</div>
-	)
+	return <div>CreateDesign</div>;
 }

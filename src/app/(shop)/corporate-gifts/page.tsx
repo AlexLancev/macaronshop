@@ -1,7 +1,3 @@
 export default function CorporateGifts() {
-	return (
-		<div>
-			CorporateGifts
-		</div>
-	)
+	return <div>CorporateGifts</div>;
 }

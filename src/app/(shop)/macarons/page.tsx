@@ -1,7 +1,3 @@
 export default function Macarons() {
-	return (
-		<div>
-			Macarons
-		</div>
-	)
+	return <div>Macarons</div>;
 }

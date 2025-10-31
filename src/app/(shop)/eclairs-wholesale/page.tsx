@@ -1,7 +1,3 @@
 export default function EclairsWholesale() {
-	return (
-		<div>
-			EclairsWholesale
-		</div>
-	)
+	return <div>EclairsWholesale</div>;
 }
