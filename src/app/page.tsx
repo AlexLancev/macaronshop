@@ -2,7 +2,7 @@
 
 // console.log(initialMacarons);
 
-import CategoryLinks from "@/shared/features/home/components/categoryLinks";
+import CategoryLinks from "@/shared/features/home/components/category";
 import Hero from "@/shared/features/home/components/hero";
 
 export default async function Home() {

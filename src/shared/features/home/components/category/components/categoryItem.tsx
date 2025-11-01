@@ -1,15 +1,19 @@
-import React from "react";
-import { keyof } from "zod";
+import Link from "next/link";
 
+import { iconRender } from "@/shared/lib/constants/icons";
 import { PATHS } from "@/shared/lib/paths";
 
-type CategoryLinksKeys = keyof typeof categoryLinksData;
+type CategorysKeys = keyof typeof categoryData;
 
-const categoryLinksData = {
+interface CategoryItemProps {
+	data: CategorysKeys;
+}
+
+const categoryData = {
 	giftSets: {
 		id: 1,
 		path: PATHS.mainMenu.giftSets,
-		cardColor: "rgb(244, 151, 110)",
+		cardColor: "#ffdbc3",
 		title: "Подарочные наборы",
 		description:
 			"Подарочные наборы со скидкой. Вы можете подобрать набор на подходящий случай",
@@ -18,7 +22,7 @@ const categoryLinksData = {
 	assembleSet: {
 		id: 2,
 		path: PATHS.mainMenu.assembleSet,
-		cardColor: "rgb(230, 114, 133)",
+		cardColor: "#ffc2cc",
 		title: "Собрать свой набор",
 		description: "Выбрать количество макаронс, и выбрать вкусы",
 		icon: "assembleSet",
@@ -26,7 +30,7 @@ const categoryLinksData = {
 	createDesign: {
 		id: 3,
 		path: PATHS.mainMenu.createDesign,
-		cardColor: "rgb(159, 206, 158)",
+		cardColor: "#b4eab3",
 		title: "Индивидуальная печать",
 		description: "Создать набор со своим дизайном",
 		icon: "createDesign",
@@ -34,7 +38,7 @@ const categoryLinksData = {
 	weddingProposals: {
 		id: 4,
 		path: PATHS.mainMenu.weddingProposals,
-		cardColor: "rgb(229, 131, 131)",
+		cardColor: "#fdd5cd",
 		title: "Свадебные предложения",
 		description:
 			"Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества",
@@ -43,7 +47,7 @@ const categoryLinksData = {
 	corporateGifts: {
 		id: 5,
 		path: PATHS.mainMenu.corporateGifts,
-		cardColor: "rgb(87, 182, 187)",
+		cardColor: "#a8dcdf",
 		title: "Корпоративные подарки",
 		description:
 			"От 85 руб за шт. С уникальным дизайном. Приятный комплимент для коллег и партнёров",
@@ -52,7 +56,7 @@ const categoryLinksData = {
 	wholesaleSupplies: {
 		id: 6,
 		path: PATHS.mainMenu.wholesaleSupplies,
-		cardColor: "rgb(138, 140, 220)",
+		cardColor: "#c4c6ec",
 		title: "Пирожные оптом",
 		description:
 			"Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы",
@@ -60,6 +64,31 @@ const categoryLinksData = {
 	},
 } as const;
 
-export default function CategoryLinks() {
-	return <div>CategoryLinks</div>;
+const angles = [338, 22, 201, 159];
+
+const getItemColor = (color: string, index: number) => {
+	const angle = angles[index % angles.length];
+	return `linear-gradient(${angle}deg, ${color} 50%, ${color}90 50%)`;
+};
+
+export default function CategoryItem({ data }: CategoryItemProps) {
+	const { path, cardColor, title, description, icon } = categoryData[data];
+
+	const categoryIdx = Object.keys(categoryData).indexOf(data);
+
+	return (
+		<li className="shadow-md">
+			<Link
+				href={path}
+				className="block h-full px-22 py-6 text-center text-[#525252]"
+				style={{ background: getItemColor(cardColor, categoryIdx) }}
+			>
+				<div className="m-auto mb-4 grid h-24 w-24 place-items-center rounded-full bg-white">
+					{iconRender[icon]({ fill: cardColor })}
+				</div>
+				<span className="mb-1 block font-semibold text-xl">{title}</span>
+				<p>{description}</p>
+			</Link>
+		</li>
+	);
 }
