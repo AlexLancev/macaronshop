@@ -1,11 +1,10 @@
 import Link from "next/link";
-import React from "react";
 
 import { socialData } from "./constants";
 import { iconRender } from "@/shared/lib/constants/icons";
 
 interface SocialProps {
-	readonly data: ReadonlyArray<keyof typeof socialData>;
+	data: ReadonlyArray<keyof typeof socialData>;
 }
 
 export default function Social({ data }: SocialProps) {

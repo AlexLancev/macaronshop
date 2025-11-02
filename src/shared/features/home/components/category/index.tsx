@@ -1,21 +1,16 @@
-import React from "react";
+import type { CategorysKeys } from "./types";
 
 import CategoryItem from "./components/categoryItem";
 
-const categoryKeys = [
-	"giftSets",
-	"assembleSet",
-	"createDesign",
-	"weddingProposals",
-	"corporateGifts",
-	"wholesaleSupplies",
-] as const;
+interface CategoryProps {
+	data: ReadonlyArray<CategorysKeys>;
+}
 
-export default function Category() {
+export default function Category({ data }: CategoryProps) {
 	return (
 		<div className="container">
 			<ul className="grid grid-cols-2 gap-4">
-				{categoryKeys.map((categoryKey, idx) => (
+				{data.map((categoryKey, idx) => (
 					<CategoryItem
 						key={idx}
 						data={categoryKey}
