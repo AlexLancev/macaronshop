@@ -1,0 +1,51 @@
+export const holidaysData = {
+	mothersDay: {
+		date: "2025-11-27",
+		title: 'День матери',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	newYear: {
+		date: "2026-01-01",
+		title: 'Новый год',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	valentinesDay: {
+		date: "2026-02-14",
+		title: 'День святого валентина',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	fatherlandDay: {
+		date: "2026-02-23",
+		title: 'День защитника отечества',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	womensDay: {
+		date: "2026-03-08",
+		title: 'Международный женский день',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	laborDay: {
+		date: "2026-05-01",
+		title: 'Праздник Весны и Труда',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+	victoryDay: {
+		date: "2026-05-09",
+		title: 'День Победы',
+		path: '',
+		cardColor: '',
+		pathIcon: '/images/holidays/icons/.svg',
+	},
+} as const;
