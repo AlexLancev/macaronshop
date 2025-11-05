@@ -1,5 +1,6 @@
-import dayjs, { type Dayjs } from 'dayjs';
-import { holidaysData } from '../constants';
+import dayjs, { type Dayjs } from "dayjs";
+
+import { holidaysData } from "../constants";
 
 type HolidaysDataKeys = keyof typeof holidaysData;
 
@@ -33,11 +34,14 @@ export const getUpcomingHolidays = (): HolidayWithKey[] => {
 		holidaysData,
 		currentYear,
 		nextYear,
-		today
+		today,
 	);
 
 	// Шаг 2: Фильтруем и сортируем праздники
-	const upcomingHolidays = filterAndSortHolidays(holidaysWithCalculatedDates, today);
+	const upcomingHolidays = filterAndSortHolidays(
+		holidaysWithCalculatedDates,
+		today,
+	);
 
 	// Шаг 3: Возвращаем 5 ближайших праздников
 	return upcomingHolidays.slice(0, 5);
@@ -50,7 +54,7 @@ const calculateHolidayDates = (
 	holidays: typeof holidaysData,
 	currentYear: number,
 	nextYear: number,
-	today: Dayjs
+	today: Dayjs,
 ): HolidayWithSortDate[] => {
 	return (Object.entries(holidays) as [HolidaysDataKeys, Holiday][])
 		.map(([key, holiday]): HolidayWithSortDate | null => {
@@ -61,7 +65,7 @@ const calculateHolidayDates = (
 				holiday.date,
 				currentYear,
 				nextYear,
-				today
+				today,
 			);
 
 			return {
@@ -80,14 +84,14 @@ const calculateNextOccurrence = (
 	dateString: string,
 	currentYear: number,
 	nextYear: number,
-	today: Dayjs
+	today: Dayjs,
 ): Dayjs => {
 	const currentYearDate = dayjs(`${currentYear}-${dateString}`);
 	const nextYearDate = dayjs(`${nextYear}-${dateString}`);
 
 	// Если праздник в текущем году еще не прошел (или сегодня), берем его
 	// Иначе берем праздник в следующем году
-	return currentYearDate.isSame(today, 'day') || currentYearDate.isAfter(today)
+	return currentYearDate.isSame(today, "day") || currentYearDate.isAfter(today)
 		? currentYearDate
 		: nextYearDate;
 };
@@ -97,22 +101,24 @@ const calculateNextOccurrence = (
  */
 const filterAndSortHolidays = (
 	holidays: HolidayWithSortDate[],
-	today: Dayjs
+	today: Dayjs,
 ): HolidayWithKey[] => {
-	return holidays
-		// Оставляем только сегодняшние и будущие праздники
-		.filter(holiday => isTodayOrFuture(holiday._sortDate, today))
-		// Сортируем по возрастанию даты
-		.sort((a, b) => a._sortDate.diff(b._sortDate))
-		// Убираем временное поле для сортировки
-		.map(removeSortDate);
+	return (
+		holidays
+			// Оставляем только сегодняшние и будущие праздники
+			.filter((holiday) => isTodayOrFuture(holiday._sortDate, today))
+			// Сортируем по возрастанию даты
+			.sort((a, b) => a._sortDate.diff(b._sortDate))
+			// Убираем временное поле для сортировки
+			.map(removeSortDate)
+	);
 };
 
 /**
  * Проверяет, что дата сегодня или в будущем
  */
 const isTodayOrFuture = (date: Dayjs, today: Dayjs): boolean => {
-	return date.isSame(today, 'day') || date.isAfter(today);
+	return date.isSame(today, "day") || date.isAfter(today);
 };
 
 /**
