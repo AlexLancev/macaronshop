@@ -8,13 +8,17 @@ export default function Holidays() {
 	return (
 		<section className="py-12">
 			<div className="container">
-				<ul className="flex items-center gap-x-4">
-					{upcomingHolidays.map((holiday, idx) => (
-						<HolidaysItem
-							key={idx}
-							data={holiday}
-						/>
-					))}
+				<ul className="grid grid-cols-6 gap-x-4">
+					{upcomingHolidays.map((holiday) => {
+						const { id } = holiday;
+
+						return (
+							<HolidaysItem
+								key={id}
+								data={holiday}
+							/>
+						)
+					})}
 				</ul>
 			</div>
 		</section>

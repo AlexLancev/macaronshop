@@ -5,11 +5,13 @@ import { holidaysData } from "../constants";
 type HolidaysDataKeys = keyof typeof holidaysData;
 
 interface Holiday {
-	date: string;
+	id: number;
+	date: string | null;
 	title: string;
 	path: string;
 	cardColor: string;
 	pathIcon: string;
+	isPrivateHoliday?: boolean;
 }
 
 export interface HolidayWithKey extends Holiday {
@@ -36,7 +38,6 @@ export const getUpcomingHolidays = (): HolidayWithKey[] => {
 		nextYear,
 		today,
 	);
-
 	// Шаг 2: Фильтруем и сортируем праздники
 	const upcomingHolidays = filterAndSortHolidays(
 		holidaysWithCalculatedDates,
@@ -44,7 +45,7 @@ export const getUpcomingHolidays = (): HolidayWithKey[] => {
 	);
 
 	// Шаг 3: Возвращаем 5 ближайших праздников
-	return upcomingHolidays.slice(0, 5);
+	return upcomingHolidays.slice(0, 6);
 };
 
 /**
@@ -55,14 +56,16 @@ const calculateHolidayDates = (
 	currentYear: number,
 	nextYear: number,
 	today: Dayjs,
-): HolidayWithSortDate[] => {
+) => {
 	return (Object.entries(holidays) as [HolidaysDataKeys, Holiday][])
-		.map(([key, holiday]): HolidayWithSortDate | null => {
+	.map(([key, holiday]): HolidayWithSortDate | null => {
+		const { isPrivateHoliday, date } = holiday;
+		
 			// Пропускаем праздники без даты
-			if (!holiday.date) return null;
+			if (!date?.trim().length && isPrivateHoliday) return null;
 
 			const calculatedDate = calculateNextOccurrence(
-				holiday.date,
+				date,
 				currentYear,
 				nextYear,
 				today,
@@ -81,16 +84,16 @@ const calculateHolidayDates = (
  * Вычисляет следующее occurrence праздника (текущий год или следующий)
  */
 const calculateNextOccurrence = (
-	dateString: string,
+	dateString: string | null,
 	currentYear: number,
 	nextYear: number,
 	today: Dayjs,
 ): Dayjs => {
-	const currentYearDate = dayjs(`${currentYear}-${dateString}`);
-	const nextYearDate = dayjs(`${nextYear}-${dateString}`);
+	const actualDateString = dateString ?? dayjs().format('MM-DD');
+	
+	const currentYearDate = dayjs(`${currentYear}-${actualDateString}`);
+	const nextYearDate = dayjs(`${nextYear}-${actualDateString}`);
 
-	// Если праздник в текущем году еще не прошел (или сегодня), берем его
-	// Иначе берем праздник в следующем году
 	return currentYearDate.isSame(today, "day") || currentYearDate.isAfter(today)
 		? currentYearDate
 		: nextYearDate;

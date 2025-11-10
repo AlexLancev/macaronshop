@@ -1,12 +1,14 @@
 export const holidaysData = {
 	birthDay: {
-		date: "",
+		id: 1,
+		isPrivateHoliday: false,
 		title: "День рождения",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/birthDay.svg",
 	},
 	mothersDay: {
+		id: 2,
 		date: "11-27",
 		title: "День матери",
 		path: "",
@@ -14,6 +16,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/mothersDay.svg",
 	},
 	newYear: {
+		id: 3,
 		date: "01-01",
 		title: "Новый год",
 		path: "",
@@ -21,6 +24,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/newYear.svg",
 	},
 	valentinesDay: {
+		id: 4,
 		date: "02-14",
 		title: "День святого валентина",
 		path: "",
@@ -28,6 +32,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/valentinesDay.svg",
 	},
 	fatherlandDay: {
+		id: 5,
 		date: "02-23",
 		title: "День защитника отечества",
 		path: "",
@@ -35,6 +40,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/fatherlandDay.svg",
 	},
 	womensDay: {
+		id: 6,
 		date: "03-08",
 		title: "Международный женский день",
 		path: "",
@@ -42,6 +48,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/womensDay.svg",
 	},
 	laborDay: {
+		id: 7,
 		date: "05-01",
 		title: "Праздник Весны и Труда",
 		path: "",
@@ -49,6 +56,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/laborDay.svg",
 	},
 	victoryDay: {
+		id: 8,
 		date: "05-09",
 		title: "День Победы",
 		path: "",
@@ -56,6 +64,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/victoryDay.svg",
 	},
 	childrensDay: {
+		id: 9,
 		date: "07-01",
 		title: "День защиты детей",
 		path: "",
@@ -63,6 +72,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/childrensDay.svg",
 	},
 	dayKnowledge: {
+		id: 10,
 		date: "09-01",
 		title: "День знаний",
 		path: "",
@@ -70,6 +80,7 @@ export const holidaysData = {
 		pathIcon: "/images/holidays/icons/dayKnowledge.svg",
 	},
 	nationalUnityDay: {
+		id: 11,
 		date: "11-04",
 		title: "День народного единства",
 		path: "",

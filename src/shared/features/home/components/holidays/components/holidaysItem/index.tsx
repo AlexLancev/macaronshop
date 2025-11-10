@@ -12,15 +12,16 @@ export default function HolidaysItem({ data }: HolidaysItemProps) {
 
 	return (
 		<li>
-			<Link href={path} className="hover:text-[#e7426a] duration-200">
+			<Link href={path} className="hover:text-[#e7426a] duration-200 text-center grid place-items-center">
 				<Image
+					className="mb-4 object-contain h-16"
 					src={pathIcon}
-					width={60}
-					height={60}
+					width={64}
+					height={64}
 					alt=""
 					aria-hidden
 				/>
-				<strong>{title}</strong>
+				<strong className="mt-auto">{title}</strong>
 			</Link>
 		</li>
 	);
