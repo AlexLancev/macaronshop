@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { HolidayWithKey } from "../../utils";
 import Image from "next/image";
+import Link from "next/link";
+
+import type { HolidayWithKey } from "../../utils";
 
 interface HolidaysItemProps {
 	data: HolidayWithKey;
@@ -11,10 +12,16 @@ export default function HolidaysItem({ data }: HolidaysItemProps) {
 
 	return (
 		<li>
-			<Link href={path}>
-				<Image src={pathIcon} width={80} height={80} alt="" aria-hidden />
+			<Link href={path} className="hover:text-[#e7426a] duration-200">
+				<Image
+					src={pathIcon}
+					width={60}
+					height={60}
+					alt=""
+					aria-hidden
+				/>
 				<strong>{title}</strong>
 			</Link>
 		</li>
-	)
+	);
 }
