@@ -3,7 +3,6 @@ import { getUpcomingHolidays } from "./utils";
 
 export default function Holidays() {
 	const upcomingHolidays = getUpcomingHolidays();
-	console.log(upcomingHolidays);
 
 	return (
 		<section className="py-12">
