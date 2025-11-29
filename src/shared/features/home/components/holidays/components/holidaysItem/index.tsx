@@ -8,20 +8,26 @@ interface HolidaysItemProps {
 }
 
 export default function HolidaysItem({ data }: HolidaysItemProps) {
-	const { title, path, pathIcon } = data;
+	const { title, path, pathIcon, event, date } = data;
 
 	return (
 		<li>
-			<Link href={path} className="hover:text-[#e7426a] duration-200 text-center grid place-items-center">
+			<Link
+				href={path}
+				className="grid place-items-center text-center duration-200 hover:text-[#e7426a]"
+			>
 				<Image
-					className="mb-4 object-contain h-16"
+					className="mb-4 h-16 object-contain"
 					src={pathIcon}
 					width={64}
 					height={64}
 					alt=""
 					aria-hidden
 				/>
-				<strong className="mt-auto">{title}</strong>
+				<strong className="flexCenter mt-auto gap-0.5">
+					{date && event && <time dateTime={date} className="text-xl">{event}</time>}
+					{title}
+				</strong>
 			</Link>
 		</li>
 	);
