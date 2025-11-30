@@ -10,6 +10,7 @@ export const holidaysData = {
 	mothersDay: {
 		id: 2,
 		date: "11-27",
+		event: "",
 		title: "День Матери",
 		path: "",
 		cardColor: "",
@@ -18,7 +19,8 @@ export const holidaysData = {
 	newYear: {
 		id: 3,
 		date: "01-01",
-		title: "31 Января Новый Год",
+		event: "31 Декабря",
+		title: "Новый Год",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/newYear.svg",
@@ -26,7 +28,8 @@ export const holidaysData = {
 	valentinesDay: {
 		id: 4,
 		date: "02-14",
-		title: "14 Февраля День Святого Валентина",
+		event: "14 Февраля",
+		title: "День Святого Валентина",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/valentinesDay.svg",
@@ -34,7 +37,8 @@ export const holidaysData = {
 	fatherlandDay: {
 		id: 5,
 		date: "02-23",
-		title: "23 Февраля День Защитника Отечества",
+		event: "23 Февраля",
+		title: "День Защитника Отечества",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/fatherlandDay.svg",
@@ -42,7 +46,8 @@ export const holidaysData = {
 	womensDay: {
 		id: 6,
 		date: "03-08",
-		title: "8 Марта Международный Женский День",
+		event: "8 Марта",
+		title: "Международный Женский День",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/womensDay.svg",
@@ -50,7 +55,8 @@ export const holidaysData = {
 	laborDay: {
 		id: 7,
 		date: "05-01",
-		title: "1 Мая Праздник Весны и Труда",
+		event: "1 Мая",
+		title: "Праздник Весны и Труда",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/laborDay.svg",
@@ -58,7 +64,8 @@ export const holidaysData = {
 	victoryDay: {
 		id: 8,
 		date: "05-09",
-		title: "9 Мая День Победы",
+		event: "9 Мая",
+		title: "День Победы",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/victoryDay.svg",
@@ -66,7 +73,8 @@ export const holidaysData = {
 	childrensDay: {
 		id: 9,
 		date: "07-01",
-		title: "1 Июня День защиты детей",
+		event: "1 Июня",
+		title: "День защиты детей",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/childrensDay.svg",
@@ -74,7 +82,8 @@ export const holidaysData = {
 	dayKnowledge: {
 		id: 10,
 		date: "09-01",
-		title: "1 Сентября День знаний",
+		event: "1 Сентября",
+		title: "День знаний",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/dayKnowledge.svg",
@@ -82,7 +91,8 @@ export const holidaysData = {
 	nationalUnityDay: {
 		id: 11,
 		date: "11-04",
-		title: "4 Ноября День Народного Единства",
+		event: "4 Ноября",
+		title: "День Народного Единства",
 		path: "",
 		cardColor: "",
 		pathIcon: "/images/holidays/icons/nationalUnityDay.svg",
