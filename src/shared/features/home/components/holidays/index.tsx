@@ -16,7 +16,7 @@ export default function Holidays() {
 								key={id}
 								data={holiday}
 							/>
-						)
+						);
 					})}
 				</ul>
 			</div>
