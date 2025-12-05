@@ -48,6 +48,13 @@
   max-width: 1240px;
 }
 
+@utility flexCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-beetwen: center;
+}
+
 @utility underlineDecor {
   position: relative;
   transition-duration: 0.4s;
