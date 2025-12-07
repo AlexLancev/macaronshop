@@ -11,7 +11,8 @@ interface Holiday {
 	path: string;
 	cardColor: string;
 	pathIcon: string;
-	isPrivateHoliday?: boolean;
+	event?: string;
+	allRussianHoliday?: boolean;
 }
 
 export interface HolidayWithKey extends Holiday {
@@ -58,11 +59,11 @@ const calculateHolidayDates = (
 	today: Dayjs,
 ) => {
 	return (Object.entries(holidays) as [HolidaysDataKeys, Holiday][])
-	.map(([key, holiday]): HolidayWithSortDate | null => {
-		const { isPrivateHoliday, date } = holiday;
-		
+		.map(([key, holiday]): HolidayWithSortDate | null => {
+			const { allRussianHoliday, date } = holiday;
+
 			// Пропускаем праздники без даты
-			if (!date?.trim().length && isPrivateHoliday) return null;
+			if (!date?.trim().length && allRussianHoliday) return null;
 
 			const calculatedDate = calculateNextOccurrence(
 				date,
@@ -89,8 +90,8 @@ const calculateNextOccurrence = (
 	nextYear: number,
 	today: Dayjs,
 ): Dayjs => {
-	const actualDateString = dateString ?? dayjs().format('MM-DD');
-	
+	const actualDateString = dateString ?? dayjs().format("MM-DD");
+
 	const currentYearDate = dayjs(`${currentYear}-${actualDateString}`);
 	const nextYearDate = dayjs(`${nextYear}-${actualDateString}`);
 
