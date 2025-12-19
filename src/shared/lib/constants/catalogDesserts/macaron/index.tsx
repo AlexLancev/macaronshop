@@ -289,7 +289,7 @@ export const macaronsData = {
 		typeHoliday: 'valentinesDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
-	giftSet: {
+	giftSetValDay: {
 		id: 10,
 		title: 'Подарочный набор на 14 февраля',
 		description: '40 макаронс в коробке. Вкусы: малина, мята, ваниль, фисташка, смородина.',
@@ -326,9 +326,343 @@ export const macaronsData = {
 	},
 
 	//fatherlandDay
-	a: {},
-	b: {},
-	c: {},
-	d: {},
-	e: {},
+	truDefender: {
+		id: 11,
+		title: 'Подарок на 23 февраля «Настоящему защитнику!»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	myHero: {
+		id: 12,
+		title: 'Подарок на 23 февраля “Ты мой герой”',
+		description: '12 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир, шоколад.',
+		price: 1490,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	belovedDefender: {
+		id: 13,
+		title: 'Подарок на 23 февраля «Любимому защитнику»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	heartDefender: {
+		id: 14,
+		title: 'Подарок на 23 февраля «Сердце»',
+		description: '22 макаронс, вкусы: фисташка, смородина, ванильный пломбир, шоколад, тропический манго-маракуйя',
+		price: 3500,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 5,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 5,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Тропический манго-маракуйя',
+				quantity: 4,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	armyFebruary: {
+		id: 15,
+		title: 'Подарочный набор «С 23 февраля»',
+		description: '20 макаронс в коробке. Вкусы: фисташка, шоколад, соленая карамель, смородина, ваниль.',
+		price: 1490,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Соленая карамель',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Фисташка (с печатью)',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Ваниль (с печатью)',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+
+	//womensDay
+	flowers: {
+		id: 16,
+		title: 'Набор макарон на 8 марта «Цветы»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'womensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	beautyWorld: {
+		id: 17,
+		title: 'Подарок на 8 марта «Красота спасёт мир»',
+		description: '12 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир, шоколад.',
+		price: 1490,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'womensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	best: {
+		id: 18,
+		title: 'Набор макарон на 8 марта «Самая лучшая»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'womensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	sovietPostcards: {
+		id: 19,
+		title: 'Подарочный набор на 8 марта «Советские открытки»',
+		description: '12 макаронс (фисташка, смородина, шоколад, ванильный пломбир), 3 эклера (вишня, шоколад, манго)',
+		price: 1790,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Эклер Шоколадный',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Вишня',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Манго',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'womensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	sweetLife: {
+		id: 20,
+		title: 'Подарочный набор на 8 марта «Сладкой жизни»',
+		description: '40 макаронс в коробке. Вкусы: вишня, смородина, пломбир, шоколад, фисташка.',
+		price: 4900,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Вишня',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 11,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 5,
+			},
+		],
+		typeHoliday: 'womensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+
+	//laborDay
+	likeSpring: {
+		id: 21,
+		title: 'Подарочный набор макаронс «Ты как весна»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'laborDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	springSet: {
+		id: 22,
+		title: 'Набор «Весенний»',
+		description: '12 штук в коробке. Вкусы: мята, манго-маракуйя, ананас, банановый милкшейк.',
+		price: 1290,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Ананас',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Мята',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Банановый милкшейк',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Манго-маракуйя',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'laborDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	seaFlowers: {
+		id: 23,
+		title: 'Подарочный набор макаронс «Море цветов»',
+		description: '9 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'laborDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
 } as const;
