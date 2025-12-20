@@ -69,7 +69,6 @@ const prodDetailsData = {
 } as const;
 
 export const macaronsData = {
-	// newYear
 	happiness: {
 		id: 1,
 		title: 'Подарочный набор макаронс «Счастье»',
@@ -175,8 +174,6 @@ export const macaronsData = {
 		typeHoliday: 'newYear',
 		prodDetails: prodDetailsData['macaron'],
 	},
-
-	// valentinesDay
 	forThoseLove: {
 		id: 6,
 		title: 'Подарочный набор макаронс «Для тех, кто влюблен»',
@@ -324,8 +321,6 @@ export const macaronsData = {
 		typeHoliday: 'valentinesDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
-
-	//fatherlandDay
 	truDefender: {
 		id: 11,
 		title: 'Подарок на 23 февраля «Настоящему защитнику!»',
@@ -461,8 +456,6 @@ export const macaronsData = {
 		typeHoliday: 'fatherlandDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
-
-	//womensDay
 	flowers: {
 		id: 16,
 		title: 'Набор макарон на 8 марта «Цветы»',
@@ -590,8 +583,6 @@ export const macaronsData = {
 		typeHoliday: 'womensDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
-
-	//laborDay
 	likeSpring: {
 		id: 21,
 		title: 'Подарочный набор макаронс «Ты как весна»',
@@ -663,6 +654,351 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'laborDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	setRound: {
+		id: 24,
+		title: 'Набор Круглый из 40 макарон',
+		description: 'Собрать свой набор: вкусы на выбор',
+		price: 5900,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Ассорти',
+				quantity: 40,
+			},
+		],
+		typeHoliday: 'victoryDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	babyMammoth: {
+		id: 25,
+		title: 'Подарочный набор «Мамонтёнок»',
+		description: '40 макаронс в коробке. Вкусы: смородина, малина, фисташка, шоколад.',
+		price: 5900,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Макарони Смородина',
+				quantity: 21,
+			},
+			{
+				flavorName: 'Макарони Малина',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Макарони (с печатью) Фисташка',
+				quantity: 5,
+			},
+			{
+				flavorName: 'Макарони (с печатью) Шоколад',
+				quantity: 6,
+			},
+		],
+		typeHoliday: 'victoryDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	childrenSet: {
+		id: 26,
+		title: 'Детский набор макарон',
+		description: '20 макаронс в коробке. Вкусы: фисташка, смородина, ванильный пломбир, бабл-гам, малина, банановый милкшейк, ананас.',
+		price: 1490,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка (с печатью)',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Смородина (с печатью)',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Бабл-гам',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Банановый Милкшейк',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'childrensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	summerSet: {
+		id: 27,
+		title: 'Набор «Лето»',
+		description: '24 штуки в коробке. Вкусы: вишня, смородина, лаванда, шоколад, соленая карамель, малина.',
+		price: 1790,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Пряная вишня',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Черная смородина',
+				quantity: 5,
+			},
+			{
+				flavorName: 'Лавандовый прованс',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Солёная карамель',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 4,
+			},
+		],
+		typeHoliday: 'childrensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	excellentSet: {
+		id: 28,
+		title: 'Набор «Превосходный»',
+		description: '24 штуки в коробке. Вкусы: малина, ваниль, банановый милкшейк, кокосовый рай, бабл-гам, апельсин-шоколад, фисташка, ананас.',
+		price: 1790,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Малина',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 4,
+			},
+			{
+				flavorName: 'Бабл-гам',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Кокосовый рай',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Банановый милкшейк',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Апельсин-шоколад',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'childrensDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	septemberSet: {
+		id: 29,
+		title: 'Набор на 1 сентября',
+		description: '9 штук в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'dayKnowledge',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	goodLuckStudies: {
+		id: 30,
+		title: 'Набор «С 1 сентября! Успешной учёбы»',
+		description: '9 штук в коробке. Вкусы: фисташка, смородина, ванильный пломбир',
+		price: 1100,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'dayKnowledge',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	giftSeptember: {
+		id: 31,
+		title: 'Подарок на 1 сентября',
+		description: '12 макаронс (фисташка, смородина, шоколад, ванильный пломбир), 3 эклера (вишня, шоколад, манго)',
+		price: 1890,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Ассорти',
+				quantity: 12,
+			},
+		],
+		typeHoliday: 'dayKnowledge',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	festiveTable: {
+		id: 32,
+		title: 'Набор макаронс «Для праздничного стола',
+		description: '40 макаронс в коробке. Вкусы: вишня, ванильный пломбир, соленая карамель, лесной орех',
+		price: 5900,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Вишня',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Соленая карамель',
+				quantity: 9,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Лесной орех',
+				quantity: 11,
+			},
+		],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	rainbow: {
+		id: 33,
+		title: 'Набор десертов «Радуга»',
+		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель.',
+		price: 7450,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Лесной орех',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Капучино',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Шоколад-апельсин',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лимон',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лаванда',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Эклеры',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Картошка',
+				quantity: 7,
+			},
+		],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['macaron'],
+	},
+	pyramid: {
+		id: 34,
+		title: 'Пирамидка из макаронс, 6 этажей',
+		description: '80 макаронс в наборе. Вкусы ассорти на ваш выбор',
+		price: 7560,
+		gallery: ['/images/macarons/',],
+		flavor: [
+			{
+				flavorName: 'Фисташка',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Солёная карамель',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Манго-маракуйя',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Ванильный пломбир',
+				quantity: 10,
+			},
+			{
+				flavorName: 'Вишня',
+				quantity: 10,
+			},
+		],
+		typeHoliday: 'nationalUnityDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
 } as const;
