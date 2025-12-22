@@ -65,7 +65,8 @@ const prodDetailsData = {
 			htmlContent: '<p>Мука миндальная, сахар, яйцо куриное (белок), ганаш.</p><br/> <p>На 100 г: Белки 7.45 г, Жиры 16.84 г, Углеводы 53.03 г, 393 ккал.</p><br/>',
 		},
 		shelfLife: shelfLifeData['macaron']
-	}
+	},
+	eclairs: {},
 } as const;
 
 export const macaronsData = {
@@ -1001,4 +1002,230 @@ export const macaronsData = {
 		typeHoliday: 'nationalUnityDay',
 		prodDetails: prodDetailsData['macaron'],
 	},
+} as const;
+
+export const eclairsData = {
+	rainbow: {
+		id: 1,
+		title: 'Набор десертов «Радуга»',
+		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
+		price: 7450,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: 'Лесной орех',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Капучино',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Шоколад-апельсин',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Лимон',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Ананас',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Малина',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Лаванда',
+				quantity: 6,
+			},
+						{
+				flavorName: 'Эклеры',
+				quantity: 8,
+			},
+						{
+				flavorName: 'Картошка',
+				quantity: 7,
+			},
+		],
+		typeHoliday: 'mothersDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	sweetSoul: {
+		id: 2,
+		title: 'Набор эклеров «Сладкая душа»',
+		description: '5 вкусов в наборе: карамель, ваниль, манго, смородина, вишня',
+		price: 910,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: 'Вишня',
+				quantity: 1,
+			},
+						{
+				flavorName: 'Карамель',
+				quantity: 1,
+			},
+						{
+				flavorName: 'Смородина',
+				quantity: 1,
+			},
+						{
+				flavorName: 'Манго',
+				quantity: 1,
+			},
+						{
+				flavorName: 'Ваниль',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'newYear',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+	a: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},],
+		typeHoliday: 'nationalUnityDay',
+		prodDetails: prodDetailsData['eclairs'],
+	},
+
 } as const;
