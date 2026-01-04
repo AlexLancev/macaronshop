@@ -68,6 +68,7 @@ const prodDetailsData = {
 	},
 	eclairs: {},
 	waferRolls: {},
+	potatoDessert: {},
 } as const;
 
 export const macaronsData = {
@@ -1337,5 +1338,22 @@ export const waferRollsData = {
 		gallery: ['/images/waferRolls/',],
 		typeHoliday: 'victoryDay',
 		prodDetails: prodDetailsData['waferRolls'],
+	},
+} as const;
+
+export const potatoDessertData = {
+	rainbowSet: {
+		id: ,
+		title: '',
+		description: '',
+		price: ,
+		gallery: ['/images/eclairs/',],
+		flavor: [
+			{
+				flavorName: '',
+				quantity: ,
+			},
+		],
+		prodDetails: prodDetailsData['potatoDessert'],
 	},
 }
