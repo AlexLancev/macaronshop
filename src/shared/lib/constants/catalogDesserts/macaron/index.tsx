@@ -1,25 +1,3 @@
-// {
-// 	id: 1,
-// 	title: '',
-// 	description: '',
-// 	price: 0,
-//  gallery: ['/images/macarons/',],
-//  flavor: [
-//  			{
-// 				flavorName: '',
-// 				quantity: ,
-// 			},
-// ],
-// 	typeHoliday: '',
-// }
-
-// {
-// 	flavorName: '',
-// 	quantity: ,
-// },
-
-//<p></p><br/> <p></p><br/> <p></p><br/>
-
 const pluralize = (count: number, words: [string, string, string]): string => {
 	if (count % 10 === 1 && count % 100 !== 11) {
 		return words[0];
@@ -36,13 +14,14 @@ interface StorageConfig {
 	bestBeforeHours?: number;
 	fridge?: number;
 	freezer?: number;
+	prodType?: string;
 };
 
 const getStorageDetails = (config: StorageConfig = {}): string => {
-	const { bestBeforeHours = 72, fridge = 7, freezer = 14 } = config;
+	const { bestBeforeHours = 72, fridge = 7, freezer = 14, prodType } = config;
 
 	return `
-    <p>Мы рекомендуем наслаждаться вкусом макарун первые ${bestBeforeHours} ${pluralize(bestBeforeHours, ['час', 'часа', 'часов'])} после покупки. Далее они могут начать терять свои вкусовые качества и текстуру.</p><br/>
+    <p>Мы рекомендуем наслаждаться вкусом ${prodType} первые ${bestBeforeHours} ${pluralize(bestBeforeHours, ['час', 'часа', 'часов'])} после покупки. Далее они могут начать терять свои вкусовые качества и текстуру.</p><br/>
     <p>Срок хранения в холодильнике ${fridge} ${pluralize(fridge, ['день', 'дня', 'дней'])}, в морозилке — ${freezer} ${pluralize(freezer, ['день', 'дня', 'дней'])}.</p><br/>
   `;
 };
@@ -50,8 +29,20 @@ const getStorageDetails = (config: StorageConfig = {}): string => {
 const shelfLifeData = {
 	macaron: {
 		trigger: 'Условия и срок хранения',
-		htmlContent: getStorageDetails(),
-	}
+		htmlContent: getStorageDetails({ prodType: 'макаруны' }),
+	},
+	eclairs: {
+		trigger: 'Условия и срок хранения',
+		htmlContent: getStorageDetails({ prodType: 'эклеры' }),
+	},
+	waferRolls: {
+		trigger: 'Условия и срок хранения',
+		htmlContent: getStorageDetails({ prodType: 'вафельные трубочки' }),
+	},
+	potato: {
+		trigger: 'Условия и срок хранения',
+		htmlContent: getStorageDetails({ prodType: 'десерт картошка' }),
+	},
 } as const;
 
 const prodDetailsData = {
@@ -68,7 +59,7 @@ const prodDetailsData = {
 	},
 	eclairs: {},
 	waferRolls: {},
-	potatoDessert: {},
+	potato: {},
 } as const;
 
 export const macaronsData = {
@@ -1343,17 +1334,123 @@ export const waferRollsData = {
 
 export const potatoDessertData = {
 	rainbowSet: {
-		id: ,
-		title: '',
-		description: '',
-		price: ,
-		gallery: ['/images/eclairs/',],
+		id: 1,
+		title: 'Набор десертов «Радуга»',
+		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
+		price: 7450,
+		gallery: ['/images/potato/',],
 		flavor: [
 			{
-				flavorName: '',
-				quantity: ,
+				flavorName: 'Лесной орех',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Капучино',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Шоколад-апельсин',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лимон',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лаванда',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Эклеры',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Картошка',
+				quantity: 7,
 			},
 		],
-		prodDetails: prodDetailsData['potatoDessert'],
+		typeHoliday: 'laborDay',
+		prodDetails: prodDetailsData['potato'],
 	},
-}
+	congratulationsSet: {
+		id: 2,
+		title: 'Набор десертов «Поздравляю»',
+		description: '33 десерта в коробке, вкусы макаронс: фисташка, малина, смородина, ананас, шоколад, солёная карамель.',
+		price: 5770,
+		gallery: ['/images/potato/',],
+		flavor: [
+			{
+				flavorName: 'Малина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Солёная карамель',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Пирожное Картошка',
+				quantity: 10,
+			},
+		],
+		typeHoliday: 'victoryDay',
+		prodDetails: prodDetailsData['potato'],
+	},
+	potatoSet: {
+		id: 3,
+		title: 'Набор пирожных картошка',
+		description: 'Ароматные и нежные пирожные в наборе, 12 штук',
+		price: 790,
+		gallery: ['/images/potato/',],
+		flavor: [
+			{
+				flavorName: 'Клубника',
+				quantity: 12,
+			},
+		],
+		typeHoliday: 'mothersDay',
+		prodDetails: prodDetailsData['potato'],
+	},
+	miniPotatoSet: {
+		id: 4,
+		title: 'MINI набор пирожных картошка',
+		description: '3 штуки в корексе, вкус клубника',
+		price: 590,
+		gallery: ['/images/potato/',],
+		flavor: [
+			{
+				flavorName: 'Клубника',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'newYear',
+		prodDetails: prodDetailsData['potato'],
+	},
+} as const
