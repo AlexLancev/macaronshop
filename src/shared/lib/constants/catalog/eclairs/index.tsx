@@ -2,11 +2,13 @@ import { prodDetailsData } from "../shared/data";
 
 export const eclairsData = {
 	rainbow: {
+		slug: 'rainbow',
+		typeProduct: 'eclair',
 		id: 1,
 		title: 'Набор десертов «Радуга»',
 		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
 		price: 7450,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-1.png',],
 		flavor: [
 			{
 				flavorName: 'Лесной орех',
@@ -50,14 +52,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'mothersDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	sweetSoul: {
+		slug: 'sweet-soul',
+		typeProduct: 'eclair',
 		id: 2,
 		title: 'Набор эклеров «Сладкая душа»',
 		description: '5 вкусов в наборе: карамель, ваниль, манго, смородина, вишня',
 		price: 910,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-2.png',],
 		flavor: [
 			{
 				flavorName: 'Вишня',
@@ -81,14 +84,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'newYear',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	paradise: {
+		slug: 'paradise',
+		typeProduct: 'eclair',
 		id: 3,
 		title: 'Набор с эклерами «Райский»',
 		description: '12 макаронc (лесной орех, лимон, вишня, малина) + 3 эклера (смородина, манго, ваниль) в коробке.',
 		price: 1390,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-3.png',],
 		flavor: [
 			{
 				flavorName: 'Макарони Лесной орех',
@@ -120,14 +124,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	sonata: {
+		slug: 'sonata',
+		typeProduct: 'eclair',
 		id: 4,
 		title: 'Набор эклеров Соната',
 		description: '5 вкусов в наборе: Ванильный, Шоколадный, Вишневый, Карамельный и Фундучное пралине.',
 		price: 910,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-4.png',],
 		flavor: [
 			{
 				flavorName: 'Фундучное пралине',
@@ -151,14 +156,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	izuminka: {
+		slug: 'izuminka',
+		typeProduct: 'eclair',
 		id: 5,
 		title: 'Набор с эклерами «Изюминка»',
 		description: '10 макаронc (кокосовый рай, фисташка, пломбир, соленая карамель, лесной орех) + 3 эклера (сицилийская фисташка, фундучное пралине) в коробке.',
 		price: 1390,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-5.png',],
 		flavor: [
 			{
 				flavorName: 'Эклер Сицилийская Фисташка',
@@ -190,14 +196,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	confetti: {
+		slug: 'confetti',
+		typeProduct: 'eclair',
 		id: 6,
 		title: 'Набор с эклерами «Конфетти»',
 		description: '10 макаронc (пломбир, кокосовый рай, смородина, лаванда, бабл-гам) + 3 эклера (манго, карамель, смородина) в коробке.',
 		price: 1390,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-6.png',],
 		flavor: [
 			{
 				flavorName: 'Эклер Смородиновый',
@@ -233,14 +240,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'laborDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	brightness: {
+		slug: 'brightness',
+		typeProduct: 'eclair',
 		id: 7,
 		title: 'Набор эклеров «Яркий»',
 		description: '5 вкусов в наборе: Ягодный восторг, Кокосовый рай, Апельсиновый брауни, Лавандовая черника и Фундучное пралине.',
 		price: 910,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-7.png',],
 		flavor: [
 			{
 				flavorName: 'Ягодный восторг',
@@ -264,14 +272,15 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'victoryDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 	forMost: {
+		slug: 'for-most',
+		typeProduct: 'eclair',
 		id: 8,
 		title: 'Подарок «Для Самой-Самой»',
 		description: '',
 		price: 910,
-		gallery: ['/images/eclairs/',],
+		gallery: ['/images/eclairs/img-8.png',],
 		flavor: [
 			{
 				flavorName: 'Шоколад',
@@ -295,6 +304,5 @@ export const eclairsData = {
 			},
 		],
 		typeHoliday: 'childrensDay',
-		prodDetails: prodDetailsData['eclairs'],
 	},
 } as const;

@@ -7,6 +7,7 @@ import { cn } from "@/shared/lib/utils/cn";
 
 import "@/shared/styles/index.css";
 
+import QueryProvider from "@/shared/providers/QueryProvider";
 import Footer from "@/shared/ui/layout/Footer";
 import Header from "@/shared/ui/layout/Header";
 
@@ -28,9 +29,11 @@ const RootLayout = ({
 }>) => (
 	<html lang="ru">
 		<body className={cn("font-sans", MontserratSans.variable)}>
-			<Header />
-			{children}
-			<Footer />
+			<QueryProvider>
+				<Header />
+				{children}
+				<Footer />
+			</QueryProvider>
 		</body>
 	</html>
 );

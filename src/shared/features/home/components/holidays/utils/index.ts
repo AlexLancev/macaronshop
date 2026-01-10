@@ -2,7 +2,7 @@ import dayjs, { type Dayjs } from "dayjs";
 
 import { holidaysData } from "../constants";
 
-type HolidaysDataKeys = keyof typeof holidaysData;
+export type HolidaysDataKeys = keyof typeof holidaysData;
 
 interface Holiday {
 	id: number;
@@ -27,27 +27,46 @@ interface HolidayWithSortDate extends HolidayWithKey {
  * Получает ближайшие 5 праздников, начиная с сегодняшнего дня
  * Для каждого праздника вычисляется ближайшая дата в текущем или следующем году
  */
-export const getUpcomingHolidays = (): HolidayWithKey[] => {
-	const today = dayjs();
-	const currentYear = today.year();
-	const nextYear = currentYear + 1;
+export const getUpcomingHolidays = (options?: {
+  limit?: number;
+  getFirstKeyOnly?: boolean;
+}): {
+  singleHolidayKey?: HolidaysDataKeys | null;
+  upcomingHolidays: HolidayWithKey[];
+} => {
+  const limit = options?.limit ?? 6;
+  const getFirstKeyOnly = options?.getFirstKeyOnly ?? false;
+  
+  const today = dayjs();
+  const currentYear = today.year();
+  const nextYear = currentYear + 1;
 
-	// Шаг 1: Преобразуем объект праздников в массив с вычисленными датами
-	const holidaysWithCalculatedDates = calculateHolidayDates(
-		holidaysData,
-		currentYear,
-		nextYear,
-		today,
-	);
-	// Шаг 2: Фильтруем и сортируем праздники
-	const upcomingHolidays = filterAndSortHolidays(
-		holidaysWithCalculatedDates,
-		today,
-	);
+  const holidaysWithCalculatedDates = calculateHolidayDates(
+    holidaysData,
+    currentYear,
+    nextYear,
+    today,
+  );
+  
+  const upcomingHolidays = filterAndSortHolidays(
+    holidaysWithCalculatedDates,
+    today,
+  );
 
-	// Шаг 3: Возвращаем 5 ближайших праздников
-	return upcomingHolidays.slice(0, 6);
+  const result: {
+    singleHolidayKey?: HolidaysDataKeys | null;
+    upcomingHolidays: HolidayWithKey[];
+  } = {
+    upcomingHolidays: upcomingHolidays.slice(0, limit),
+  };
+
+  if (getFirstKeyOnly) {
+    result.singleHolidayKey = upcomingHolidays[1]?.key ?? null;
+  }
+
+  return result;
 };
+
 
 /**
  * Вычисляет ближайшие даты для каждого праздника

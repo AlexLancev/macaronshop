@@ -2,11 +2,13 @@ import { prodDetailsData } from "../shared/data";
 
 export const potatoDessertData = {
 	rainbowSet: {
+		slug: 'rainbow-set',
+		typeProduct: 'potato',
 		id: 1,
 		title: 'Набор десертов «Радуга»',
 		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
 		price: 7450,
-		gallery: ['/images/potato/',],
+		gallery: ['/images/potato/img-1.png',],
 		flavor: [
 			{
 				flavorName: 'Лесной орех',
@@ -50,14 +52,15 @@ export const potatoDessertData = {
 			},
 		],
 		typeHoliday: 'laborDay',
-		prodDetails: prodDetailsData['potato'],
 	},
 	congratulationsSet: {
+		slug: 'congratulations-set',
+		typeProduct: 'potato',
 		id: 2,
 		title: 'Набор десертов «Поздравляю»',
 		description: '33 десерта в коробке, вкусы макаронс: фисташка, малина, смородина, ананас, шоколад, солёная карамель.',
 		price: 5770,
-		gallery: ['/images/potato/',],
+		gallery: ['/images/potato/img-2.png',],
 		flavor: [
 			{
 				flavorName: 'Малина',
@@ -89,14 +92,15 @@ export const potatoDessertData = {
 			},
 		],
 		typeHoliday: 'victoryDay',
-		prodDetails: prodDetailsData['potato'],
 	},
 	potatoSet: {
+		slug: 'potato-set',
+		typeProduct: 'potato',
 		id: 3,
 		title: 'Набор пирожных картошка',
 		description: 'Ароматные и нежные пирожные в наборе, 12 штук',
 		price: 790,
-		gallery: ['/images/potato/',],
+		gallery: ['/images/potato/img-3.jpg',],
 		flavor: [
 			{
 				flavorName: 'Клубника',
@@ -104,14 +108,15 @@ export const potatoDessertData = {
 			},
 		],
 		typeHoliday: 'mothersDay',
-		prodDetails: prodDetailsData['potato'],
 	},
 	miniPotatoSet: {
+		slug: 'mini-potato-set',
+		typeProduct: 'potato',
 		id: 4,
 		title: 'MINI набор пирожных картошка',
 		description: '3 штуки в корексе, вкус клубника',
 		price: 590,
-		gallery: ['/images/potato/',],
+		gallery: ['/images/potato/img-4.png',],
 		flavor: [
 			{
 				flavorName: 'Клубника',
@@ -119,6 +124,5 @@ export const potatoDessertData = {
 			},
 		],
 		typeHoliday: 'newYear',
-		prodDetails: prodDetailsData['potato'],
 	},
 } as const
