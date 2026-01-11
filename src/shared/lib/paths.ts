@@ -5,7 +5,6 @@ export const PATHS = {
 		delivery: "/delivery",
 		wholesale: "/wholesale",
 		contacts: "/contacts",
-		news: "/news",
 		policy: "/policy",
 		quality: "/quality",
 	},
@@ -30,9 +29,7 @@ export const PATHS = {
 		macarons: "/catalog/macarons",
 		eclairs: "/catalog/eclairs",
 		waffleCones: "/catalog/wafer-rolls",
-		cakePops: "/cake-pops",
 		potatoDessert: "/catalog/potato-dessert",
-		comboSets: "/combo-sets",
 	},
 } as const;
 

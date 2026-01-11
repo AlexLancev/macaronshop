@@ -77,17 +77,9 @@ export const mainMenuDataCurrent = {
 		path: PATHS.mainMenu.waffleCones,
 		linkName: "Вафельные трубочки",
 	},
-	cakePops: {
-		path: PATHS.mainMenu.cakePops,
-		linkName: "Кейк-попсы",
-	},
 	potatoDessert: {
 		path: PATHS.mainMenu.potatoDessert,
 		linkName: "Десерт картошка",
-	},
-	comboSets: {
-		path: PATHS.mainMenu.comboSets,
-		linkName: "Комбо наборы",
 	},
 	freshness: {
 		path: PATHS.servicePages.freshness,

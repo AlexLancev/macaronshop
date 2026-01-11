@@ -8,6 +8,7 @@ interface SupabaseProduct {
 	id: number;
 	name: string;
 	slug: string;
+	title?: string | null;
 	shortDescription?: string | null;
 	fullDescription?: string | null;
 	description?: string | null;
@@ -92,7 +93,7 @@ export async function getProductBySlug(
  * Преобразует продукт из Supabase в формат ProductCardType
  */
 function transformSupabaseProductToProductCard(
-	supabaseProduct: any, // Используем any, так как структура из jsonb может отличаться
+	supabaseProduct: SupabaseProduct, // Используем any, так как структура из jsonb может отличаться
 	typeProduct: ProductType
 ): ProductCardType {
 	// В вашей структуре данных из jsonb колонок используются поля:
@@ -106,8 +107,7 @@ function transformSupabaseProductToProductCard(
 		description: supabaseProduct.description || '',
 		price: supabaseProduct.price,
 		gallery: supabaseProduct.gallery || [],
-		// flavor уже в правильном формате: массив объектов с flavorName и quantity
-		flavor: supabaseProduct.flavor || supabaseProduct.flavors,
+		flavor: supabaseProduct.flavors,
 		typeHoliday: supabaseProduct.typeHoliday || 'newYear',
 		productDetails: prodDetailsData[typeProduct === 'macaron' ? 'macaron' : 
 			typeProduct === 'eclairs' ? 'eclairs' :

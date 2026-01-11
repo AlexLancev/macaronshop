@@ -1,8 +1,311 @@
-import { prodDetailsData } from "../shared/data";
+const eclairsData = {
+	rainbow: {
+		slug: 'rainbow',
+		typeProduct: 'eclair',
+		id: 1,
+		title: 'Набор десертов «Радуга»',
+		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
+		price: 7450,
+		gallery: ['/images/eclairs/img-1.png',],
+		flavor: [
+			{
+				flavorName: 'Лесной орех',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Капучино',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Шоколад-апельсин',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лимон',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лаванда',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Эклеры',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Картошка',
+				quantity: 7,
+			},
+		],
+		typeHoliday: 'mothersDay',
+	},
+	sweetSoul: {
+		slug: 'sweet-soul',
+		typeProduct: 'eclair',
+		id: 2,
+		title: 'Набор эклеров «Сладкая душа»',
+		description: '5 вкусов в наборе: карамель, ваниль, манго, смородина, вишня',
+		price: 910,
+		gallery: ['/images/eclairs/img-2.png',],
+		flavor: [
+			{
+				flavorName: 'Вишня',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Карамель',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Манго',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Ваниль',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'newYear',
+	},
+	paradise: {
+		slug: 'paradise',
+		typeProduct: 'eclair',
+		id: 3,
+		title: 'Набор с эклерами «Райский»',
+		description: '12 макаронc (лесной орех, лимон, вишня, малина) + 3 эклера (смородина, манго, ваниль) в коробке.',
+		price: 1390,
+		gallery: ['/images/eclairs/img-3.png',],
+		flavor: [
+			{
+				flavorName: 'Макарони Лесной орех',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Макарони Пряная вишня',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Макарони Малина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Макарони Лимон',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Эклер Смородина',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Манго',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Ваниль',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'valentinesDay',
+	},
+	sonata: {
+		slug: 'sonata',
+		typeProduct: 'eclair',
+		id: 4,
+		title: 'Набор эклеров Соната',
+		description: '5 вкусов в наборе: Ванильный, Шоколадный, Вишневый, Карамельный и Фундучное пралине.',
+		price: 910,
+		gallery: ['/images/eclairs/img-4.png',],
+		flavor: [
+			{
+				flavorName: 'Фундучное пралине',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Ваниль',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Вишня',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Карамель',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'fatherlandDay',
+	},
+	izuminka: {
+		slug: 'izuminka',
+		typeProduct: 'eclair',
+		id: 5,
+		title: 'Набор с эклерами «Изюминка»',
+		description: '10 макаронc (кокосовый рай, фисташка, пломбир, соленая карамель, лесной орех) + 3 эклера (сицилийская фисташка, фундучное пралине) в коробке.',
+		price: 1390,
+		gallery: ['/images/eclairs/img-5.png',],
+		flavor: [
+			{
+				flavorName: 'Эклер Сицилийская Фисташка',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Эклер Фундучное Пралине',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Макарони Фисташка',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Ванильный пломбир',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Лесной орех',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Соленая карамель',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Кокосовый рай',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'womensDay',
+	},
+	confetti: {
+		slug: 'confetti',
+		typeProduct: 'eclair',
+		id: 6,
+		title: 'Набор с эклерами «Конфетти»',
+		description: '10 макаронc (пломбир, кокосовый рай, смородина, лаванда, бабл-гам) + 3 эклера (манго, карамель, смородина) в коробке.',
+		price: 1390,
+		gallery: ['/images/eclairs/img-6.png',],
+		flavor: [
+			{
+				flavorName: 'Эклер Смородиновый',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Манго',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Карамельный',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Макарони Кокосовый рай',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Ванильный пломбир',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Смородина',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Бабл-гам',
+				quantity: 2,
+			},
+			{
+				flavorName: 'Макарони Лаванда',
+				quantity: 2,
+			},
+		],
+		typeHoliday: 'laborDay',
+	},
+	brightness: {
+		slug: 'brightness',
+		typeProduct: 'eclair',
+		id: 7,
+		title: 'Набор эклеров «Яркий»',
+		description: '5 вкусов в наборе: Ягодный восторг, Кокосовый рай, Апельсиновый брауни, Лавандовая черника и Фундучное пралине.',
+		price: 910,
+		gallery: ['/images/eclairs/img-7.png',],
+		flavor: [
+			{
+				flavorName: 'Ягодный восторг',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Кокосовый рай',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Апельсиновый брауни',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Лавандовая черника',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Фундучное пралине',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'victoryDay',
+	},
+	forMost: {
+		slug: 'for-most',
+		typeProduct: 'eclair',
+		id: 8,
+		title: 'Подарок «Для Самой-Самой»',
+		description: '',
+		price: 910,
+		gallery: ['/images/eclairs/img-8.png',],
+		flavor: [
+			{
+				flavorName: 'Шоколад',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Эклер Шоколад',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Ваниль',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Смородина',
+				quantity: 1,
+			},
+			{
+				flavorName: 'Эклер Карамель',
+				quantity: 1,
+			},
+		],
+		typeHoliday: 'childrensDay',
+	},
+};
 
-// 
-
-export const macaronsData = {
+const macaronsData = {
 	happiness: {
 		typeProduct: 'macaron',
 		id: 1,
@@ -84,7 +387,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'newYear',
-		
+
 	},
 	bullfinches: {
 		typeProduct: 'macaron',
@@ -113,7 +416,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'newYear',
-		
+
 	},
 	forThoseLove: {
 		typeProduct: 'macaron',
@@ -138,7 +441,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		
+
 	},
 	excellent: {
 		typeProduct: 'macaron',
@@ -183,7 +486,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		
+
 	},
 	loveYou: {
 		typeProduct: 'macaron',
@@ -208,7 +511,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		
+
 	},
 	withoutYou: {
 		typeProduct: 'macaron',
@@ -233,7 +536,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		
+
 	},
 	giftSetValDay: {
 		typeProduct: 'macaron',
@@ -270,7 +573,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'valentinesDay',
-		
+
 	},
 	truDefender: {
 		typeProduct: 'macaron',
@@ -295,7 +598,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		
+
 	},
 	myHero: {
 		typeProduct: 'macaron',
@@ -324,7 +627,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		
+
 	},
 	belovedDefender: {
 		typeProduct: 'macaron',
@@ -349,7 +652,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		
+
 	},
 	heartDefender: {
 		typeProduct: 'macaron',
@@ -382,7 +685,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		
+
 	},
 	armyFebruary: {
 		typeProduct: 'macaron',
@@ -415,7 +718,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'fatherlandDay',
-		
+
 	},
 	flowers: {
 		typeProduct: 'macaron',
@@ -440,7 +743,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		
+
 	},
 	beautyWorld: {
 		typeProduct: 'macaron',
@@ -469,7 +772,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		
+
 	},
 	best: {
 		typeProduct: 'macaron',
@@ -494,7 +797,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		
+
 	},
 	sovietPostcards: {
 		typeProduct: 'macaron',
@@ -519,7 +822,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		
+
 	},
 	sweetLife: {
 		typeProduct: 'macaron',
@@ -552,7 +855,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'womensDay',
-		
+
 	},
 	likeSpring: {
 		typeProduct: 'macaron',
@@ -577,7 +880,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'laborDay',
-		
+
 	},
 	springSet: {
 		typeProduct: 'macaron',
@@ -606,7 +909,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'laborDay',
-		
+
 	},
 	seaFlowers: {
 		typeProduct: 'macaron',
@@ -631,7 +934,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'laborDay',
-		
+
 	},
 	setRound: {
 		typeProduct: 'macaron',
@@ -648,7 +951,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'victoryDay',
-		
+
 	},
 	babyMammoth: {
 		typeProduct: 'macaron',
@@ -677,7 +980,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'victoryDay',
-		
+
 	},
 	childrenSet: {
 		typeProduct: 'macaron',
@@ -722,7 +1025,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'childrensDay',
-		
+
 	},
 	summerSet: {
 		typeProduct: 'macaron',
@@ -759,7 +1062,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'childrensDay',
-		
+
 	},
 	excellentSet: {
 		typeProduct: 'macaron',
@@ -804,7 +1107,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'childrensDay',
-		
+
 	},
 	septemberSet: {
 		typeProduct: 'macaron',
@@ -829,7 +1132,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'dayKnowledge',
-		
+
 	},
 	goodLuckStudies: {
 		typeProduct: 'macaron',
@@ -854,7 +1157,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'dayKnowledge',
-		
+
 	},
 	giftSeptember: {
 		typeProduct: 'macaron',
@@ -871,7 +1174,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'dayKnowledge',
-		
+
 	},
 	festiveTable: {
 		typeProduct: 'macaron',
@@ -900,7 +1203,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'nationalUnityDay',
-		
+
 	},
 	rainbow: {
 		typeProduct: 'macaron',
@@ -953,7 +1256,7 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'nationalUnityDay',
-		
+
 	},
 	pyramid: {
 		typeProduct: 'macaron',
@@ -998,6 +1301,172 @@ export const macaronsData = {
 			},
 		],
 		typeHoliday: 'nationalUnityDay',
-		
+
 	},
-} as const;
+}
+
+const potatoDessertData = {
+	rainbowSet: {
+		slug: 'rainbow-set',
+		typeProduct: 'potato',
+		id: 1,
+		title: 'Набор десертов «Радуга»',
+		description: '64 десерта в коробке, вкусы макарони: фисташка, лесной орех, смородина, вишня, малина, апельсин-шоколад, карамель',
+		price: 7450,
+		gallery: ['/images/potato/img-1.png',],
+		flavor: [
+			{
+				flavorName: 'Лесной орех',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Капучино',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Шоколад-апельсин',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лимон',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Малина',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Лаванда',
+				quantity: 6,
+			},
+			{
+				flavorName: 'Эклеры',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Картошка',
+				quantity: 7,
+			},
+		],
+		typeHoliday: 'laborDay',
+	},
+	congratulationsSet: {
+		slug: 'congratulations-set',
+		typeProduct: 'potato',
+		id: 2,
+		title: 'Набор десертов «Поздравляю»',
+		description: '33 десерта в коробке, вкусы макаронс: фисташка, малина, смородина, ананас, шоколад, солёная карамель.',
+		price: 5770,
+		gallery: ['/images/potato/img-2.png',],
+		flavor: [
+			{
+				flavorName: 'Малина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Смородина',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Солёная карамель',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Ананас',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Фисташка',
+				quantity: 3,
+			},
+			{
+				flavorName: 'Шоколад',
+				quantity: 8,
+			},
+			{
+				flavorName: 'Пирожное Картошка',
+				quantity: 10,
+			},
+		],
+		typeHoliday: 'victoryDay',
+	},
+	potatoSet: {
+		slug: 'potato-set',
+		typeProduct: 'potato',
+		id: 3,
+		title: 'Набор пирожных картошка',
+		description: 'Ароматные и нежные пирожные в наборе, 12 штук',
+		price: 790,
+		gallery: ['/images/potato/img-3.jpg',],
+		flavor: [
+			{
+				flavorName: 'Клубника',
+				quantity: 12,
+			},
+		],
+		typeHoliday: 'mothersDay',
+	},
+	miniPotatoSet: {
+		slug: 'mini-potato-set',
+		typeProduct: 'potato',
+		id: 4,
+		title: 'MINI набор пирожных картошка',
+		description: '3 штуки в корексе, вкус клубника',
+		price: 590,
+		gallery: ['/images/potato/img-4.png',],
+		flavor: [
+			{
+				flavorName: 'Клубника',
+				quantity: 3,
+			},
+		],
+		typeHoliday: 'newYear',
+	},
+}
+
+const waferRollsData = {
+	chocolate: {
+		slug: 'chocolate',
+		typeProduct: 'waferRolls',
+		id: 1,
+		title: 'Трубочка с шоколадной начинкой',
+		description: 'Вафельная трубочка с шоколадной начинкой навевает теплые воспоминания о беззаботных моментах угощения сладостями. Вкус такой трубочки – это гармоничное сочетание сладкой, немного карамельной вафельной оболочки с богатым и густым шоколадным кремом внутри. Хрустящая вафля с легкими масляными нотками создает идеальный контраст с мягкой, тающей во рту шоколадной начинкой, которая обволакивает вкусовые рецепторы насыщенным шоколадным вкусом с легкими оттенками фундука. Это стоит попробовать!',
+		price: 100,
+		gallery: ['/images/waferRolls/img-1.png',],
+		typeHoliday: 'dayKnowledge',
+	},
+	condensedMilk: {
+		slug: 'condensed-milk',
+		typeProduct: 'waferRolls',
+		id: 2,
+		title: 'Набор трубочек со сгущёнкой',
+		description: '10 штук в наборе',
+		price: 995,
+		gallery: ['/images/waferRolls/img-2.png',],
+		flavor: [
+			{
+				flavorName: 'Трубочки со сгущёнкой',
+				quantity: 10,
+			},
+		],
+		typeHoliday: 'nationalUnityDay',
+	},
+	oneCondensedMilk: {
+		slug: 'one-condensed-milk',
+		typeProduct: 'waferRolls',
+		id: 3,
+		title: 'Трубочка со сгущёнкой',
+		description: 'В составе наших вафель — натуральное масло и яйца. Мы не используем яичный желток и сухие порошки, не используем консерванты, разрыхлители и загустители. В составе начинки: натуральная сгущёнка, масло и молоко. То есть наши трубочки приготовлены так, как если бы готовила их ваша бабушка)',
+		price: 100,
+		gallery: ['/images/waferRolls/img-3.png',],
+		typeHoliday: 'victoryDay',
+	},
+}
