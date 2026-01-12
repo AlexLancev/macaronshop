@@ -42,9 +42,7 @@ export const menuInfoData = [
 			"macarons",
 			"eclairs",
 			"waffleCones",
-			"cakePops",
 			"potatoDessert",
-			"comboSets",
 		],
 	},
 ] as const;
