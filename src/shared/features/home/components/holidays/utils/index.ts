@@ -28,45 +28,44 @@ interface HolidayWithSortDate extends HolidayWithKey {
  * Для каждого праздника вычисляется ближайшая дата в текущем или следующем году
  */
 export const getUpcomingHolidays = (options?: {
-  limit?: number;
-  getFirstKeyOnly?: boolean;
+	limit?: number;
+	getFirstKeyOnly?: boolean;
 }): {
-  singleHolidayKey?: HolidaysDataKeys | null;
-  upcomingHolidays: HolidayWithKey[];
+	singleHolidayKey?: HolidaysDataKeys | null;
+	upcomingHolidays: HolidayWithKey[];
 } => {
-  const limit = options?.limit ?? 6;
-  const getFirstKeyOnly = options?.getFirstKeyOnly ?? false;
-  
-  const today = dayjs();
-  const currentYear = today.year();
-  const nextYear = currentYear + 1;
+	const limit = options?.limit ?? 6;
+	const getFirstKeyOnly = options?.getFirstKeyOnly ?? false;
 
-  const holidaysWithCalculatedDates = calculateHolidayDates(
-    holidaysData,
-    currentYear,
-    nextYear,
-    today,
-  );
-  
-  const upcomingHolidays = filterAndSortHolidays(
-    holidaysWithCalculatedDates,
-    today,
-  );
+	const today = dayjs();
+	const currentYear = today.year();
+	const nextYear = currentYear + 1;
 
-  const result: {
-    singleHolidayKey?: HolidaysDataKeys | null;
-    upcomingHolidays: HolidayWithKey[];
-  } = {
-    upcomingHolidays: upcomingHolidays.slice(0, limit),
-  };
+	const holidaysWithCalculatedDates = calculateHolidayDates(
+		holidaysData,
+		currentYear,
+		nextYear,
+		today,
+	);
 
-  if (getFirstKeyOnly) {
-    result.singleHolidayKey = upcomingHolidays[1]?.key ?? null;
-  }
+	const upcomingHolidays = filterAndSortHolidays(
+		holidaysWithCalculatedDates,
+		today,
+	);
 
-  return result;
+	const result: {
+		singleHolidayKey?: HolidaysDataKeys | null;
+		upcomingHolidays: HolidayWithKey[];
+	} = {
+		upcomingHolidays: upcomingHolidays.slice(0, limit),
+	};
+
+	if (getFirstKeyOnly) {
+		result.singleHolidayKey = upcomingHolidays[1]?.key ?? null;
+	}
+
+	return result;
 };
-
 
 /**
  * Вычисляет ближайшие даты для каждого праздника
