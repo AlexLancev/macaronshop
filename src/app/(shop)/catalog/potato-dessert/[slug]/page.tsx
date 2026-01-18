@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function PotatoDessertProductPage({ params }: PageProps) {
 	const { slug } = await params;
-	const product = await getProductBySlug(slug, 'potato');
+	const product = await getProductBySlug(slug, "potato");
 
 	if (!product) {
 		notFound();
@@ -22,4 +22,3 @@ export default async function PotatoDessertProductPage({ params }: PageProps) {
 		</div>
 	);
 }
-

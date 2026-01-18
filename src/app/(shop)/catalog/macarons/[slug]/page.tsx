@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function MacaronProductPage({ params }: PageProps) {
 	const { slug } = await params;
-	const product = await getProductBySlug(slug, 'macaron');
+	const product = await getProductBySlug(slug, "macaron");
 
 	if (!product) {
 		notFound();
@@ -22,4 +22,3 @@ export default async function MacaronProductPage({ params }: PageProps) {
 		</div>
 	);
 }
-

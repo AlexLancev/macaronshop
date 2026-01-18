@@ -5,8 +5,11 @@ export default function BenefitsList() {
 	return (
 		<ul>
 			{benefitsData.map((benefit) => (
-				<BenefitItem key={benefit.id} benefit={benefit} />
+				<BenefitItem
+					key={benefit.id}
+					benefit={benefit}
+				/>
 			))}
 		</ul>
-	)
+	);
 }

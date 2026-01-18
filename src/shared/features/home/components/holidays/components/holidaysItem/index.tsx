@@ -25,7 +25,14 @@ export default function HolidaysItem({ data }: HolidaysItemProps) {
 					aria-hidden
 				/>
 				<strong className="flexCenter mt-auto gap-0.5">
-					{date && event && <time dateTime={date} className="text-xl">{event}</time>}
+					{date && event && (
+						<time
+							dateTime={date}
+							className="text-xl"
+						>
+							{event}
+						</time>
+					)}
 					{title}
 				</strong>
 			</Link>

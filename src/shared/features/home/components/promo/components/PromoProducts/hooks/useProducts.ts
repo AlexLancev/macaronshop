@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useQuery } from "@tanstack/react-query";
 import { getUpcomingHolidays } from "@/shared/features/home/components/holidays/utils";
@@ -13,13 +13,13 @@ export const useProducts = (): ProductCardType[] => {
 			if (!singleHolidayKey) {
 				return [];
 			}
-			
+
 			const response = await fetch(`/api/products/holiday/${singleHolidayKey}`);
-			
+
 			if (!response.ok) {
 				throw new Error("Failed to fetch products");
 			}
-			
+
 			return response.json() as Promise<ProductCardType[]>;
 		},
 		enabled: !!singleHolidayKey,
@@ -27,4 +27,3 @@ export const useProducts = (): ProductCardType[] => {
 
 	return products;
 };
-

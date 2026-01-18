@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function WaferRollProductPage({ params }: PageProps) {
 	const { slug } = await params;
-	const product = await getProductBySlug(slug, 'waferRolls');
+	const product = await getProductBySlug(slug, "waferRolls");
 
 	if (!product) {
 		notFound();
@@ -22,4 +22,3 @@ export default async function WaferRollProductPage({ params }: PageProps) {
 		</div>
 	);
 }
-

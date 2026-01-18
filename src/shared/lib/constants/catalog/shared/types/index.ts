@@ -2,7 +2,11 @@ import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/uti
 import { JSX } from "react";
 import { prodDetailsData } from "../data";
 
-export type ProductType = 'Макаруны' | 'Эклеры' | 'Вафельные трубочки' | 'Десерт картошка';
+export type ProductType =
+	| "Макаруны"
+	| "Эклеры"
+	| "Вафельные трубочки"
+	| "Десерт картошка";
 
 export type TypeProductKeys = keyof typeof prodDetailsData;
 
@@ -19,33 +23,33 @@ export interface StorageDetailsProps {
 
 export interface ProductDetailsType {
 	description: {
-		trigger: string,
-		htmlContent: string,
-	},
+		trigger: string;
+		htmlContent: string;
+	};
 	nutriFacts: {
-		trigger: string,
-		htmlContent: string,
-	},
+		trigger: string;
+		htmlContent: string;
+	};
 	shelfLife: {
-		trigger: string,
-		htmlContent: JSX.Element
-	}
+		trigger: string;
+		htmlContent: JSX.Element;
+	};
 }
 
 export interface ProductFlavor {
-	flavorName: string,
-	quantity: number,
+	flavorName: string;
+	quantity: number;
 }
 
 export interface ProductCardType {
-	id: number,
+	id: number;
 	slug: string;
-	title: string,
-	description: string,
-	price: number,
-	gallery: readonly string[],
-	flavor?: readonly ProductFlavor[],
-	typeProduct: TypeProductKeys,
-	typeHoliday: HolidaysDataKeys,
-	productDetails: ProductDetailsType
+	title: string;
+	description: string;
+	price: number;
+	gallery: readonly string[];
+	flavor?: readonly ProductFlavor[];
+	typeProduct: TypeProductKeys;
+	typeHoliday: HolidaysDataKeys;
+	productDetails: ProductDetailsType;
 }

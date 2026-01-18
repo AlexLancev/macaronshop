@@ -2,7 +2,7 @@ import HolidaysItem from "./components/holidaysItem";
 import { getUpcomingHolidays } from "./utils";
 
 export default function Holidays() {
-const { upcomingHolidays } = getUpcomingHolidays();
+	const { upcomingHolidays } = getUpcomingHolidays();
 
 	return (
 		<section className="py-12">

@@ -1,22 +1,10 @@
-import Link from "next/link";
-import { getAllProductsByType } from "@/shared/lib/api/products";
-import ProductCard from "@/shared/ui/components/ProductCard";
+import Products from "../components/Products";
 
-export default async function Macarons() {
-	const macarons = await getAllProductsByType("macaron");
-	console.log(macarons)
-
+export default function Macarons() {
 	return (
-		<section>
-			<div className="container">
-				<h1>Каталог макаронс</h1>
-				<ul className="grid grid-cols-3 gap-3">
-					{macarons.map((product, idx) => (
-						<ProductCard key={idx} data={product} />
-					))}
-				</ul>
-			</div>
-
-		</section>
+		<Products
+			typeProduct="Макаронс"
+			product="macaron"
+		/>
 	);
 }

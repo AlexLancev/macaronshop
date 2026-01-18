@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function EclairProductPage({ params }: PageProps) {
 	const { slug } = await params;
-	const product = await getProductBySlug(slug, 'eclairs');
+	const product = await getProductBySlug(slug, "eclairs");
 
 	if (!product) {
 		notFound();
@@ -22,4 +22,3 @@ export default async function EclairProductPage({ params }: PageProps) {
 		</div>
 	);
 }
-
