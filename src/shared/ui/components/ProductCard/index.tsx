@@ -25,8 +25,8 @@ export default function ProductCard({ data }: ProductCardProps) {
 	} = data;
 
 	return (
-		<li className="">
-			<Link className="py-4 bg-white block" href={`${CATEGORY_PATHS[typeProduct as CategoryPathKey]}/${slug}`}>
+		<li className="h-full flex flex-col">
+			<Link className="py-4 bg-white block flex-grow" href={`${CATEGORY_PATHS[typeProduct as CategoryPathKey]}/${slug}`}>
 				<Image
 					className="w-full h-auto max-h-[400px] object-cover"
 					src={gallery[0]}
