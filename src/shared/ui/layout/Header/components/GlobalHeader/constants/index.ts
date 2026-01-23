@@ -38,7 +38,6 @@ export const menuInfoData = [
 	{
 		keyMenu: "entireСatalog",
 		submenu: [
-			"dessertCatalog",
 			"macarons",
 			"eclairs",
 			"waffleCones",
