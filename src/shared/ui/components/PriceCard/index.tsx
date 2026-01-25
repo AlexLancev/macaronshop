@@ -5,14 +5,22 @@ const shopIcon = iconRender["shoppingBag"]();
 
 const RUB_SIGN = "₽";
 
-export default function PriceCard({ price }: { price: number }) {
-	
+interface PriceCardProps {
+	price: number;
+}
+
+export default function PriceCard({ price }: PriceCardProps) {
 	return (
-		<div className="flex items-center w-full bg-white border border-customGray [&>*]:w-1/2">
-			<div className="flex items-center text-customPinkDark font-medium text-lg">{price} {RUB_SIGN}</div>
-			<Button className="text-white bg-transparent hover:bg-transparent hover:text-customPinkDark" type="button">
+		<div className="flex w-full border border-customGray bg-white [&>*]:w-1/2">
+			<div className="grid place-items-center border-customGray border-r font-medium text-customPinkDark text-lg">
+				{price} {RUB_SIGN}
+			</div>
+			<Button
+				className="rounded-none bg-transparent px-2 py-4 text-black shadow-none hover:bg-transparent hover:text-customPinkDark"
+				type="button"
+			>
 				{shopIcon}
-				Купить!
+				Купить
 			</Button>
 		</div>
 	);
