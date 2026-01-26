@@ -1,6 +1,8 @@
-import { FC } from "react";
+import type { FC } from "react";
+
+import type { StorageDetailsProps } from "../../types";
+
 import { pluralize } from "@/shared/lib/utils/pluralize";
-import { StorageDetailsProps } from "../../types";
 
 export const StorageDetails: FC<StorageDetailsProps> = ({ config = {} }) => {
 	const {
