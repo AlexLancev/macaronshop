@@ -1,7 +1,7 @@
 "use client";
 
-import ProductCard from "@/shared/ui/components/ProductCard";
 import { useProducts } from "./hooks/useProducts";
+import ProductCard from "@/shared/ui/components/ProductCard";
 
 export default function PromoProducts() {
 	const allPromoProducts = useProducts();
