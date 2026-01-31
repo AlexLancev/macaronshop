@@ -1,8 +1,10 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
+
+import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
+
 import { getUpcomingHolidays } from "@/shared/features/home/components/holidays/utils";
-import { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
 
 export const useProducts = (): ProductCardType[] => {
 	const { singleHolidayKey } = getUpcomingHolidays({ getFirstKeyOnly: true });
