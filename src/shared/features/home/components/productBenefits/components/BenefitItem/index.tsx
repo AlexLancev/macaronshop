@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { benefitsData } from "../../constants";
+
+import type { benefitsData } from "../../constants";
 
 interface BenefitItemProps {
 	benefit: (typeof benefitsData)[number];
