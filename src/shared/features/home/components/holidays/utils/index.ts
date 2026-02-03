@@ -28,12 +28,14 @@ interface HolidayWithSortDate extends HolidayWithKey {
  * Для каждого праздника вычисляется ближайшая дата в текущем или следующем году
  */
 export const getUpcomingHolidays = (options?: {
+	startIndex?: number;
 	limit?: number;
 	getFirstKeyOnly?: boolean;
 }): {
 	singleHolidayKey?: HolidaysDataKeys | null;
 	upcomingHolidays: HolidayWithKey[];
 } => {
+	const startIndex = options?.startIndex ?? 0;
 	const limit = options?.limit ?? 6;
 	const getFirstKeyOnly = options?.getFirstKeyOnly ?? false;
 
@@ -57,7 +59,7 @@ export const getUpcomingHolidays = (options?: {
 		singleHolidayKey?: HolidaysDataKeys | null;
 		upcomingHolidays: HolidayWithKey[];
 	} = {
-		upcomingHolidays: upcomingHolidays.slice(0, limit),
+		upcomingHolidays: upcomingHolidays.slice(startIndex, startIndex + limit),
 	};
 
 	if (getFirstKeyOnly) {

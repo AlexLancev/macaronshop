@@ -1,5 +1,6 @@
-import { getProductBySlug } from "@/shared/lib/api/products";
 import { notFound } from "next/navigation";
+
+import { getProductBySlug } from "@/shared/lib/api/products";
 
 interface PageProps {
 	params: Promise<{ slug: string }>;

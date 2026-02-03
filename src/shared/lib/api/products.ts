@@ -1,5 +1,7 @@
 import { getSupabaseClient } from "@/lib/server";
-import { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
+
+import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
+
 import { prodDetailsData } from "@/shared/lib/constants/catalog/shared/data";
 
 type ProductType = "macaron" | "eclairs" | "waferRolls" | "potato";

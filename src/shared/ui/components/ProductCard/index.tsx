@@ -1,10 +1,12 @@
-import {
-	CATEGORY_PATHS,
-	CategoryPathKey,
-} from "@/shared/lib/constants/catalog/categoryPaths";
-import { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
 import Image from "next/image";
 import Link from "next/link";
+
+import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
+
+import {
+	CATEGORY_PATHS,
+	type CategoryPathKey,
+} from "@/shared/lib/constants/catalog/categoryPaths";
 import PriceCard from "../PriceCard";
 
 interface ProductCardProps {
@@ -24,11 +26,16 @@ export default function ProductCard({ data }: ProductCardProps) {
 		productDetails,
 	} = data;
 
+	console.log("data", data);
+
 	return (
-		<li className="h-full flex flex-col">
-			<Link className="py-4 bg-white block flex-grow" href={`${CATEGORY_PATHS[typeProduct as CategoryPathKey]}/${slug}`}>
+		<li className="flex h-full flex-col shadow-md transition-shadow duration-300 hover:shadow-lg">
+			<Link
+				className="stretch block flex-grow bg-white py-4"
+				href={`${CATEGORY_PATHS[typeProduct as CategoryPathKey]}/${slug}`}
+			>
 				<Image
-					className="w-full h-auto max-h-[400px] object-cover"
+					className="h-auto max-h-[400px] w-full object-cover"
 					src={gallery[0]}
 					width={300}
 					height={200}
@@ -36,11 +43,11 @@ export default function ProductCard({ data }: ProductCardProps) {
 					alt={title}
 				/>
 				<div className="p-4">
-					<h3 className="text-xl font-medium mb-2">{title}</h3>
+					<h3 className="mb-2 font-medium text-xl">{title}</h3>
 					<p className="text-gray-500">{description}</p>
 				</div>
 			</Link>
-			<PriceCard price={price} />
+			<PriceCard price={price} typeHoliday={typeHoliday} />
 		</li>
 	);
 }

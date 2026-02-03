@@ -25,7 +25,6 @@ export const PATHS = {
 		wholesaleSupplies: "/wholesale-supplies",
 		eclairsWholesale: "/eclairs-wholesale",
 		entireСatalog: "/entire-catalog",
-		dessertCatalog: "/dessert-catalog",
 		macarons: "/catalog/macarons",
 		eclairs: "/catalog/eclairs",
 		waffleCones: "/catalog/wafer-rolls",

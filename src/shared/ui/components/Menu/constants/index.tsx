@@ -61,10 +61,6 @@ export const mainMenuDataCurrent = {
 		path: PATHS.mainMenu.entireСatalog,
 		linkName: "Весь каталог",
 	},
-	dessertCatalog: {
-		path: PATHS.mainMenu.dessertCatalog,
-		linkName: "Каталог десертов",
-	},
 	macarons: {
 		path: PATHS.mainMenu.macarons,
 		linkName: "Макарон",

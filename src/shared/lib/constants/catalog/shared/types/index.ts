@@ -1,6 +1,7 @@
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
-import { JSX } from "react";
-import { prodDetailsData } from "../data";
+import type { JSX } from "react";
+
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+import type { prodDetailsData } from "../data";
 
 export type ProductType =
 	| "Макаруны"

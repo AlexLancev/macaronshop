@@ -1,7 +1,9 @@
-import { getAllProductsByType } from "@/shared/lib/api/products";
-import { TypeProductKeys } from "@/shared/lib/constants/catalog/shared/types";
-import ProductCard from "@/shared/ui/components/ProductCard";
 import React from "react";
+
+import type { TypeProductKeys } from "@/shared/lib/constants/catalog/shared/types";
+
+import { getAllProductsByType } from "@/shared/lib/api/products";
+import ProductCard from "@/shared/ui/components/ProductCard";
 
 interface ProductsProps {
 	typeProduct: string;
@@ -15,10 +17,12 @@ export default async function Products({
 	const products = await getAllProductsByType(product);
 
 	return (
-		<section>
+		<section className="py-10">
 			<div className="container">
-				<h1>{typeProduct}</h1>
-				<ul className="grid grid-cols-3 gap-3">
+				<h1 className="mb-10 text-center font-semibold text-4xl">
+					{typeProduct}
+				</h1>
+				<ul className="grid grid-cols-3 gap-4">
 					{products.map((product) => (
 						<ProductCard
 							key={product.id}
