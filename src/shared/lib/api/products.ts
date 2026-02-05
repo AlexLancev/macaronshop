@@ -3,6 +3,7 @@ import { getSupabaseClient } from "@/lib/server";
 import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
 
 import { prodDetailsData } from "@/shared/lib/constants/catalog/shared/data";
+import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
 
 type ProductType = "macaron" | "eclairs" | "waferRolls" | "potato";
 
@@ -194,7 +195,7 @@ export async function getAllProductsByType(
  * Получает все продукты из Supabase по типу праздника
  */
 export async function getAllProductsByHoliday(
-	typeHoliday: string,
+	typeHoliday?: HolidaysDataKeys,
 ): Promise<ProductCardType[]> {
 	try {
 		const supabase = await getSupabaseClient();

@@ -5,7 +5,15 @@ export const menuSaleData = [
 	},
 	{
 		keyMenu: "giftSets",
-		submenu: ["weddingProposals", "candyBars", "corporateGifts"],
+		submenu: [
+			"birthDay",
+			"newYear",
+			"dayKnowledge",
+			"valentinesDay",
+			"childrensDay",
+			"fatherlandDay",
+			"womensDay",
+		],
 	},
 	{
 		keyMenu: "assembleSet",
@@ -37,11 +45,6 @@ export const menuInfoData = [
 	},
 	{
 		keyMenu: "entireСatalog",
-		submenu: [
-			"macarons",
-			"eclairs",
-			"waffleCones",
-			"potatoDessert",
-		],
+		submenu: ["macarons", "eclairs", "waffleCones", "potatoDessert"],
 	},
 ] as const;

@@ -1,5 +1,26 @@
-import React from "react";
+import GiftSetPage from "@/shared/ui/components/GiftSetPage";
+import GiftSetCategoryList from "./components/GiftSetCategoryList";
+import { giftSetsData } from "./constants";
+import Image from "next/image";
 
 export default function GiftSets() {
-	return <div>GiftSets</div>;
+	return (
+		<div className="relative">
+			<Image className="absolute top-0 left-0 z-10 opacity-60" src="/images/holidays/images/promo-1.webp" width={350} height={390} alt="" aria-hidden />
+			<Image className="absolute top-0 right-0 z-10 opacity-60" src="/images/holidays/images/promo-2.webp" width={271} height={458} alt="" aria-hidden />
+			<div className="relative z-20">
+				
+			<GiftSetPage
+				title="Подарочные наборы"
+				subtitle="Для сладких моментов вашей жизни"
+				className="px-10 py-36"
+			/>
+			<section className="py-10">
+				<div className="container">
+					<GiftSetCategoryList giftSetsData={giftSetsData} />
+				</div>
+			</section>
+			</div>
+		</div>
+	);
 }

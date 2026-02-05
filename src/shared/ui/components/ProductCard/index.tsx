@@ -14,19 +14,8 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ data }: ProductCardProps) {
-	const {
-		title,
-		description,
-		price,
-		typeProduct,
-		slug,
-		gallery,
-		flavor,
-		typeHoliday,
-		productDetails,
-	} = data;
-
-	console.log("data", data);
+	const { title, description, price, typeProduct, slug, gallery, typeHoliday } =
+		data;
 
 	return (
 		<li className="flex h-full flex-col shadow-md transition-shadow duration-300 hover:shadow-lg">
@@ -47,7 +36,10 @@ export default function ProductCard({ data }: ProductCardProps) {
 					<p className="text-gray-500">{description}</p>
 				</div>
 			</Link>
-			<PriceCard price={price} typeHoliday={typeHoliday} />
+			<PriceCard
+				price={price}
+				typeHoliday={typeHoliday}
+			/>
 		</li>
 	);
 }

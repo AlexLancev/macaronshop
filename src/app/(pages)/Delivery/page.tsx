@@ -11,7 +11,9 @@ export default function Delivery() {
 	return (
 		<section className="py-10">
 			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">Доставка и оплата</h1>
+				<h1 className="mb-10 text-center font-semibold text-4xl">
+					Доставка и оплата
+				</h1>
 				<div className="flex">
 					<div className="w-1/2 flex items-center justify-center">
 						<Image
@@ -26,12 +28,17 @@ export default function Delivery() {
 						<h2 className="text-2xl font-semibold">Доставка и оплата</h2>
 						<div className="mt-4 space-y-5 text-base">
 							<p>
-								Курьеры работают ежедневно с 10 до 22. Доставляем по Санкт-Петербургу в радиусе 30 км.
-								Доставка по городу — от <span className="font-semibold">400₽</span> (при заказе от 2000₽ — бесплатно, в зависимости от района).
-								В дальние районы (Кронштадт, Сестрорецк и другие) стоимость доставки согласовывается с менеджером.
+								Курьеры работают ежедневно с 10 до 22. Доставляем по
+								Санкт-Петербургу в радиусе 30 км. Доставка по городу — от{" "}
+								<span className="font-semibold">400₽</span> (при заказе от 2000₽
+								— бесплатно, в зависимости от района). В дальние районы
+								(Кронштадт, Сестрорецк и другие) стоимость доставки
+								согласовывается с менеджером.
 							</p>
 							<div>
-								<span className="font-semibold block mb-2">Интервалы доставки:</span>
+								<span className="font-semibold block mb-2">
+									Интервалы доставки:
+								</span>
 								<ul className="list-disc list-inside space-y-1">
 									{deliveryIntervalsData.map((interval, idx) => (
 										<li key={idx}>{interval}</li>
@@ -42,7 +49,8 @@ export default function Delivery() {
 								</p>
 							</div>
 							<p>
-								На данном сайте заказ доставки возможен по Санкт-Петербургу в радиусе 30 км.
+								На данном сайте заказ доставки возможен по Санкт-Петербургу в
+								радиусе 30 км.
 							</p>
 						</div>
 					</div>

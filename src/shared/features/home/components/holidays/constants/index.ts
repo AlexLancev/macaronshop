@@ -1,10 +1,13 @@
+import { PATHS } from "@/shared/lib/paths";
+
 export const holidaysData = {
 	birthDay: {
 		id: 1,
 		allRussianHoliday: false,
 		title: "День Рождения",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.birthDay,
+		cardColor: "#0e3250",
+		imageUrl: "/images/holidays/images/happyDay.webp",
 		pathIcon: "/images/holidays/icons/birthDay.svg",
 	},
 	mothersDay: {
@@ -13,7 +16,8 @@ export const holidaysData = {
 		event: "",
 		title: "День Матери",
 		path: "",
-		cardColor: "",
+		cardColor: "#52052f",
+		imageUrl: "/images/holidays/images/mothersDay.webp",
 		pathIcon: "/images/holidays/icons/mothersDay.svg",
 	},
 	newYear: {
@@ -21,8 +25,9 @@ export const holidaysData = {
 		date: "01-01",
 		event: "31 Декабря",
 		title: "Новый Год",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.newYear,
+		cardColor: "#255351",
+		imageUrl: "/images/holidays/images/newYear.webp",
 		pathIcon: "/images/holidays/icons/newYear.svg",
 	},
 	valentinesDay: {
@@ -30,8 +35,9 @@ export const holidaysData = {
 		date: "02-14",
 		event: "14 Февраля",
 		title: "День Святого Валентина",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.valentinesDay,
+		cardColor: "#b94b8f",
+		imageUrl: "/images/holidays/images/valDay.webp",
 		pathIcon: "/images/holidays/icons/valentinesDay.svg",
 	},
 	fatherlandDay: {
@@ -39,8 +45,9 @@ export const holidaysData = {
 		date: "02-23",
 		event: "23 Февраля",
 		title: "День Защитника Отечества",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.fatherlandDay,
+		cardColor: "#a83229",
+		imageUrl: "/images/holidays/images/fatherlandDay.webp",
 		pathIcon: "/images/holidays/icons/fatherlandDay.svg",
 	},
 	womensDay: {
@@ -48,8 +55,9 @@ export const holidaysData = {
 		date: "03-08",
 		event: "8 Марта",
 		title: "Международный Женский День",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.womensDay,
+		cardColor: "#abaa21",
+		imageUrl: "/images/holidays/images/womensDay.webp",
 		pathIcon: "/images/holidays/icons/womensDay.svg",
 	},
 	laborDay: {
@@ -58,7 +66,8 @@ export const holidaysData = {
 		event: "1 Мая",
 		title: "Праздник Весны и Труда",
 		path: "",
-		cardColor: "",
+		cardColor: "#650d5c",
+		imageUrl: "/images/holidays/images/laborDay.webp",
 		pathIcon: "/images/holidays/icons/laborDay.svg",
 	},
 	victoryDay: {
@@ -67,7 +76,8 @@ export const holidaysData = {
 		event: "9 Мая",
 		title: "День Победы",
 		path: "",
-		cardColor: "",
+		cardColor: "#2a0d65",
+		imageUrl: "/images/holidays/images/victoryDay.webp",
 		pathIcon: "/images/holidays/icons/victoryDay.svg",
 	},
 	childrensDay: {
@@ -75,8 +85,9 @@ export const holidaysData = {
 		date: "07-01",
 		event: "1 Июня",
 		title: "День защиты детей",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.childrensDay,
+		cardColor: "#41671d",
+		imageUrl: "/images/holidays/images/kidsDay.webp",
 		pathIcon: "/images/holidays/icons/childrensDay.svg",
 	},
 	dayKnowledge: {
@@ -84,8 +95,9 @@ export const holidaysData = {
 		date: "09-01",
 		event: "1 Сентября",
 		title: "День знаний",
-		path: "",
-		cardColor: "",
+		path: PATHS.mainMenu.dayKnowledge,
+		cardColor: "#8c5118",
+		imageUrl: "/images/holidays/images/dayKnowledge.webp",
 		pathIcon: "/images/holidays/icons/dayKnowledge.svg",
 	},
 	nationalUnityDay: {
@@ -94,7 +106,8 @@ export const holidaysData = {
 		event: "4 Ноября",
 		title: "День Народного Единства",
 		path: "",
-		cardColor: "",
+		cardColor: "#0c5818",
+		imageUrl: "/images/holidays/images/nationalUnityDay.webp",
 		pathIcon: "/images/holidays/icons/nationalUnityDay.svg",
 	},
 } as const;

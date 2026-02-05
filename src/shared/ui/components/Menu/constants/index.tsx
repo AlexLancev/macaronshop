@@ -93,6 +93,30 @@ export const mainMenuDataCurrent = {
 		path: PATHS.servicePages.contacts,
 		linkName: "Контакты",
 	},
+	newYear: {
+		path: PATHS.mainMenu.newYear,
+		linkName: "Подарки на Новый год",
+	},
+	dayKnowledge: {
+		path: PATHS.mainMenu.dayKnowledge,
+		linkName: "Подарочные наборы на День знаний",
+	},
+	childrensDay: {
+		path: PATHS.mainMenu.childrensDay,
+		linkName: "Подарки на День защиты детей",
+	},
+	valentinesDay: {
+		path: PATHS.mainMenu.valentinesDay,
+		linkName: "Подарки на День святого Валентина",
+	},
+	fatherlandDay: {
+		path: PATHS.mainMenu.fatherlandDay,
+		linkName: "Подарки на День Защитника Отечества",
+	},
+	womensDay: {
+		path: PATHS.mainMenu.womensDay,
+		linkName: "Подарки на Международный Женский День",
+	},
 } as const;
 
 export type MenuKeysType = keyof typeof mainMenuDataCurrent;
