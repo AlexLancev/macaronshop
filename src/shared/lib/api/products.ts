@@ -1,9 +1,9 @@
 import { getSupabaseClient } from "@/lib/server";
 
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
 import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/types";
 
 import { prodDetailsData } from "@/shared/lib/constants/catalog/shared/data";
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
 
 type ProductType = "macaron" | "eclairs" | "waferRolls" | "potato";
 
