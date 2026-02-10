@@ -15,7 +15,7 @@ export default function Delivery() {
 					Доставка и оплата
 				</h1>
 				<div className="flex">
-					<div className="w-1/2 flex items-center justify-center">
+					<div className="flex w-1/2 items-center justify-center">
 						<Image
 							className="object-contain"
 							src="/images/delivery/vehicle.png"
@@ -25,7 +25,7 @@ export default function Delivery() {
 						/>
 					</div>
 					<div className="w-1/2">
-						<h2 className="text-2xl font-semibold">Доставка и оплата</h2>
+						<h2 className="font-semibold text-2xl">Доставка и оплата</h2>
 						<div className="mt-4 space-y-5 text-base">
 							<p>
 								Курьеры работают ежедневно с 10 до 22. Доставляем по
@@ -36,10 +36,10 @@ export default function Delivery() {
 								согласовывается с менеджером.
 							</p>
 							<div>
-								<span className="font-semibold block mb-2">
+								<span className="mb-2 block font-semibold">
 									Интервалы доставки:
 								</span>
-								<ul className="list-disc list-inside space-y-1">
+								<ul className="list-inside list-disc space-y-1">
 									{deliveryIntervalsData.map((interval, idx) => (
 										<li key={idx}>{interval}</li>
 									))}

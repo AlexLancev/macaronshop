@@ -1,6 +1,7 @@
-import React from "react";
-import { freshnessData } from "./data";
 import Image from "next/image";
+import React from "react";
+
+import { freshnessData } from "./data";
 
 export default function Freshness() {
 	return (

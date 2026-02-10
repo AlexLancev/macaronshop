@@ -1,10 +1,10 @@
-import { iconRender } from "@/shared/lib/constants/icons";
-import { Button } from "../Button";
+import { isHolidayMatch } from "./utils/isHolidayMatch";
 import {
 	getUpcomingHolidays,
-	HolidaysDataKeys,
+	type HolidaysDataKeys,
 } from "@/shared/features/home/components/holidays/utils";
-import { isHolidayMatch } from "./utils/isHolidayMatch";
+import { iconRender } from "@/shared/lib/constants/icons";
+import { Button } from "../Button";
 
 interface PriceCardProps {
 	price: number;
@@ -19,10 +19,10 @@ export default function PriceCard({ price, typeHoliday }: PriceCardProps) {
 	});
 
 	return (
-		<div className="flex items-center w-full border border-customGray bg-white [&>*]:w-1/2">
+		<div className="flex w-full items-center border border-customGray bg-white [&>*]:w-1/2">
 			{isHolidayMatch(typeHoliday, price, singleHolidayKey)}
 			<Button
-				className="rounded-none border-l border-customGray bg-transparent px-2 py-8 text-black shadow-none hover:bg-transparent hover:text-customPinkDark"
+				className="rounded-none border-customGray border-l bg-transparent px-2 py-8 text-black shadow-none hover:bg-transparent hover:text-customPinkDark"
 				type="button"
 			>
 				{shopIcon}

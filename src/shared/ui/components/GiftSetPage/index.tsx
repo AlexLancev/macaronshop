@@ -1,7 +1,8 @@
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+
 import { getAllProductsByHoliday } from "@/shared/lib/api/products";
-import ProductCard from "../ProductCard";
 import { cn } from "@/shared/lib/utils/cn";
+import ProductCard from "../ProductCard";
 
 interface GiftSetPageProps {
 	title: string;
@@ -21,8 +22,8 @@ export default async function GiftSetPage({
 	return (
 		<section className={cn("py-10", className)}>
 			<div className="container">
-				<h1 className="text-4xl font-semibold text-center mb-2">{title}</h1>
-				<h2 className="text-xl font-medium text-center mb-10">{subtitle}</h2>
+				<h1 className="mb-2 text-center font-semibold text-4xl">{title}</h1>
+				<h2 className="mb-10 text-center font-medium text-xl">{subtitle}</h2>
 				<ul className="grid grid-cols-3 gap-4">
 					{allProducts.map((product, idx) => (
 						<ProductCard

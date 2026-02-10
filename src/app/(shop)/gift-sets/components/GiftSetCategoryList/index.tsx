@@ -1,6 +1,8 @@
-import { holidaysData } from "@/shared/features/home/components/holidays/constants";
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
 import Link from "next/link";
+
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+
+import { holidaysData } from "@/shared/features/home/components/holidays/constants";
 import GiftSetCategoryItem from "../GiftSetCategoryItem";
 
 interface GiftSetCategoryListProps {

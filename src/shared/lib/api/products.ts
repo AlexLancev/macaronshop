@@ -5,7 +5,7 @@ import type { ProductCardType } from "@/shared/lib/constants/catalog/shared/type
 
 import { prodDetailsData } from "@/shared/lib/constants/catalog/shared/data";
 
-type ProductType = "macaron" | "eclairs" | "waferRolls" | "potato";
+export type ProductTypeKeys = "macaron" | "eclairs" | "waferRolls" | "potato";
 
 interface SupabaseProduct {
 	id: number;
@@ -35,8 +35,8 @@ function slugToColumnName(slug: string): string {
 /**
  * Определяет название таблицы в Supabase в зависимости от типа продукта
  */
-function getTableName(typeProduct: ProductType): string {
-	const tableMap: Record<ProductType, string> = {
+function getTableName(typeProduct: ProductTypeKeys): string {
+	const tableMap: Record<ProductTypeKeys, string> = {
 		macaron: "macarons",
 		eclairs: "eclairs",
 		waferRolls: "waferrolls",
@@ -47,7 +47,7 @@ function getTableName(typeProduct: ProductType): string {
 
 export async function getProductBySlug(
 	slug: string,
-	typeProduct: ProductType,
+	typeProduct: ProductTypeKeys,
 ): Promise<ProductCardType | null> {
 	try {
 		const supabase = await getSupabaseClient();
@@ -97,7 +97,7 @@ export async function getProductBySlug(
  */
 function transformSupabaseProductToProductCard(
 	supabaseProduct: SupabaseProduct, // Используем any, так как структура из jsonb может отличаться
-	typeProduct: ProductType,
+	typeProduct: ProductTypeKeys,
 ): ProductCardType {
 	// В вашей структуре данных из jsonb колонок используются поля:
 	// title, slug, price, description, flavor (массив объектов), typeHoliday, gallery и т.д.
@@ -130,7 +130,7 @@ function transformSupabaseProductToProductCard(
  * В структуре БД продукты хранятся как JSONB колонки
  */
 export async function getAllProductsByType(
-	typeProduct: ProductType,
+	typeProduct: ProductTypeKeys,
 ): Promise<ProductCardType[]> {
 	try {
 		const supabase = await getSupabaseClient();
@@ -203,14 +203,14 @@ export async function getAllProductsByHoliday(
 		// Получаем продукты из всех таблиц (macarons, eclairs, waferRolls, potato)
 		const allProducts: ProductCardType[] = [];
 
-		const productTypes: ProductType[] = [
+		const ProductTypeKeyss: ProductTypeKeys[] = [
 			"macaron",
 			"eclairs",
 			"waferRolls",
 			"potato",
 		];
 
-		for (const typeProduct of productTypes) {
+		for (const typeProduct of ProductTypeKeyss) {
 			const tableName = getTableName(typeProduct);
 
 			// В вашей структуре продукты хранятся как jsonb колонки

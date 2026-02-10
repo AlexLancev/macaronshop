@@ -1,6 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
-import { wholesaleData } from "../../data";
+import Link from "next/link";
+
+import type { wholesaleData } from "../../data";
 
 interface WholesaleProductGridProps {
 	data: typeof wholesaleData;
@@ -15,16 +16,16 @@ export default function WholesaleProductGrid({
 				<li key={id}>
 					<Link
 						href={path}
-						className="text-center relative"
+						className="relative text-center"
 					>
 						<Image
-							className="mb-4 w-full h-full object-cover"
+							className="mb-4 h-full w-full object-cover"
 							src={image}
 							alt={title}
 							width={100}
 							height={100}
 						/>
-						<h3 className="text-xl font-semibold mb-2">{title}</h3>
+						<h3 className="mb-2 font-semibold text-xl">{title}</h3>
 						<p className="text-gray-700">{description}</p>
 					</Link>
 				</li>

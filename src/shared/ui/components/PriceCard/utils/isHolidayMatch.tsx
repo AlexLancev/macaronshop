@@ -1,5 +1,7 @@
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
-import { JSX } from "react";
+import type { JSX } from "react";
+
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+
 import { discountedPrice } from "./discountedPrice";
 
 const RUB_SIGN = "₽";
@@ -15,7 +17,7 @@ export const isHolidayMatch = (
 
 		return (
 			<div className="grid place-items-center">
-				<span className="text-sm text-customGrayMedium">
+				<span className="text-customGrayMedium text-sm">
 					<s>
 						{price} {RUB_SIGN}
 					</s>

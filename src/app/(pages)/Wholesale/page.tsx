@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { wholesaleData } from "./data";
+
 import WholesaleProductGrid from "./components/WholesaleProductGrid";
+import { wholesaleData } from "./data";
 
 export default function Wholesale() {
 	return (
@@ -11,7 +12,7 @@ export default function Wholesale() {
 						Оптовые поставки
 					</h1>
 					<div className="flex gap-10 md:gap-16">
-						<div className="w-full md:w-1/2 flex justify-center">
+						<div className="flex w-full justify-center md:w-1/2">
 							<Image
 								src="/images/wholesale/optom.jpg"
 								alt="Десерты на витрине"
@@ -19,15 +20,15 @@ export default function Wholesale() {
 								height={582}
 							/>
 						</div>
-						<div className="w-full md:w-1/2 pt-10 md:items-start text-center md:text-left">
-							<h2 className="text-4xl font-semibold mb-3">
+						<div className="w-full pt-10 text-center md:w-1/2 md:items-start md:text-left">
+							<h2 className="mb-3 font-semibold text-4xl">
 								Десерты для кофейни
 							</h2>
 							<div className="mb-8 font-medium text-black">
 								<span>Акция! </span>
 								<span>Специальные условия доставки в Москву. </span>
 							</div>
-							<p className="mb-7 text-xl text-gray-700 max-w-xl">
+							<p className="mb-7 max-w-xl text-gray-700 text-xl">
 								Мы с 2013 года производим и поставляем оптом пирожные для кофеен
 								и кафе. Наши десерты продаются в крупных кондитерских сетях
 								Петербурга. Они яркие, натуральные, позволяют делать высокую
@@ -36,7 +37,7 @@ export default function Wholesale() {
 						</div>
 					</div>
 				</div>
-				<h2 className="text-3xl font-semibold mb-10 text-center">
+				<h2 className="mb-10 text-center font-semibold text-3xl">
 					Пирожные для вашей кофейни
 				</h2>
 				<WholesaleProductGrid data={wholesaleData} />

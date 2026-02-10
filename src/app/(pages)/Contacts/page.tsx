@@ -6,7 +6,7 @@ export default function Contacts() {
 			<div className="container">
 				<h1 className="mb-10 text-center font-semibold text-4xl">Контакты</h1>
 				<div className="flex items-center justify-center gap-10">
-					<div className="flex-shrink-0 flex justify-center md:block mb-8 md:mb-0">
+					<div className="mb-8 flex flex-shrink-0 justify-center md:mb-0 md:block">
 						<div className="relative">
 							<Image
 								src="/images/contacts/location.png"
@@ -17,20 +17,20 @@ export default function Contacts() {
 							/>
 						</div>
 					</div>
-					<div className="max-w-xl w-full">
+					<div className="w-full max-w-xl">
 						<div className="mb-6">
-							<div className="font-semibold mb-1">Розничные заказы:</div>
+							<div className="mb-1 font-semibold">Розничные заказы:</div>
 							<div>
 								<a
 									href="tel:88123098288"
-									className="block text-base mb-1"
+									className="mb-1 block text-base"
 								>
 									(812) 309-82-88{" "}
 									<span className="text-gray-500">(ежедневно, с 9 до 18)</span>
 								</a>
 								<a
 									href="mailto:info@macaronshop.ru"
-									className="block text-base mb-1"
+									className="mb-1 block text-base"
 									style={{ color: "var(--color-customBlue)" }}
 								>
 									info@macaronshop.ru
@@ -49,7 +49,7 @@ export default function Contacts() {
 						</div>
 
 						<div className="mb-6">
-							<div className="font-semibold mb-1">Пункт самовывоза:</div>
+							<div className="mb-1 font-semibold">Пункт самовывоза:</div>
 							<div>
 								<div>
 									Мясной пер. 7А,
@@ -61,30 +61,30 @@ export default function Contacts() {
 						</div>
 
 						<div className="mb-6">
-							<div className="font-semibold mb-1">Юридические лица:</div>
+							<div className="mb-1 font-semibold">Юридические лица:</div>
 							<div>
 								<a
 									href="tel:88123098288"
-									className="block text-base mb-1"
+									className="mb-1 block text-base"
 								>
 									(812) 309-82-88{" "}
 									<span className="text-gray-500">(доб. 2)</span>
 								</a>
 								<a
 									href="mailto:sales@macaronshop.ru"
-									className="block text-base mb-1"
+									className="mb-1 block text-base"
 									style={{ color: "var(--color-customBlue)" }}
 								>
 									sales@macaronshop.ru
 								</a>
-								<span className="text-gray-500 text-sm block">
+								<span className="block text-gray-500 text-sm">
 									Пн–Пт (9:00 – 18:00)
 								</span>
 							</div>
 						</div>
 
 						<div>
-							<div className="font-semibold mb-1">
+							<div className="mb-1 font-semibold">
 								Отдел по работе с сетями:
 							</div>
 							<a

@@ -1,4 +1,4 @@
-import { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
+import type { HolidaysDataKeys } from "@/shared/features/home/components/holidays/utils";
 
 export const giftSetsData = [
 	"birthDay",

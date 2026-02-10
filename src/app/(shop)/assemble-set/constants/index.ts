@@ -1,0 +1,60 @@
+import type { AssemblePromoItem } from "../types";
+
+export const assembleSetData = [
+	{
+		id: 1,
+		title: "Набор из 6 макарон",
+		price: 490,
+		type: "macaron",
+		quantity: 6,
+		image: "/images/assemble-set/promo-1.png",
+	},
+	{
+		id: 2,
+		title: "Набор из 12 макарон",
+		price: 890,
+		type: "macaron",
+		quantity: 12,
+		image: "/images/assemble-set/promo-2.png",
+	},
+	{
+		id: 3,
+		title: "Набор Сердце из 22 макарон",
+		price: 2500,
+		type: "macaron",
+		quantity: 22,
+		image: "/images/assemble-set/promo-3.png",
+	},
+	{
+		id: 4,
+		title: "Набор из 24 макарон",
+		price: 1790,
+		type: "macaron",
+		quantity: 24,
+		image: "/images/assemble-set/promo-4.png",
+	},
+	{
+		id: 5,
+		title: "Набор Круглый из 40 макарон",
+		price: 4900,
+		type: "macaron",
+		quantity: 40,
+		image: "/images/assemble-set/promo-5.png",
+	},
+	{
+		id: 6,
+		title: "Набор из 49 макарон",
+		price: 3700,
+		type: "macaron",
+		quantity: 49,
+		image: "/images/assemble-set/promo-6.png",
+	},
+	{
+		id: 7,
+		title: "Набор из 60 макарон",
+		price: 5900,
+		type: "macaron",
+		quantity: 60,
+		image: "/images/assemble-set/promo-7.png",
+	},
+] as const satisfies ReadonlyArray<AssemblePromoItem>;
