@@ -1,4 +1,4 @@
-import { ProductTypeKeys } from "@/shared/lib/api/products";
+import type { ProductTypeKeys } from "@/shared/lib/api/products";
 
 export const FLAVOR_VARIANTS = [
 	"Чёрная смородина",
@@ -23,6 +23,7 @@ export type FlavorVariant = (typeof FLAVOR_VARIANTS)[number];
 
 export type AssembleSetItem = {
 	id: number;
+	quantity: number;
 	flavor: FlavorVariant;
 	description: string;
 	image: string;

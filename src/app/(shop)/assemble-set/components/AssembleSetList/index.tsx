@@ -6,7 +6,9 @@ interface AssembleSetListProps {
 	assembleSetData: ReadonlyArray<AssemblePromoItem>;
 }
 
-export default function AssembleSetList({ assembleSetData }: AssembleSetListProps) {
+export default function AssembleSetList({
+	assembleSetData,
+}: AssembleSetListProps) {
 	return (
 		<ul className="grid grid-cols-4 gap-4">
 			{assembleSetData.map((setItem) => {
@@ -17,7 +19,7 @@ export default function AssembleSetList({ assembleSetData }: AssembleSetListProp
 						key={id}
 						data={setItem}
 					/>
-				)
+				);
 			})}
 		</ul>
 	);
