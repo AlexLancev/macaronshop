@@ -16,7 +16,6 @@ export default function OrderBuilderItem({ orderBuilderData: { quantity, id, fla
 	const { addFlavor, removeFlavor, flavors, handleIncrementQuantity, handleDecrementQuantity } = useOrderComposerStore();
 	const { id: maxQuantity } = useParams();
 	const isMaxQuantity = Number(maxQuantity);
-
 	
 	const handleIncrement = () => {
 		if (flavors.some((flavor: Flavor) => flavor.id === id && flavor.quantity >= isMaxQuantity), flavors.reduce((acc, flavor) => acc + flavor.quantity, 0) === isMaxQuantity) return;

@@ -3,6 +3,5 @@ interface QuantityProps {
 }
 
 export default function Quantity({ quantity }: QuantityProps) {
-	
 	return <span>{quantity}</span>;
 }

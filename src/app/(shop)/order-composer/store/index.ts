@@ -17,13 +17,17 @@ const useOrderComposerStore = create<OrderComposerStore>((set) => ({
 	handleIncrementQuantity: (flavorId: number) =>
 		set(({ flavors }) => ({
 			flavors: flavors.map((flavor) =>
-				flavor.id === flavorId ? { ...flavor, quantity: flavor.quantity + 1 } : flavor
+				flavor.id === flavorId
+					? { ...flavor, quantity: flavor.quantity + 1 }
+					: flavor,
 			),
 		})),
 	handleDecrementQuantity: (flavorId: number) =>
 		set(({ flavors }) => ({
 			flavors: flavors.map((flavor) =>
-				flavor.id === flavorId ? { ...flavor, quantity: flavor.quantity - 1 } : flavor
+				flavor.id === flavorId
+					? { ...flavor, quantity: flavor.quantity - 1 }
+					: flavor,
 			),
 		})),
 	addFlavor: (flavor: Flavor) =>
