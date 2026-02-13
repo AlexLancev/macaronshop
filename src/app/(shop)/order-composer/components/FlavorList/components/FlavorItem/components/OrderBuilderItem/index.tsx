@@ -1,38 +1,90 @@
 "use client";
 
 import { MinusIcon, PlusIcon } from "lucide-react";
+import { useParams } from "next/navigation";
+
+import useOrderComposerStore, {
+	type Flavor,
+} from "@/app/(shop)/order-composer/store";
 import { Button } from "@/shared/ui/components/Button";
 import Quantity from "../quantity";
-import useOrderComposerStore, { Flavor } from "@/app/(shop)/order-composer/store";
-import { useParams } from "next/navigation";
 
 interface OrderBuilderItemProps {
 	orderBuilderData: Flavor;
 }
 
-const isElementInArray: <T>(elem: T, array: T[]) => boolean = (elem, array) => array.some((item) => item === elem);
+interface isElementInArrayProps<T> {
+	elem: T;
+	array: T[];
+}
 
-export default function OrderBuilderItem({ orderBuilderData: { quantity, id, flavor } }: OrderBuilderItemProps) {
-	const { addFlavor, removeFlavor, flavors, handleIncrementQuantity, handleDecrementQuantity } = useOrderComposerStore();
+interface isMaxQuantityReachedProps {
+	flavors: Flavor[];
+	id: number;
+	isMaxQuantity: number;
+	totalQuantity: number;
+}
+
+interface getQuantityProps {
+	flavors: Flavor[];
+	id: number;
+	quantity: number;
+}
+
+const isElementInArray: <T>(props: isElementInArrayProps<T>) => boolean = ({
+	elem,
+	array,
+}) => array.some((item) => item === elem);
+
+const isMaxQuantityReached: (props: isMaxQuantityReachedProps) => boolean = ({
+	flavors,
+	id,
+	isMaxQuantity,
+	totalQuantity,
+}) => flavors.some(({ id: flavorId, quantity }: Flavor) => flavorId === id && quantity > isMaxQuantity,)
+	|| totalQuantity === isMaxQuantity;
+
+const getQuantity: (props: getQuantityProps) => number = ({
+	flavors,
+	id,
+	quantity,
+}) => flavors.find(({ id: flavorId }: Flavor) => flavorId === id)?.quantity ?? quantity;
+
+export default function OrderBuilderItem({
+	orderBuilderData: { quantity, id, flavor },
+}: OrderBuilderItemProps) {
+	const {
+		flavors,
+		totalQuantity,
+		addFlavor,
+		removeFlavor,
+		setTotalQuantity,
+		handleIncrementQuantity,
+		handleDecrementQuantity,
+	} = useOrderComposerStore();
 	const { id: maxQuantity } = useParams();
 	const isMaxQuantity = Number(maxQuantity);
-	
+
+	console.log(totalQuantity)
+
 	const handleIncrement = () => {
-		if (flavors.some((flavor: Flavor) => flavor.id === id && flavor.quantity >= isMaxQuantity), flavors.reduce((acc, flavor) => acc + flavor.quantity, 0) === isMaxQuantity) return;
-		if (isElementInArray(id, flavors.map((flavor) => flavor.id))) {
-			console.log(flavors.find((flavor: Flavor) => flavor.id === id)?.quantity)
+		if (isMaxQuantityReached({ flavors, id, isMaxQuantity, totalQuantity })) return;
+		if (isElementInArray({ elem: id, array: flavors.map(({ id }) => id) })) {
+			setTotalQuantity(totalQuantity);
 			return handleIncrementQuantity(id, quantity + 1);
-		};
+		}
+		setTotalQuantity(totalQuantity + 1);
 		addFlavor({ id, quantity: quantity + 1, flavor });
-	}
+	};
 
 	const handleDecrement = () => {
-		if (flavors.some((flavor: Flavor) => flavor.id === id && flavor.quantity > 1)) {
+		if (isMaxQuantityReached({ flavors, id, isMaxQuantity: 1, totalQuantity })) {
+			setTotalQuantity(totalQuantity - 1);
 			return handleDecrementQuantity(id, quantity - 1);
 		}
 		removeFlavor(id);
-	}
-	// console.log(flavors);
+	};
+	console.log(flavors);
 
 	return (
 		<>
@@ -42,11 +94,7 @@ export default function OrderBuilderItem({ orderBuilderData: { quantity, id, fla
 			>
 				<MinusIcon />
 			</Button>
-			<Quantity
-				quantity={
-					flavors.find((flavor: Flavor) => flavor.id === id)?.quantity ?? quantity
-				}
-			/>
+			<Quantity quantity={getQuantity({ flavors, id, quantity })} />
 			<Button
 				variant="outline"
 				onClick={handleIncrement}
