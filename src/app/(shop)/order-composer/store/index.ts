@@ -30,7 +30,7 @@ const useOrderComposerStore = create<OrderComposerStore>((set) => ({
 		set(({ flavors, totalQuantity }) => ({
 			flavors: flavors.map((flavor) =>
 				flavor.id === flavorId
-					? { ...flavor, quantity: flavor.quantity + 1, totalQuantity: totalQuantity + 1 }
+					? { ...flavor, quantity: flavor.quantity + 1 }
 					: flavor,
 			),
 			totalQuantity: totalQuantity + 1,
