@@ -1,0 +1,88 @@
+import { AddSalesItem } from "../types";
+
+export const addSalesData = [
+	{
+		id: 1,
+		title: 'Открытка "Наслаждайся!"',	
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-1.png",
+	},
+	{
+		id: 2,
+		title: 'Открытка "Hug Me"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-2.jpg",
+	},
+	{
+		id: 3,
+		title: 'Открытка "Счастье ждет тебя"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-3.png",
+	},
+	{
+		id: 4,
+		title: 'Открытка "P.S. I Love You"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-4.jpg",
+	},
+	{
+		id: 5,
+		title: 'Открытка "Для тебя"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-5.jpg",
+	},
+	{
+		id: 6,
+		title: 'Открытка "Поздравляю"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-6.jpg",
+	},
+	{
+		id: 7,
+		title: 'Открытка "С праздником весны"',
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-7.jpg",
+	},
+	{
+		id: 8,
+		title: "Ленточка красная",
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-8.jpg",
+	},
+	{
+		id: 9,
+		title: "Ленточка зеленая",
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-9.jpg",
+	},	
+	{
+		id: 10,
+		title: "Ленточка синяя",
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-10.jpg",
+	},
+	{
+		id: 11,
+		title: "Ленточка белая",
+		price: 50,
+		quantity: 0,
+		image: "/images/add-sales/sale-11.jpg",
+	},
+	{
+		id: 12,
+		title: "Ленточка бордовая",
+		price: 50,								
+		quantity: 0,
+		image: "/images/add-sales/sale-12.jpg",
+	},
+] as const satisfies ReadonlyArray<AddSalesItem>;
