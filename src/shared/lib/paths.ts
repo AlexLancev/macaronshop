@@ -16,7 +16,7 @@ export const PATHS = {
 		dayKnowledge: "/day-knowledge",
 		newYear: "/new-year",
 		birthDay: "/birthday",
-
+		addSales: "/add-sales",
 		sweetDays: "/sweet-days",
 		giftSets: "/gift-sets",
 		teachesDay: "/teaches-day",
