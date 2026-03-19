@@ -1,17 +1,19 @@
 import PromoProducts from "@/shared/features/home/components/promo/components/PromoProducts";
+import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function SweetDays() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-2 text-center font-semibold text-4xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					Акция: сладкие дни!
-				</h1>
-				<h2 className="mb-10 text-center font-medium text-xl">
+				</Title>
+				<Title className="mb-10 text-center font-medium text-xl">
 					Неделя скидок на авторские и подарочные наборы макарон
-				</h2>
+				</Title>
 				<PromoProducts />
-			</div>
+			</Container>
 		</section>
 	);
 }
