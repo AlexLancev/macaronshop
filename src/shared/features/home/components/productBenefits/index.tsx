@@ -1,12 +1,14 @@
+import { Title } from "@/shared/ui/components/Title";
 import BenefitsList from "./components/BenefitsList";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function ProductBenefits() {
 	return (
 		<section>
-			<div className="container">
-				<h2>Мы обо всём позаботились</h2>
+			<Container>
+				<Title>Мы обо всём позаботились</Title>
 				<BenefitsList />
-			</div>
+			</Container>
 		</section>
 	);
 }
