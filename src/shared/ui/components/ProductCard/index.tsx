@@ -8,6 +8,7 @@ import {
 	type CategoryPathKey,
 } from "@/shared/lib/constants/catalog/categoryPaths";
 import PriceCard from "../PriceCard";
+import { Title } from "../Title";
 
 interface ProductCardProps {
 	data: ProductCardType;
@@ -32,7 +33,7 @@ export default function ProductCard({ data }: ProductCardProps) {
 					alt={title}
 				/>
 				<div className="p-4">
-					<h3 className="mb-2 font-medium text-xl">{title}</h3>
+					<Title headingType="md" className="mb-2 font-medium text-xl">{title}</Title>
 					<p className="text-gray-500">{description}</p>
 				</div>
 			</Link>
