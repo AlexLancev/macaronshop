@@ -1,3 +1,4 @@
+import { Container } from "@/shared/ui/components/Container";
 import HolidaysItem from "./components/holidaysItem";
 import { getUpcomingHolidays } from "./utils";
 
@@ -6,7 +7,7 @@ export default function Holidays() {
 
 	return (
 		<section className="py-12">
-			<div className="container">
+			<Container>
 				<ul className="grid grid-cols-6 gap-x-4">
 					{upcomingHolidays.map((holiday) => {
 						const { id } = holiday;
@@ -19,7 +20,7 @@ export default function Holidays() {
 						);
 					})}
 				</ul>
-			</div>
+			</Container>
 		</section>
 	);
 }
