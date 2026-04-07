@@ -3,6 +3,7 @@ import Image from "next/image";
 import GiftSetCategoryList from "./components/GiftSetCategoryList";
 import { giftSetsData } from "./constants";
 import GiftSetPage from "@/shared/ui/components/GiftSetPage";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function GiftSets() {
 	return (
@@ -30,9 +31,9 @@ export default function GiftSets() {
 					className="px-10 py-36"
 				/>
 				<section className="py-10">
-					<div className="container">
+					<Container>
 						<GiftSetCategoryList giftSetsData={giftSetsData} />
-					</div>
+					</Container>
 				</section>
 			</div>
 		</div>

@@ -1,15 +1,17 @@
+import { Title } from "@/shared/ui/components/Title";
 import AssembleSetList from "./components/AssembleSetList";
 import { assembleSetData } from "./constants";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function AssembleSet() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-bold text-2xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					Собери свой набор макаронс
-				</h1>
+				</Title>
 				<AssembleSetList assembleSetData={assembleSetData} />
-			</div>
+			</Container>
 		</section>
 	);
 }

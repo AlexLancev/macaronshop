@@ -4,6 +4,8 @@ import type { TypeProductKeys } from "@/shared/lib/constants/catalog/shared/type
 
 import { getAllProductsByType } from "@/shared/lib/api/products";
 import ProductCard from "@/shared/ui/components/ProductCard";
+import { Title } from "@/shared/ui/components/Title";
+import { Container } from "@/shared/ui/components/Container";
 
 interface ProductsProps {
 	typeProduct: string;
@@ -18,10 +20,10 @@ export default async function Products({
 
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					{typeProduct}
-				</h1>
+				</Title>
 				<ul className="grid grid-cols-3 gap-4">
 					{products.map((product) => (
 						<ProductCard
@@ -30,7 +32,7 @@ export default async function Products({
 						/>
 					))}
 				</ul>
-			</div>
+			</Container>
 		</section>
 	);
 }

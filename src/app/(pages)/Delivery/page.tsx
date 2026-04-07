@@ -1,3 +1,5 @@
+import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 import Image from "next/image";
 
 const deliveryIntervalsData = [
@@ -10,10 +12,10 @@ const deliveryIntervalsData = [
 export default function Delivery() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					Доставка и оплата
-				</h1>
+				</Title>
 				<div className="flex">
 					<div className="flex w-1/2 items-center justify-center">
 						<Image
@@ -25,7 +27,7 @@ export default function Delivery() {
 						/>
 					</div>
 					<div className="w-1/2">
-						<h2 className="font-semibold text-2xl">Доставка и оплата</h2>
+						<Title className="font-semibold text-2xl">Доставка и оплата</Title>
 						<div className="mt-4 space-y-5 text-base">
 							<p>
 								Курьеры работают ежедневно с 10 до 22. Доставляем по
@@ -55,7 +57,7 @@ export default function Delivery() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

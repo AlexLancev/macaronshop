@@ -2,15 +2,17 @@ import Image from "next/image";
 
 import WholesaleProductGrid from "./components/WholesaleProductGrid";
 import { wholesaleData } from "./data";
+import { Title } from "@/shared/ui/components/Title";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function Wholesale() {
 	return (
 		<section className="py-10">
-			<div className="container">
+			<Container>
 				<div className="mb-18">
-					<h1 className="mb-10 text-center font-semibold text-4xl">
+					<Title headingType="xl" className="font-semibold text-4xl">
 						Оптовые поставки
-					</h1>
+					</Title>
 					<div className="flex gap-10 md:gap-16">
 						<div className="flex w-full justify-center md:w-1/2">
 							<Image
@@ -21,9 +23,9 @@ export default function Wholesale() {
 							/>
 						</div>
 						<div className="w-full pt-10 text-center md:w-1/2 md:items-start md:text-left">
-							<h2 className="mb-3 font-semibold text-4xl">
+							<Title className="mb-3 font-semibold text-4xl">
 								Десерты для кофейни
-							</h2>
+							</Title>
 							<div className="mb-8 font-medium text-black">
 								<span>Акция! </span>
 								<span>Специальные условия доставки в Москву. </span>
@@ -37,11 +39,11 @@ export default function Wholesale() {
 						</div>
 					</div>
 				</div>
-				<h2 className="mb-10 text-center font-semibold text-3xl">
+				<Title className="mb-10 text-center font-semibold text-3xl">
 					Пирожные для вашей кофейни
-				</h2>
+				</Title>
 				<WholesaleProductGrid data={wholesaleData} />
-			</div>
+			</Container>
 		</section>
 	);
 }

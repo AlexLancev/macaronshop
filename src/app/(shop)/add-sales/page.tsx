@@ -1,14 +1,16 @@
+import { Title } from "@/shared/ui/components/Title";
 import AdditionallyList from "./components/AdditionallyList";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function AddSalesPage() {
-  return (
-    <section className="py-10">
-      <div className="container">
-        <h1 className="mb-10 text-center font-semibold text-4xl">
-          Дополнительные товары
-        </h1>
+	return (
+		<section className="py-10">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
+					Дополнительные товары
+				</Title>
 				<AdditionallyList />
-      </div>
-    </section>
-  )
+			</Container>
+		</section>
+	);
 }

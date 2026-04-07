@@ -1,10 +1,12 @@
+import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
 	return (
 		<section className="bg-[url(/images/hero/hero-bg.svg)] bg-center bg-cover bg-no-repeat py-14">
-			<div className="container">
+			<Container>
 				<div className="flex items-center gap-x-4">
 					<Image
 						src="/images/hero/heart.png"
@@ -14,14 +16,14 @@ export default function Hero() {
 						aria-hidden
 					/>
 					<div className="text-center text-[rgb(72,72,72)]">
-						<h2 className="mb-3 font-semibold text-4xl">Настоящая любовь</h2>
+						<Title className="mb-3 font-semibold text-4xl">Настоящая любовь</Title>
 						<p className="font-medium text-lg">
 							Пирожные макаронс и другие десерты из натуральных ингредиентов,
 							приготовленные с любовью
 						</p>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

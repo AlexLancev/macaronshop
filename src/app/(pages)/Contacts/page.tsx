@@ -1,10 +1,18 @@
 import Image from "next/image";
 
+import { Title } from "@/shared/ui/components/Title";
+import { Container } from "@/shared/ui/components/Container";
+
 export default function Contacts() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">Контакты</h1>
+			<Container>
+				<Title
+					className="font-semibold text-4xl"
+					headingType="xl"
+				>
+					Контакты
+				</Title>
 				<div className="flex items-center justify-center gap-10">
 					<div className="mb-8 flex flex-shrink-0 justify-center md:mb-0 md:block">
 						<div className="relative">
@@ -97,7 +105,7 @@ export default function Contacts() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

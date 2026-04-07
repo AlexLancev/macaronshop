@@ -1,16 +1,18 @@
+import { Title } from "@/shared/ui/components/Title";
 import Flavor from "../../components/Flavor";
 import OrderComposer from "../../components/OrderComposer";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function OrderComposerPage() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					Выберите вкусы
-				</h1>
+				</Title>
 				<Flavor />
 				<OrderComposer />
-			</div>
+			</Container>
 		</section>
 	);
 }

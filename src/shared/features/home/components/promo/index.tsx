@@ -1,12 +1,14 @@
 import PromoProducts from "@/shared/features/home/components/promo/components/PromoProducts";
+import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function Promo() {
 	return (
 		<section>
-			<div className="container">
-				<h2>Популярные наборы</h2>
+			<Container>
+				<Title>Популярные наборы</Title>
 				<PromoProducts />
-			</div>
+			</Container>
 		</section>
 	);
 }

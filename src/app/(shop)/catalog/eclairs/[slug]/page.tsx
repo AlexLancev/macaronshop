@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { getProductBySlug } from "@/shared/lib/api/products";
+import { Title } from "@/shared/ui/components/Title";
 
 interface PageProps {
 	params: Promise<{ slug: string }>;
@@ -16,7 +17,9 @@ export default async function EclairProductPage({ params }: PageProps) {
 
 	return (
 		<div>
-			<h1>{product.title}</h1>
+			<Title headingType="xl" className="font-semibold text-4xl">
+				{product.title}
+			</Title>
 			<p>{product.description}</p>
 			<p>Цена: {product.price} ₽</p>
 			{/* Здесь можно добавить полную страницу продукта */}

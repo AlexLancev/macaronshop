@@ -1,31 +1,23 @@
 "use client";
 
-import { Button } from "@/shared/ui/components/Button";
-import useOrderComposerStore from "../../store";
 import { useParams } from "next/navigation";
+
+import FlavorsList from "./components/FlavorsList";
+import ProceedNotice from "./components/ProceedNotice";
+import useOrderComposerStore from "../../store";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function OrderComposer() {
 	const { flavors, totalQuantity } = useOrderComposerStore();
-	const { id: maxQuantity } = useParams();
+	const { id: maxQuantity } = useParams<{ id: string }>();
 
 	return (
 		<div>
-			<h2>
+			<Title>
 				Количество вкусов: {totalQuantity} из {maxQuantity}
-			</h2>
-			<ul>
-				{flavors.map((flavor) => (
-					<li key={flavor.id}>
-						{flavor.flavor}
-					</li>
-				))}
-			</ul>
-			<span>
-				Для продолжения количество макарон должно равняться {maxQuantity} штук.
-			</span>
-			<Button>
-				Далее
-			</Button>
+			</Title>
+			<FlavorsList flavors={flavors} />
+			<ProceedNotice maxQuantity={maxQuantity} />
 		</div>
 	);
 }

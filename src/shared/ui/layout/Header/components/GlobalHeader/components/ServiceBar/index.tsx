@@ -4,11 +4,12 @@ import Menu from "@/shared/ui/components/Menu";
 import Phone from "@/shared/ui/components/Phone";
 import Social from "@/shared/ui/components/Social";
 import { menuServiceData } from "../../constants";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function ServiceBar() {
 	return (
 		<div className="bg-customBeige">
-			<div className="container">
+			<Container>
 				<div className="flex items-center justify-between gap-x-2 py-3">
 					<Menu
 						data={menuServiceData}
@@ -20,7 +21,7 @@ export default function ServiceBar() {
 						<Social data={socialData} />
 					</div>
 				</div>
-			</div>
+			</Container>
 		</div>
 	);
 }

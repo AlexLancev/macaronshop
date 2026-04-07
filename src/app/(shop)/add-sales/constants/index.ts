@@ -1,9 +1,9 @@
-import { AddSalesItem } from "../types";
+import type { AddSalesItem } from "../types";
 
 export const addSalesData = [
 	{
 		id: 1,
-		title: 'Открытка "Наслаждайся!"',	
+		title: 'Открытка "Наслаждайся!"',
 		price: 50,
 		quantity: 0,
 		image: "/images/add-sales/sale-1.png",
@@ -63,7 +63,7 @@ export const addSalesData = [
 		price: 50,
 		quantity: 0,
 		image: "/images/add-sales/sale-9.jpg",
-	},	
+	},
 	{
 		id: 10,
 		title: "Ленточка синяя",
@@ -81,7 +81,7 @@ export const addSalesData = [
 	{
 		id: 12,
 		title: "Ленточка бордовая",
-		price: 50,								
+		price: 50,
 		quantity: 0,
 		image: "/images/add-sales/sale-12.jpg",
 	},

@@ -1,7 +1,8 @@
-import { Flavor } from "@/app/(shop)/order-composer/store";
+import type { Flavor } from "@/app/(shop)/order-composer/store";
 
 export interface OrderBuilderItemProps {
 	orderBuilderData: Flavor;
+	isRemoveItem?: boolean;
 }
 
 export interface isElementInArrayProps<T> {

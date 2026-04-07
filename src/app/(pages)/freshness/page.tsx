@@ -2,14 +2,16 @@ import Image from "next/image";
 import React from "react";
 
 import { freshnessData } from "./data";
+import { Title } from "@/shared/ui/components/Title";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function Freshness() {
 	return (
 		<section className="py-10">
-			<div className="container">
-				<h1 className="mb-10 text-center font-semibold text-4xl">
+			<Container>
+				<Title headingType="xl" className="font-semibold text-4xl">
 					Гарантии свежести
-				</h1>
+				</Title>
 				<p className="mb-10 text-center text-lg">
 					При изготовлении пирожных макаронс и других десертов мы используем
 					только натуральные ингредиенты и красители, готовя наши изделия по
@@ -29,11 +31,11 @@ export default function Freshness() {
 								width={291}
 								height={291}
 							/>
-							<h2 className="text-lg">{title}</h2>
+							<Title className="text-lg">{title}</Title>
 						</li>
 					))}
 				</ul>
-			</div>
+			</Container>
 		</section>
 	);
 }

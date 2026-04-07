@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { wholesaleData } from "../../data";
+import { Title } from "@/shared/ui/components/Title";
 
 interface WholesaleProductGridProps {
 	data: typeof wholesaleData;
@@ -25,7 +26,7 @@ export default function WholesaleProductGrid({
 							width={100}
 							height={100}
 						/>
-						<h3 className="mb-2 font-semibold text-xl">{title}</h3>
+						<Title headingType="md" className="mb-2 font-semibold text-xl">{title}</Title>
 						<p className="text-gray-700">{description}</p>
 					</Link>
 				</li>
