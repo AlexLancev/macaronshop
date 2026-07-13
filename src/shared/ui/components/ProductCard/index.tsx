@@ -33,7 +33,12 @@ export default function ProductCard({ data }: ProductCardProps) {
 					alt={title}
 				/>
 				<div className="p-4">
-					<Title headingType="md" className="mb-2 font-medium text-xl">{title}</Title>
+					<Title
+						headingType="md"
+						className="mb-2 font-medium text-xl"
+					>
+						{title}
+					</Title>
 					<p className="text-gray-500">{description}</p>
 				</div>
 			</Link>

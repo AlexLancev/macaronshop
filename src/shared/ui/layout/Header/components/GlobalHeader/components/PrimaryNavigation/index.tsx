@@ -1,7 +1,7 @@
+import { Container } from "@/shared/ui/components/Container";
 import Logo from "@/shared/ui/components/Logo";
 import Menu from "@/shared/ui/components/Menu";
 import { menuInfoData, menuSaleData } from "../../constants";
-import { Container } from "@/shared/ui/components/Container";
 
 export default function PrimaryNavigation() {
 	return (

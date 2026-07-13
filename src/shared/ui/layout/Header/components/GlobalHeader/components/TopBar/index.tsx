@@ -1,8 +1,8 @@
 "use client";
 
-import { Container } from "@/shared/ui/components/Container";
 import { carouselConfig, carouselTopBarData, topBarData } from "./constants";
 import { Carousel } from "@/shared/ui/components/Carousel";
+import { Container } from "@/shared/ui/components/Container";
 
 const TopBar = () => {
 	return (

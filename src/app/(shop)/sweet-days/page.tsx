@@ -6,7 +6,10 @@ export default function SweetDays() {
 	return (
 		<section className="py-10">
 			<Container>
-				<Title headingType="xl" className="font-semibold text-4xl">
+				<Title
+					headingType="xl"
+					className="font-semibold text-4xl"
+				>
 					Акция: сладкие дни!
 				</Title>
 				<Title className="mb-10 text-center font-medium text-xl">

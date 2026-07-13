@@ -2,14 +2,17 @@ import Image from "next/image";
 import React from "react";
 
 import { freshnessData } from "./data";
-import { Title } from "@/shared/ui/components/Title";
 import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function Freshness() {
 	return (
 		<section className="py-10">
 			<Container>
-				<Title headingType="xl" className="font-semibold text-4xl">
+				<Title
+					headingType="xl"
+					className="font-semibold text-4xl"
+				>
 					Гарантии свежести
 				</Title>
 				<p className="mb-10 text-center text-lg">

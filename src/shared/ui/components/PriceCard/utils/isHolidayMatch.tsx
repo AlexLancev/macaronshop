@@ -12,7 +12,7 @@ export const isHolidayMatch = (
 	price: number,
 	singleHolidayKey?: HolidaysDataKeys | null,
 ): JSX.Element => {
-	if (typeHoliday === singleHolidayKey) {
+	if (typeHoliday === singleHolidayKey && price > 0) {
 		const discountedSum = discountedPrice(price, DISCOUNT_PERCENT);
 
 		return (
@@ -28,6 +28,7 @@ export const isHolidayMatch = (
 			</div>
 		);
 	}
+
 	return (
 		<div className="grid place-items-center font-medium text-customPinkDark text-lg">
 			{price} {RUB_SIGN}

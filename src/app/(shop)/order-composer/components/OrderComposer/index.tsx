@@ -4,8 +4,8 @@ import { useParams } from "next/navigation";
 
 import FlavorsList from "./components/FlavorsList";
 import ProceedNotice from "./components/ProceedNotice";
-import useOrderComposerStore from "../../store";
 import { Title } from "@/shared/ui/components/Title";
+import useOrderComposerStore from "../../store";
 
 export default function OrderComposer() {
 	const { flavors, totalQuantity } = useOrderComposerStore();

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { AddSalesItem } from "../types";
+
 import { Title } from "@/shared/ui/components/Title";
 
 interface AdditionallyItemProps {
@@ -21,7 +22,12 @@ export default function AdditionallyItem({
 				width={100}
 				height={100}
 			/>
-			<Title headingType="md" className="mb-1">{title}</Title>
+			<Title
+				headingType="md"
+				className="mb-1"
+			>
+				{title}
+			</Title>
 			<span className="font-medium text-customPinkDark">
 				{price} {RUB_SYMBOL}
 			</span>

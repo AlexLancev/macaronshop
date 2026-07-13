@@ -5,7 +5,6 @@ import ProductCard from "@/shared/ui/components/ProductCard";
 
 export default function PromoProducts() {
 	const allPromoProducts = useProducts();
-	console.log("allPromoProducts", allPromoProducts);
 
 	return (
 		<ul className="grid grid-cols-3 gap-3">

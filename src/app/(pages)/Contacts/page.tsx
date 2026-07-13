@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { Title } from "@/shared/ui/components/Title";
 import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function Contacts() {
 	return (

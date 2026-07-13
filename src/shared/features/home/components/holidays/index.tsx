@@ -1,6 +1,6 @@
-import { Container } from "@/shared/ui/components/Container";
 import HolidaysItem from "./components/holidaysItem";
 import { getUpcomingHolidays } from "./utils";
+import { Container } from "@/shared/ui/components/Container";
 
 export default function Holidays() {
 	const { upcomingHolidays } = getUpcomingHolidays();

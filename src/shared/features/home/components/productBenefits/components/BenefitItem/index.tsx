@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { benefitsData } from "../../constants";
+
 import { Title } from "@/shared/ui/components/Title";
 
 interface BenefitItemProps {

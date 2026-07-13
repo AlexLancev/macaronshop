@@ -2,15 +2,18 @@ import Image from "next/image";
 
 import WholesaleProductGrid from "./components/WholesaleProductGrid";
 import { wholesaleData } from "./data";
-import { Title } from "@/shared/ui/components/Title";
 import { Container } from "@/shared/ui/components/Container";
+import { Title } from "@/shared/ui/components/Title";
 
 export default function Wholesale() {
 	return (
 		<section className="py-10">
 			<Container>
 				<div className="mb-18">
-					<Title headingType="xl" className="font-semibold text-4xl">
+					<Title
+						headingType="xl"
+						className="font-semibold text-4xl"
+					>
 						Оптовые поставки
 					</Title>
 					<div className="flex gap-10 md:gap-16">

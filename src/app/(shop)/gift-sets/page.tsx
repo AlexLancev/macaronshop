@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import GiftSetCategoryList from "./components/GiftSetCategoryList";
 import { giftSetsData } from "./constants";
-import GiftSetPage from "@/shared/ui/components/GiftSetPage";
 import { Container } from "@/shared/ui/components/Container";
+import GiftSetPage from "@/shared/ui/components/GiftSetPage";
 
 export default function GiftSets() {
 	return (

@@ -17,7 +17,10 @@ export default async function PotatoDessertProductPage({ params }: PageProps) {
 
 	return (
 		<div>
-			<Title headingType="xl" className="font-semibold text-4xl">
+			<Title
+				headingType="xl"
+				className="font-semibold text-4xl"
+			>
 				{product.title}
 			</Title>
 			<p>{product.description}</p>

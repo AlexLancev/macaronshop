@@ -1,10 +1,10 @@
 import { socialData } from "./constants";
 import Cart from "@/shared/ui/components/Cart";
+import { Container } from "@/shared/ui/components/Container";
 import Menu from "@/shared/ui/components/Menu";
 import Phone from "@/shared/ui/components/Phone";
 import Social from "@/shared/ui/components/Social";
 import { menuServiceData } from "../../constants";
-import { Container } from "@/shared/ui/components/Container";
 
 export default function ServiceBar() {
 	return (

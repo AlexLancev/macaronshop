@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { AssemblePromoItem } from "../../types";
+
 import { Title } from "@/shared/ui/components/Title";
 
 interface AssemblePromoItemProps {
@@ -27,7 +28,12 @@ export default function AssembleItem({
 					height={100}
 				/>
 			</Link>
-			<Title headingType="md" className="mb-1">{title}</Title>
+			<Title
+				headingType="md"
+				className="mb-1"
+			>
+				{title}
+			</Title>
 			<span className="font-medium text-customPinkDark">
 				{price} {RUB_SYMBOL}
 			</span>
