@@ -3,18 +3,17 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import GalleryList from "./components/GalleryList";
+
 interface ProductGalleryProps {
 	gallery: readonly string[];
 }
 
 export default function ProductGallery({ gallery }: ProductGalleryProps) {
 	const [selectedImage, setSelectedImage] = useState(gallery[0]);
-	const handleSelectImage = (image: string) => {
-		setSelectedImage(image);
-	};
 
 	return (
-		<>
+		<div className="flex flex-col gap-4">
 			<Image
 				className="mb-4 block h-full w-full object-cover"
 				src={selectedImage}
@@ -22,19 +21,10 @@ export default function ProductGallery({ gallery }: ProductGalleryProps) {
 				width={546}
 				height={532}
 			/>
-			{gallery?.map((image, idx) => (
-				<button
-					key={idx}
-					onClick={() => handleSelectImage(image)}
-				>
-					<Image
-						src={image}
-						alt={image}
-						width={100}
-						height={100}
-					/>
-				</button>
-			))}
-		</>
+			<GalleryList
+				setSelectedImage={setSelectedImage}
+				gallery={gallery}
+			/>
+		</div>
 	);
 }
