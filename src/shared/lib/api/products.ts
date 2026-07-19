@@ -7,6 +7,11 @@ import { prodDetailsData } from "@/shared/lib/constants/catalog/shared/data";
 
 export type ProductTypeKeys = "macaron" | "eclairs" | "waferRolls" | "potato";
 
+export interface FlavorType {
+	flavorName: string;
+	quantity: number;
+}
+
 interface SupabaseProduct {
 	id: number;
 	name: string;
@@ -18,7 +23,7 @@ interface SupabaseProduct {
 	price: number;
 	imageUrl?: string | null;
 	gallery?: string[] | null;
-	flavors?: string[] | null;
+	flavor?: FlavorType[] | null;
 	category?: string | null;
 	typeProduct?: string | null;
 	typeHoliday?: string | null;
@@ -110,7 +115,7 @@ function transformSupabaseProductToProductCard(
 		description: supabaseProduct.description || "",
 		price: supabaseProduct.price,
 		gallery: supabaseProduct.gallery || [],
-		flavor: supabaseProduct.flavors,
+		flavor: supabaseProduct.flavor,
 		typeHoliday: supabaseProduct.typeHoliday || "newYear",
 		productDetails:
 			prodDetailsData[
