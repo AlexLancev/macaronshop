@@ -15,7 +15,7 @@ export const StorageDetails: FC<StorageDetailsProps> = ({ config = {} }) => {
 	return (
 		<>
 			<p>
-				Мы рекомендуем наслаждаться вкусом "{prodType}" первые {bestBeforeHours}
+				Мы рекомендуем наслаждаться вкусом "{prodType}" первые {bestBeforeHours}{" "}
 				{pluralize(bestBeforeHours, ["час", "часа", "часов"])} после покупки.
 				Далее они могут начать терять свои вкусовые качества и текстуру.
 			</p>
