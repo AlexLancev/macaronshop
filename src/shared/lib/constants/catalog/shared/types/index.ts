@@ -25,15 +25,15 @@ export interface StorageDetailsProps {
 export interface ProductDetailsType {
 	description: {
 		trigger: string;
-		htmlContent: string;
+		htmlContent?: string;
 	};
 	nutriFacts: {
 		trigger: string;
-		htmlContent: string;
+		htmlContent?: string;
 	};
 	shelfLife: {
 		trigger: string;
-		htmlContent: JSX.Element;
+		jsxContent?: JSX.Element;
 	};
 }
 
