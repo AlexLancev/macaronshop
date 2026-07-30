@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 
-import DeliveryInfo from "./components/DeliveryInfo";
 import FlavorList from "./components/FlavorList";
 import ProductActions from "./components/ProductActions";
 import ProductGallery from "./components/ProductGallery";
 import ProductHeader from "./components/ProductHeader";
 import { getProductBySlug } from "@/shared/lib/api/products";
-import { Title } from "@/shared/ui/components/Title";
+import DeliveryInfo from "@/shared/ui/components/DeliveryInfo";
+import ProductInfo from "@/shared/ui/components/ProductInfo";
 
 interface PageProps {
 	params: Promise<{ slug: string }>;
@@ -20,7 +20,10 @@ export default async function MacaronProductPage({ params }: PageProps) {
 		notFound();
 	}
 
-	const { title, description, price, gallery, flavors, deliveryInfo } = product;
+	console.log(product);
+
+	const { title, description, gallery, flavor, price, productDetails } =
+		product;
 
 	return (
 		<div className="container mx-auto">
@@ -31,9 +34,10 @@ export default async function MacaronProductPage({ params }: PageProps) {
 						title={title}
 						description={description}
 					/>
-					{/* <ProductActions />
-					<FlavorList />
-					<DeliveryInfo /> */}
+					<FlavorList flavors={flavor} />
+					<ProductActions price={price} />
+					<DeliveryInfo />
+					<ProductInfo productDetails={productDetails} />
 				</div>
 			</div>
 		</div>
