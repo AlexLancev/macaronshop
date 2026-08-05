@@ -34,6 +34,7 @@ export default async function MacaronProductPage({ params }: PageProps) {
 						title={title}
 						description={description}
 					/>
+					
 					<FlavorList flavors={flavor} />
 					<ProductActions price={price} />
 					<DeliveryInfo />
