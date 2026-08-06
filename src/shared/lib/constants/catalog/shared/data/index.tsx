@@ -7,7 +7,6 @@ export const shelfLifeData = {
 	waferRolls: <StorageDetails config={{ prodType: "Вафельные трубочки" }} />,
 	potato: <StorageDetails config={{ prodType: "Десерт картошка" }} />,
 } as const;
-
 export const prodDetailsData = {
 	macaron: {
 		description: {
@@ -22,7 +21,7 @@ export const prodDetailsData = {
 		},
 		shelfLife: {
 			trigger: INFO_SECTIONS.SHELF_LIFE,
-			htmlContent: shelfLifeData["macaron"],
+			jsxContent: shelfLifeData["macaron"],
 		},
 	},
 	eclairs: {
