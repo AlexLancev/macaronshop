@@ -16,15 +16,17 @@ interface ProductInfoProps {
 export default function ProductInfo({ productDetails }: ProductInfoProps) {
 	return (
 		<Accordion
-			type="multiple"
-			defaultValue={[productDetails.description.trigger]}
+			className="flex"
+			type="single"
+			collapsible
+			defaultValue={productDetails.description.trigger}
 		>
 			{Object.values(productDetails).map(({ trigger, htmlContent, jsxContent }) => (
 				<AccordionItem
 					key={trigger}
 					value={trigger}
 				>
-					<AccordionTrigger>{trigger}</AccordionTrigger>
+					<AccordionTrigger className="[&>svg]:hidden">{trigger}</AccordionTrigger>
 					<AccordionContent>
 						{htmlContent ? (
 							<div
