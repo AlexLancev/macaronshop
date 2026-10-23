@@ -15,7 +15,7 @@ export default function ProductGallery({ gallery }: ProductGalleryProps) {
 	return (
 		<div className="flex flex-col gap-4">
 			<Image
-				className="mb-4 block h-full w-full object-cover"
+				className="mb-4 block"
 				src={selectedImage}
 				alt={selectedImage}
 				width={546}
