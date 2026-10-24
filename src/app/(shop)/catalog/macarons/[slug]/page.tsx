@@ -20,8 +20,6 @@ export default async function MacaronProductPage({ params }: PageProps) {
 		notFound();
 	}
 
-	console.log(product);
-
 	const { title, description, gallery, flavor, price, productDetails } =
 		product;
 
@@ -38,9 +36,9 @@ export default async function MacaronProductPage({ params }: PageProps) {
 					<FlavorList flavors={flavor} />
 					<ProductActions price={price} />
 					<DeliveryInfo />
-					<ProductInfo productDetails={productDetails} />
 				</div>
 			</div>
+			<ProductInfo productDetails={productDetails} />
 		</div>
 	);
 }
