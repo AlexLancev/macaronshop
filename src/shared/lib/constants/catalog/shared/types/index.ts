@@ -37,6 +37,12 @@ export interface ProductDetailsType {
 	};
 }
 
+export interface ProductDetailsValue {
+	trigger: string;
+	htmlContent?: string;
+	jsxContent?: JSX.Element;
+}
+
 export interface ProductFlavor {
 	flavorName: string;
 	quantity: number;
