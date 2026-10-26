@@ -1,45 +1,29 @@
 import xss from "xss";
 
-import type { ProductDetailsType } from "@/shared/lib/constants/catalog/shared/types";
+import type { ProductDetailsType, ProductDetailsValue } from "@/shared/lib/constants/catalog/shared/types";
 
-import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "../Accordion/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/shared/ui/components/Tabs";
 
 interface ProductInfoProps {
 	productDetails: ProductDetailsType;
 }
 
 export default function ProductInfo({ productDetails }: ProductInfoProps) {
+	const productDetailsValues = Object.values(productDetails) as ProductDetailsValue[];
+
 	return (
-		<Accordion
-			className="flex"
-			type="single"
-			collapsible
-			defaultValue={productDetails.description.trigger}
-		>
-			{Object.values(productDetails).map(({ trigger, htmlContent, jsxContent }) => (
-				<AccordionItem
-					key={trigger}
-					value={trigger}
-				>
-					<AccordionTrigger className="[&>svg]:hidden">{trigger}</AccordionTrigger>
-					<AccordionContent>
-						{htmlContent ? (
-							<div
-								dangerouslySetInnerHTML={{
-									__html: xss(htmlContent),
-								}}
-							></div>
-						) : (
-							jsxContent
-						)}
-					</AccordionContent>
-				</AccordionItem>
-			))}
-		</Accordion>
-	);
+		<Tabs defaultValue={productDetails.description.trigger}>
+			<TabsList>
+				{productDetailsValues.map(({ trigger }) => (
+					<TabsTrigger key={trigger} value={trigger}>{trigger}</TabsTrigger>
+				))}
+			</TabsList>
+			{productDetailsValues.map(({ trigger, htmlContent, jsxContent }, idx) => (
+				<TabsContent key={idx} value={trigger}>
+					{htmlContent ? <div dangerouslySetInnerHTML={{ __html: xss(htmlContent) }} /> : jsxContent}
+				</TabsContent>
+			 )
+			)}
+		</Tabs>
+	)
 }
