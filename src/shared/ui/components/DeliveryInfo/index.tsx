@@ -11,7 +11,7 @@ export default function DeliveryInfo() {
 				>
 					{iconRender[icon]()}
 					<span className="text-[#313131] text-base leading-[22px] whitespace-pre-line">
-						{text}
+						{text}	
 					</span>
 				</li>
 			))}
