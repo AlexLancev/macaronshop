@@ -16,9 +16,9 @@ export default function ProductHeader({
 			>
 				{title}
 			</Title>
-			<p className="text-[16px] leading-[22px] text-[rgb(89,89,89)]">{description}</p>
+			<p className="text-[16px] leading-[22px] text-[rgb(89,89,89)]">
+				{description}
+			</p>
 		</div>
 	);
 }
-
-
