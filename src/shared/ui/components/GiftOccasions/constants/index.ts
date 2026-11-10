@@ -11,7 +11,7 @@ export const giftOccasionsConstants = [
 		icon: "GiftClients",
 		text: "Клиентам",
 	},
-	{	
+	{
 		icon: "GiftCake",
 		text: "Родным и близким",
 	},
